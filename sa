@@ -1,0 +1,307 @@
+import os
+import re
+import math
+import requests
+from flask import Flask, render_template, request
+from dotenv import load_dotenv
+from groq import Groq
+
+load_dotenv()
+
+app = Flask(__name__)
+
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY")
+PEXELS_API_KEY = os.getenv("PEXELS_API_KEY")
+
+
+# --------------------------------------------------
+# DEFAULT ROUTE (Used when no places included)
+# --------------------------------------------------
+DEFAULT_ROUTE = [
+    "Colombo", "Negombo", "Anuradhapura", "Sigiriya",
+    "Polonnaruwa", "Kandy", "Nuwara Eliya", "Ella",
+    "Yala", "Tangalle", "Mirissa", "Galle",
+    "Bentota", "Kalutara", "Hikkaduwa",
+    "Trincomalee", "Nilaveli", "Arugam Bay",
+    "Batticaloa", "Pasikudah", "Mannar",
+    "Wilpattu National Park", "Habarana",
+    "Pigeon Island", "Hambantota",
+    "Knuckles", "Riverston", "Mihintale",
+    "Chilaw", "Colombo"
+]
+
+
+# --------------------------------------------------
+# Approximate Coordinates (For KM-Based Sorting)
+# --------------------------------------------------
+PLACE_COORDINATES = {
+    "Colombo": (6.9271, 79.8612),
+    "Negombo": (7.2083, 79.8358),
+    "Anuradhapura": (8.3114, 80.4037),
+    "Sigiriya": (7.9570, 80.7603),
+    "Polonnaruwa": (7.9403, 81.0188),
+    "Kandy": (7.2906, 80.6337),
+    "Nuwara Eliya": (6.9497, 80.7891),
+    "Ella": (6.8667, 81.0466),
+    "Yala": (6.3725, 81.5185),
+    "Tangalle": (6.0243, 80.7946),
+    "Mirissa": (5.9483, 80.4716),
+    "Galle": (6.0535, 80.2210),
+    "Bentota": (6.4218, 79.9989),
+    "Trincomalee": (8.5874, 81.2152),
+    "Nilaveli": (8.6955, 81.1843),
+}
+
+
+# --------------------------------------------------
+# Distance Calculation (Haversine Formula)
+# --------------------------------------------------
+def calculate_distance(coord1, coord2):
+    R = 6371
+    lat1, lon1 = map(math.radians, coord1)
+    lat2, lon2 = map(math.radians, coord2)
+
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+
+    a = math.sin(dlat/2)**2 + math.cos(lat1)*math.cos(lat2)*math.sin(dlon/2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+
+    return R * c
+
+
+# --------------------------------------------------
+# Sort Places by Nearest Distance
+# --------------------------------------------------
+def sort_places_by_distance(places):
+
+    places_with_coords = [p for p in places if p in PLACE_COORDINATES]
+
+    if not places_with_coords:
+        return places
+
+    sorted_places = []
+    current = places_with_coords[0]
+    sorted_places.append(current)
+
+    remaining = places_with_coords[1:]
+
+    while remaining:
+        nearest = min(
+            remaining,
+            key=lambda x: calculate_distance(
+                PLACE_COORDINATES[current],
+                PLACE_COORDINATES[x]
+            )
+        )
+        sorted_places.append(nearest)
+        remaining.remove(nearest)
+        current = nearest
+
+    return sorted_places
+
+
+# --------------------------------------------------
+# Extract Trip Info from Email
+# --------------------------------------------------
+def extract_trip_info(email):
+
+    days_match = re.search(r"(\d+)\s*day", email.lower())
+    days = int(days_match.group(1)) if days_match else 7
+    days = max(3, min(days, 30))
+
+    budget_match = re.search(r"(usd|\$)\s*([\d,]+)", email.lower())
+    budget = int(budget_match.group(2).replace(",", "")) if budget_match else None
+
+    adults_match = re.search(r"(\d+)\s*adult", email.lower())
+    adults = int(adults_match.group(1)) if adults_match else 1
+
+    child_match = re.search(r"(\d+)\s*child", email.lower())
+    children = int(child_match.group(1)) if child_match else 0
+
+    preferred_section = re.search(
+        r"preferred destinations:(.*?)(travel style|budget range|we are interested)",
+        email.lower(),
+        re.DOTALL
+    )
+
+    places = []
+
+    if preferred_section:
+        raw_places = preferred_section.group(1).split(",")
+        for p in raw_places:
+            clean = p.strip(" .\n*")
+            if len(clean) > 2:
+                places.append(clean.title())
+
+    return days, budget, adults, children, places
+
+
+# --------------------------------------------------
+# FUNCTION 1: Mail-Based Allocation (KM Sorted)
+# --------------------------------------------------
+def allocate_places_to_days(days, places):
+
+    if not places:
+        return []
+
+    places = sort_places_by_distance(places)
+
+    schedule = []
+    total_places = len(places)
+
+    if total_places >= days:
+        base = total_places // days
+        remainder = total_places % days
+        index = 0
+
+        for i in range(days):
+            count = base + (1 if i < remainder else 0)
+            schedule.append(places[index:index + count])
+            index += count
+
+    else:
+        base_days = days // total_places
+        remainder_days = days % total_places
+
+        for i, place in enumerate(places):
+            repeat = base_days + (1 if i < remainder_days else 0)
+            for _ in range(repeat):
+                schedule.append([place])
+
+    return schedule
+
+
+# --------------------------------------------------
+# FUNCTION 2: Default Allocation (1 Place Per Day)
+# --------------------------------------------------
+def default_allocation(days):
+    selected = DEFAULT_ROUTE[:days]
+    return [[place] for place in selected]
+
+
+# --------------------------------------------------
+# Generate Itinerary
+# --------------------------------------------------
+def generate_itinerary(days, budget, adults, children, schedule):
+
+    schedule_text = ""
+    for i, day_places in enumerate(schedule, start=1):
+        schedule_text += f"Day {i}: {', '.join(day_places)}\n"
+
+    prompt = f"""
+You are a professional Sri Lanka travel consultant.
+
+Create EXACTLY {days} days itinerary.
+
+Trip Details:
+Adults: {adults}
+Children: {children}
+Budget: {budget} USD
+
+Follow this exact schedule:
+
+{schedule_text}
+
+Rules:
+- No extra days.
+- No missing days.
+- Focus only on listed destinations.
+- Suggest realistic hotels.
+- Include transport, activities, meals, entrance fees.
+- End with total estimated package cost.
+"""
+
+    response = client.chat.completions.create(
+        model="llama-3.1-8b-instant",
+        messages=[
+            {"role": "system", "content": "You are a Sri Lanka travel expert."},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.5,
+    )
+
+    return response.choices[0].message.content
+
+
+# --------------------------------------------------
+# Safe Image Fetch
+# --------------------------------------------------
+def fetch_image(place):
+
+    try:
+        if UNSPLASH_ACCESS_KEY:
+            res = requests.get(
+                "https://api.unsplash.com/search/photos",
+                params={
+                    "query": f"{place} Sri Lanka",
+                    "client_id": UNSPLASH_ACCESS_KEY,
+                    "per_page": 1
+                },
+                timeout=10
+            )
+            if res.status_code == 200:
+                data = res.json()
+                if data.get("results"):
+                    return data["results"][0]["urls"]["regular"]
+
+        if PEXELS_API_KEY:
+            res = requests.get(
+                "https://api.pexels.com/v1/search",
+                headers={"Authorization": PEXELS_API_KEY},
+                params={
+                    "query": f"{place} Sri Lanka",
+                    "per_page": 1
+                },
+                timeout=10
+            )
+            if res.status_code == 200:
+                data = res.json()
+                if data.get("photos"):
+                    return data["photos"][0]["src"]["large"]
+
+    except:
+        pass
+
+    return None
+
+
+# --------------------------------------------------
+# Main Route
+# --------------------------------------------------
+@app.route("/", methods=["GET", "POST"])
+def index():
+
+    if request.method == "POST":
+
+        email_content = request.form["email"]
+
+        days, budget, adults, children, places = extract_trip_info(email_content)
+
+        if places:
+            schedule = allocate_places_to_days(days, places)
+        else:
+            schedule = default_allocation(days)
+
+        itinerary = generate_itinerary(days, budget, adults, children, schedule)
+
+        unique_places = {p for day in schedule for p in day}
+
+        images = []
+        for place in unique_places:
+            img = fetch_image(place)
+            if img:
+                images.append({"place": place, "url": img})
+
+        return render_template(
+            "itinerary.html",
+            itinerary=itinerary,
+            images=images
+        )
+
+    return render_template("index.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

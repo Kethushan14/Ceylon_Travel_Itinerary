@@ -1,0 +1,126 @@
+convert this section
+
+5.1  Star Schema Design
+
+5.2  SQL Implementation of the Data Warehouse
+After designing the dimensional model, the data warehouse schema was implemented in SQL Server. A separate database named DWBI_Project was created to store the data warehouse tables.
+The implementation included the creation of all dimension tables and the fact table according to the star schema design. The DimDate table was created first and populated with date values covering the required time period for the analysis. After that, the remaining dimension tables such as DimCustomer, DimProduct, DimEmployee, DimShipper, and DimCategory were created.
+The FactSales table was then created with foreign key relationships connecting it to the dimension tables. The table also included business transaction fields such as OrderID and ProductID, together with the main measures Quantity, UnitPrice, Discount, and SalesAmount.
+ 
+During the implementation, surrogate keys were used as primary keys for all dimension tables. These keys were generated using identity columns, while the original source keys were stored as business reference attributes.
+Special consideration was given to the Slowly Changing Dimension design in DimCustomer, where the attributes StartDate, EndDate, and IsCurrent were included to support historical tracking of customer changes.
+This SQL implementation provided the physical structure required for loading data through SSIS and ensured that the warehouse schema was ready for analytical querying.
+ 
+5.3 Assumptions Made in the Design
+Several assumptions were made during the design of the data warehouse. The FactSales table was designed at the grain of one product line item in one order. This means each record in the fact table represents one product sold within a specific order.
+The DimCustomer table was selected as the Slowly Changing Dimension because customer details such as city, country, or contact information can change over time.
+The DimDate table was generated separately to support time-based analysis and to avoid date lookup failures during ETL processing.
+The product category was treated as a separate dimension to support category-level analysis. In addition, surrogate keys were used for all dimensions to maintain consistency and improve query performance in the warehouse.
+
+
+6 .     ETL development
+The ETL process for this project was developed using SQL Server Integration Services (SSIS). The main purpose of the ETL process was to extract data from multiple source systems, transform it into the required format, and load it into the data warehouse.
+To manage the ETL flow properly, the implementation was divided into two main stages. In the first stage, data from the source systems was loaded into a staging database. In the second stage, the data was transformed and loaded from the staging database into the dimensional data warehouse.
+The ETL process used three different source types: CSV files, an Excel file, and a SQL Server database. This helped to demonstrate the integration of data from multiple formats into a unified warehouse system.
+
+6.1 Loading Data into the Staging Area
+The first ETL package, Load_Staging.dtsx, was developed to load data from the different source systems into the staging database named DWBI_Staging.
+The following staging tables were created and loaded:
+• StgEmployee 
+• StgOrder 
+• StgOrderDetails 
+• StgCustomer 
+• StgCategory 
+• StgShipper 
+• StgProduct 
+Employees, Orders, and Order Details were extracted from the SQL Server source database (DWBI_Source_DB). Customers, Categories, and Shippers were extracted from CSV files. Product data was extracted from the Excel file.
+Before loading data into each staging table, truncation logic was applied using the OnPreExecute event handler in SSIS. This was done to avoid duplicate records when the package was executed multiple times.
+
+
+
+
+
+
+
+next convert
+
+6.2 Loading Data into the Data Warehouse
+The second ETL package, Load_DW.dtsx, was used to transform and load data from the staging database into the data warehouse (DWBI_Project).
+The dimension tables were loaded first in the following order:
+• DimCategory 
+• DimShipper 
+• DimCustomer 
+• DimEmployee 
+• DimProduct 
+
+After loading the dimension tables, the FactSales table was loaded.
+This loading order was important because the fact table depends on the dimension tables for
+surrogate key lookups.
+
+6.3 Transformations and Data Processing
+During the ETL process, several transformations were applied to convert the raw data into a structured format suitable for the data warehouse.
+·       Sorting - used before performing merge operations to ensure that data was properly aligned based on keys.
+·       A Merge Join transformation - used to combine data from the Orders and Order Details tables. This allowed the system to create a complete view of each transaction.
+·       Lookup transformations - used to retrieve surrogate keys from the dimension tables. These lookups were performed for Date, Customer, Product, Employee, Shipper, and Category dimensions. This ensured that the fact table stored references using surrogate keys instead of original source keys.
+·       Derived Column transformations - used to create calculated fields. The SalesAmount was calculated using the formula:             SalesAmount = Quantity × UnitPrice × (1 − Discount)
+ 
+In addition, the transaction create time was generated using the system date during the loading process.
+Error handling was also considered during lookups by configuring the system to ignore rows with no matching entries. This helped to prevent ETL failures and ensured smooth data loading.
+ 
+6.4 Fact Table Loading
+The FactSales table was loaded after all dimension tables were successfully populated. This is because the fact table depends on the surrogate keys generated in the dimension tables.
+The data for the fact table was created by combining the Orders and Order Details data using a merge join operation. After that, lookup transformations were applied to obtain the required surrogate keys from each dimension table.
+
+Finally, the transformed data, including all foreign keys and calculated measures, was loaded into the FactSales table. This ensured that each record in the fact table was properly connected to all relevant dimensions.
+
+7.    Accumulating Fact Implementation
+In this project, an accumulating fact table approach was implemented to track the lifecycle of transactions. This was done by extending the FactSales table with additional columns to store transaction start time, completion time, and processing duration.
+The following columns were added to the FactSales table:
+• accm_txn_create_time - stores the time when the transaction record was created. 
+• accm_txn_complete_time - stores the time when the transaction was completed. 
+• txn_process_time_hours - stores the total processing time in hours between the create time and completion time. 
+The accm_txn_create_time was set during the initial ETL process using the system date. This represents the time when the transaction was loaded into the data warehouse.
+
+7.1   Completion Time Update Process
+ 
+To update the transaction completion time, a separate dataset was prepared containing order IDs and completion timestamps. This dataset was stored as a CSV file named fact_completion_updates.csv.
+ 
+A separate SSIS package named Update_Accumulating_Fact.dtsx was developed to handle the update process. The CSV file was first loaded into a staging table named FactCompletionUpdate in the DWBI_Staging database.
+ 
+After loading the update data into the staging table, an SQL update operation was performed to update the corresponding records in the FactSales table. This update was performed using an INNER JOIN between FactSales and FactCompletionUpdate based on OrderID.
+
+
+7.2  Process Time Calculation
+ 
+After updating the completion time, the transaction processing time was calculated using SQL. The DATEDIFF function was used to calculate the difference in hours between accm_txn_create_time and accm_txn_complete_time.
+ 
+Only records with a valid completion time were considered for this calculation. This ensured that the process time was calculated correctly without affecting incomplete transactions.
+
+7.3  Handling Missing Transaction IDs
+During the update process, it was possible that some order IDs in the update dataset did not exist in the FactSales table. To handle this scenario, the update operation was performed using an INNER JOIN. This ensured that only matching records were updated, while non-matching records were ignored without causing errors.
+ 
+This approach provided a safe and reliable method for handling missing transaction IDs in the update process.
+ 
+7.4  Validation of Results
+ 
+Validation queries were used to verify the correctness of the update process. These queries were used to check whether completion times were updated correctly, whether process times were calculated properly, and whether any unmatched transaction IDs existed in the update dataset.
+The results confirmed that the accumulating fact update process was successfully implemented.
+
+1.  1.    Validation and Results
+ 
+After completing the ETL process and accumulating fact updates, several validation checks were performed to ensure the correctness and completeness of the data warehouse.
+First, the total number of records in the FactSales table was verified to confirm that all transactions were successfully loaded. The results showed that the expected number of records was present in the fact table.
+Next, checks were performed to ensure that there were no NULL values in the foreign key columns of the fact table. This confirmed that all lookup transformations were successful and that each fact record was properly linked to the corresponding dimension tables.
+Additional validation was done to verify the calculated SalesAmount values. Sample records were checked to ensure that the calculation based on Quantity, UnitPrice, and Discount was correct.
+For the accumulating fact implementation, validation queries were used to confirm that accm_txn_complete_time was updated correctly and that txn_process_time_hours was calculated properly. The results showed that the process time values were consistent and logically correct.
+Finally, checks were performed to identify any missing transaction IDs in the update dataset. The results confirmed that unmatched records were handled safely without causing any errors in the system.
+These validation steps ensured that the data warehouse was accurate, consistent, and ready for analytical use.        
+__ __
+__SQL Queries__
+
+1. 1.    Conclusion
+This project successfully demonstrated the complete development of a data warehouse system using the Northwind dataset. The process included data source preparation, dimensional modeling, ETL development, and accumulating fact implementation.
+A multi-source ETL environment was implemented using CSV files, an Excel file, and a SQL Server database. The data was first loaded into a staging area and then transformed and loaded into a star schema-based data warehouse.
+The use of SSIS allowed efficient data extraction, transformation, and loading, while the implementation of Slowly Changing Dimensions ensured that historical data changes were properly managed.
+In addition, the accumulating fact table approach was used to track transaction progress, including completion time and processing duration.
+Overall, the project provides a strong foundation for business intelligence and analytical reporting, and it demonstrates the practical application of data warehousing concepts using real-world data.

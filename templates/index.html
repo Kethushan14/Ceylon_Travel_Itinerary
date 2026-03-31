@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ceylon Journey Weaver — AI Itinerary Generator</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+    .hero-bg {
+      background-image:
+        linear-gradient(135deg, rgba(13,148,136,.82) 0%, rgba(6,95,70,.88) 50%, rgba(8,145,178,.75) 100%),
+        url('https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?q=80&w=2128&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gradient-btn {
+      background: linear-gradient(135deg, #0d9488 0%, #059669 100%);
+      transition: all 0.3s ease;
+    }
+    .gradient-btn:hover {
+      background: linear-gradient(135deg, #0f766e 0%, #047857 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(13,148,136,.35);
+    }
+
+    .card-float {
+      transition: all 0.35s cubic-bezier(.4,0,.2,1);
+    }
+    .card-float:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(0,0,0,.12);
+    }
+
+    .template-card { transition: all 0.4s cubic-bezier(.4,0,.2,1); }
+    .template-card:hover { transform: translateY(-8px); box-shadow: 0 32px 64px rgba(0,0,0,.15); }
+    .template-card:hover .card-img { transform: scale(1.07); }
+    .card-img { transition: transform 0.7s cubic-bezier(.19,1,.22,1); }
+
+    .tab-btn { transition: all 0.25s ease; border-bottom: 2px solid transparent; }
+    .tab-btn.active { color: #0d9488; border-bottom-color: #0d9488; }
+
+    .textarea-field:focus { box-shadow: 0 0 0 4px rgba(13,148,136,.12); }
+
+    /* Floating label animation */
+    .upload-zone { transition: all 0.25s ease; }
+    .upload-zone:hover { border-color: #0d9488; background: #f0fdfc; }
+
+    /* Feature icon circles */
+    .feat-icon {
+      background: linear-gradient(135deg, #ccfbf1 0%, #d1fae5 100%);
+    }
+
+    /* Destination pills */
+    .dest-pill {
+      transition: all 0.2s ease;
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,.25);
+    }
+    .dest-pill:hover {
+      background: rgba(255,255,255,.25);
+      border-color: rgba(255,255,255,.5);
+      transform: translateY(-1px);
+    }
+
+    /* Pulse ring on CTA */
+    @keyframes pulseRing {
+      0% { box-shadow: 0 0 0 0 rgba(13,148,136,.4); }
+      70% { box-shadow: 0 0 0 18px rgba(13,148,136,0); }
+      100% { box-shadow: 0 0 0 0 rgba(13,148,136,0); }
+    }
+    .pulse-cta { animation: pulseRing 2.5s ease-out infinite; }
+
+    /* Scroll fade-in */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* Stat counter animation */
+    @keyframes countUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+    .stat-val { animation: countUp .6s ease forwards; }
+
+    /* Progress bar shimmer */
+    @keyframes shimmer {
+      from { background-position: -200% center; }
+      to   { background-position: 200% center; }
+    }
+    .progress-shimmer {
+      background: linear-gradient(90deg, #0d9488 0%, #34d399 50%, #0d9488 100%);
+      background-size: 200% auto;
+      animation: shimmer 1.5s linear infinite;
+    }
+
+    /* Nav scroll effect */
+    .nav-scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.08); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+<!-- ══════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════ -->
+<nav id="navbar" class="bg-white/95 backdrop-blur-md sticky top-0 z-40 transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex justify-between items-center h-16">
+      <!-- Brand -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl gradient-btn flex items-center justify-center shadow-md">
+          <i class="fas fa-compass text-white text-lg"></i>
+        </div>
+        <div>
+          <div class="font-bold text-gray-900 text-sm leading-tight" style="font-family:'Playfair Display',serif">Ceylon Journey Weaver</div>
+          <div class="text-xs text-teal-600 font-medium">AI-Powered Itinerary Generator</div>
+        </div>
+      </div>
+      <!-- Nav links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#features" class="text-slate-500 hover:text-teal-600 text-sm font-medium transition-colors">Features</a>
+        <a href="#templates" class="text-slate-500 hover:text-teal-600 text-sm font-medium transition-colors">Templates</a>
+        <a href="#formSection" class="text-slate-500 hover:text-teal-600 text-sm font-medium transition-colors">How It Works</a>
+      </div>
+      <!-- CTA -->
+      <button onclick="scrollToForm()" class="gradient-btn text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm">
+        <i class="fas fa-paper-plane mr-2"></i>Start Planning
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="hero-bg text-white relative overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+      <path d="M0,80 L1440,80 L1440,0 Q1080,80 720,60 Q360,40 0,80 Z" fill="#f8fafc"/>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24 pb-28">
+    <!-- Badge -->
+    <div class="flex justify-center mb-8">
+      <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 px-5 py-2 rounded-full text-sm font-medium">
+        <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+        AI-Powered Travel Planning · Sri Lanka
+      </span>
+    </div>
+
+    <!-- Headline -->
+    <div class="text-center max-w-4xl mx-auto mb-10">
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+        Plan Your Perfect<br>
+        <em class="text-emerald-300">Sri Lanka</em> Adventure
+      </h1>
+      <p class="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+        Paste your travel email and get a fully crafted, day-by-day itinerary with real hotels, routes, and activities — matched to your exact budget.
+      </p>
+    </div>
+
+    <!-- Stats row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-12">
+      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-center">
+        <div class="text-3xl font-bold mb-1 stat-val">205</div>
+        <div class="text-sm text-white/70">Cities Covered</div>
+      </div>
+      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-center">
+        <div class="text-3xl font-bold mb-1 stat-val">800+</div>
+        <div class="text-sm text-white/70">Hotels & Resorts</div>
+      </div>
+      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-center">
+        <div class="text-3xl font-bold mb-1 stat-val">AI</div>
+        <div class="text-sm text-white/70">Smart Analysis</div>
+      </div>
+      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-center">
+        <div class="text-3xl font-bold mb-1 stat-val">3</div>
+        <div class="text-sm text-white/70">Budget Tiers</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <button onclick="scrollToForm()" class="pulse-cta bg-white text-teal-700 font-bold py-4 px-10 rounded-2xl text-lg shadow-2xl hover:bg-gray-50 transition-all">
+        <i class="fas fa-wand-magic-sparkles mr-3 text-teal-500"></i>Create Your Itinerary
+      </button>
+      <button onclick="scrollToTemplates()" class="bg-white/15 border border-white/30 text-white font-semibold py-4 px-8 rounded-2xl hover:bg-white/25 transition-all backdrop-blur-sm">
+        <i class="fas fa-eye mr-2"></i>See Templates
+      </button>
+    </div>
+
+    <!-- Destination pills -->
+    <div class="flex flex-wrap justify-center gap-2 mt-12">
+      <span class="text-white/50 text-sm mr-2 self-center">Popular:</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Sigiriya</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Kandy</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Ella</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Yala Safari</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Galle Fort</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Nuwara Eliya</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Mirissa Beach</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FORM SECTION (overlaps hero bottom)
+══════════════════════════════════════════════ -->
+<section id="formSection" class="max-w-5xl mx-auto px-4 sm:px-6 -mt-4 pb-16 relative z-10">
+  <div class="bg-white rounded-3xl shadow-2xl overflow-hidden card-float">
+
+    <!-- Card header -->
+    <div class="bg-gradient-to-r from-teal-600 to-emerald-500 px-8 py-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-white text-2xl font-bold" style="font-family:'Playfair Display',serif">Create Your Itinerary</h2>
+          <p class="text-teal-100 text-sm mt-1">Paste your travel email — our AI handles everything</p>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <div class="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-full text-white text-xs border border-white/25">
+            <i class="fas fa-bolt text-yellow-300"></i> Instant Generation
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-8">
+      <!-- Tabs -->
+      <div class="flex gap-1 mb-8 border-b border-slate-100">
+        <button id="emailTabBtn" class="tab-btn active px-6 py-3 text-sm font-semibold rounded-t-lg" onclick="switchTab('email')">
+          <i class="fas fa-envelope mr-2 text-teal-500"></i>Paste Email
+        </button>
+        <button id="manualTabBtn" class="tab-btn px-6 py-3 text-sm font-semibold text-slate-400 rounded-t-lg" onclick="switchTab('manual')">
+          <i class="fas fa-sliders mr-2"></i>Manual Input
+        </button>
+      </div>
+
+      <!-- Email Tab -->
+      <div id="emailTab">
+        <!-- Quick fill examples -->
+        <div class="mb-5">
+          <div class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Try an example</div>
+          <div class="flex flex-wrap gap-2">
+            <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="luxury">
+              <i class="fas fa-crown mr-1.5 text-yellow-500"></i>Luxury Couple
+            </button>
+            <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="family">
+              <i class="fas fa-users mr-1.5 text-blue-500"></i>Family Trip
+            </button>
+            <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="budget">
+              <i class="fas fa-backpack mr-1.5 text-green-500"></i>Budget Explorer
+            </button>
+            <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="wildlife">
+              <i class="fas fa-paw mr-1.5 text-orange-500"></i>Wildlife Safari
+            </button>
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="relative">
+          <textarea
+            id="emailContent"
+            name="email"
+            rows="11"
+            class="textarea-field w-full bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 text-slate-700 text-sm leading-relaxed focus:border-teal-400 focus:bg-white outline-none transition-all resize-none"
+            placeholder="Paste your travel enquiry email here...
+
+Example:
+Hi, we're a couple planning a 7-day honeymoon in Sri Lanka.
+Budget: USD 3,000 total. 
+We'd love to visit Kandy, Ella, and the south coast beaches.
+Prefer boutique hotels with breakfast included.
+
+Kind regards, Sarah & James"
+          ></textarea>
+          <div class="absolute bottom-4 right-4 flex items-center gap-3">
+            <span id="charCount" class="text-xs text-slate-400">0 chars</span>
+            <button onclick="clearContent()" class="w-7 h-7 flex items-center justify-center rounded-full hover:bg-slate-200 text-slate-400 hover:text-slate-600 transition-colors">
+              <i class="fas fa-times text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- File upload -->
+        <div class="mt-4">
+          <div id="dropZone" class="upload-zone border-2 border-dashed border-slate-200 rounded-2xl p-6 text-center cursor-pointer" onclick="document.getElementById('emailFile').click()">
+            <input type="file" id="emailFile" class="hidden" accept=".txt,.eml,.html,.pdf"/>
+            <div class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mx-auto mb-3">
+              <i class="fas fa-cloud-arrow-up text-xl text-slate-400"></i>
+            </div>
+            <p class="text-slate-600 font-medium text-sm">Drop email file here or <span class="text-teal-600">browse</span></p>
+            <p class="text-slate-400 text-xs mt-1">PDF, TXT, EML supported</p>
+          </div>
+          <div id="fileInfo" class="hidden mt-3 p-3 bg-teal-50 border border-teal-200 rounded-xl flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center">
+                <i class="fas fa-file-lines text-teal-600 text-sm"></i>
+              </div>
+              <div>
+                <p id="fileName" class="text-sm font-medium text-teal-800"></p>
+                <p id="fileSize" class="text-xs text-teal-500"></p>
+              </div>
+            </div>
+            <button onclick="removeFile()" class="text-red-400 hover:text-red-600 transition-colors"><i class="fas fa-times"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manual Tab -->
+      <div id="manualTab" class="hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-2">Trip Duration</label>
+            <select id="manualDuration" class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 text-sm focus:border-teal-400 outline-none transition-colors">
+              <option>3–5 Days</option>
+              <option selected>7 Days</option>
+              <option>10–14 Days</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-2">Travellers</label>
+            <select id="manualTravelers" class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 text-sm focus:border-teal-400 outline-none transition-colors">
+              <option>Solo</option>
+              <option selected>2 People</option>
+              <option>Family with Kids</option>
+              <option>Group</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-2">Budget Level</label>
+            <select id="manualBudget" class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 text-sm focus:border-teal-400 outline-none transition-colors">
+              <option>Budget</option>
+              <option selected>Mid-range</option>
+              <option>Luxury</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-2">Interests</label>
+            <input type="text" id="manualInterests" placeholder="Beaches, Wildlife, Culture…"
+              class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 text-sm focus:border-teal-400 outline-none transition-colors"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info tip -->
+      <div class="mt-5 flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4">
+        <i class="fas fa-lightbulb text-amber-500 mt-0.5 flex-shrink-0"></i>
+        <p class="text-sm text-amber-800 leading-relaxed">
+          <strong>Tip:</strong> Include budget, group size, destinations and travel style for the most accurate itinerary.
+          No budget given? We automatically apply a <strong>medium tier</strong> plan.
+        </p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row gap-3 mt-6 pt-6 border-t border-slate-100">
+        <button id="useSampleBtn" class="flex-1 px-6 py-3.5 border-2 border-slate-200 text-slate-600 font-semibold rounded-xl hover:border-teal-400 hover:text-teal-600 hover:bg-teal-50 transition-all text-sm flex items-center justify-center gap-2">
+          <i class="fas fa-file-lines"></i>Use Sample Email
+        </button>
+        <button id="generateBtn" class="flex-2 px-8 py-3.5 gradient-btn text-white font-bold rounded-xl shadow-lg text-sm flex items-center justify-center gap-2" style="flex:2">
+          <i class="fas fa-wand-magic-sparkles"></i>Generate Itinerary
+          <i class="fas fa-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FEATURES
+══════════════════════════════════════════════ -->
+<section id="features" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-14 fade-in">
+      <span class="text-teal-600 font-semibold text-sm uppercase tracking-widest">Why Choose Us</span>
+      <h2 class="text-4xl font-bold text-slate-900 mt-3 mb-4">Everything You Need,<br><em class="text-teal-600">Automatically Handled</em></h2>
+      <p class="text-slate-500 max-w-xl mx-auto">From budget-matched hotels to optimised routes — our AI creates a complete Sri Lanka journey in seconds.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-float bg-slate-50 rounded-2xl p-6 fade-in">
+        <div class="feat-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+          <i class="fas fa-hotel text-teal-600 text-xl"></i>
+        </div>
+        <h3 class="font-bold text-slate-900 mb-2">800+ Hotels</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Budget-matched accommodation from our live supplier database across all tiers.</p>
+      </div>
+      <div class="card-float bg-slate-50 rounded-2xl p-6 fade-in">
+        <div class="feat-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+          <i class="fas fa-route text-teal-600 text-xl"></i>
+        </div>
+        <h3 class="font-bold text-slate-900 mb-2">Smart Routing</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Nearest-neighbour optimisation from Colombo airport across 205 cities.</p>
+      </div>
+      <div class="card-float bg-slate-50 rounded-2xl p-6 fade-in">
+        <div class="feat-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+          <i class="fas fa-utensils text-teal-600 text-xl"></i>
+        </div>
+        <h3 class="font-bold text-slate-900 mb-2">Meals & Transfers</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Real restaurant options, transport providers and activity suppliers per city.</p>
+      </div>
+      <div class="card-float bg-slate-50 rounded-2xl p-6 fade-in">
+        <div class="feat-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+          <i class="fas fa-brain text-teal-600 text-xl"></i>
+        </div>
+        <h3 class="font-bold text-slate-900 mb-2">AI-Powered</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Groq AI extracts every detail from your email and crafts a perfect daily programme.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     TEMPLATES SECTION
+══════════════════════════════════════════════ -->
+<section id="templates" class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-14 fade-in">
+      <span class="text-teal-600 font-semibold text-sm uppercase tracking-widest">Your Itinerary</span>
+      <h2 class="text-4xl font-bold text-slate-900 mt-3 mb-4">What You'll Receive</h2>
+      <p class="text-slate-500 max-w-xl mx-auto">A fully personalised, beautifully formatted day-by-day Sri Lanka itinerary with real images and supplier data.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Card 1 -->
+      <div class="template-card bg-white rounded-3xl overflow-hidden shadow-lg fade-in">
+        <div class="h-56 relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1580635849262-3161a7c99dac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTM5NzR8MHwxfHNlYXJjaHwxfHxFbGVwaGFudCUyMENvcnJpZG9yJTIwU2lnaXJpeWElMjBTcmklMjBMYW5rYXxlbnwxfDB8fHwxNzczMzc1OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Sigiriya" class="card-img w-full h-full object-cover"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent"></div>
+          <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-semibold border border-white/30">
+            Day Cards
+          </div>
+          <div class="absolute bottom-4 left-4">
+            <p class="text-white font-bold text-lg" style="font-family:'Playfair Display',serif">Hotel Showcase</p>
+            <p class="text-white/70 text-xs">Real photos, tier-matched</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-family:'Playfair Display',serif">Where to Stay</h3>
+          <p class="text-slate-500 text-sm mb-4 leading-relaxed">Budget-tier matched hotels with real photos, star ratings and direct website links.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Real hotel photography</li>
+            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>3 options per city</li>
+            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Star ratings &amp; websites</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="template-card bg-white rounded-3xl overflow-hidden shadow-lg fade-in">
+        <div class="h-56 relative overflow-hidden">
+          <img src="https://images.pexels.com/photos/32547976/pexels-photo-32547976.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Sri Lanka landscape" class="card-img w-full h-full object-cover"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent"></div>
+          <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-semibold border border-white/30">
+            Daily Plan
+          </div>
+          <div class="absolute bottom-4 left-4">
+            <p class="text-white font-bold text-lg" style="font-family:'Playfair Display',serif">Day Programme</p>
+            <p class="text-white/70 text-xs">AI-crafted, timed activities</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-family:'Playfair Display',serif">Day by Day</h3>
+          <p class="text-slate-500 text-sm mb-4 leading-relaxed">AI-generated daily schedules with timed activities, meals, transfers and local guides.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Timed activity schedule</li>
+            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Restaurant suggestions</li>
+            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Transfer &amp; guide options</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="template-card bg-white rounded-3xl overflow-hidden shadow-lg fade-in">
+        <div class="h-56 relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1692874310398-03cc79955dca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTM5NzR8MHwxfHNlYXJjaHwxfHxHYWdhJTIwQmVlcyUyMFlhbGElMjBZYWxhJTIwU3JpJTIwTGFua2F8ZW58MXwwfHx8MTc3MzI1MjUzOHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Sri Lanka beach" class="card-img w-full h-full object-cover"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent"></div>
+          <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-semibold border border-white/30">
+            Summary
+          </div>
+          <div class="absolute bottom-4 left-4">
+            <p class="text-white font-bold text-lg" style="font-family:'Playfair Display',serif">City Photo Strip</p>
+            <p class="text-white/70 text-xs">Landmark images, per city</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-family:'Playfair Display',serif">City Highlights</h3>
+          <p class="text-slate-500 text-sm mb-4 leading-relaxed">Real landmark photography for each destination, plus a complete trip summary at a glance.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Landmark photography</li>
+            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Route overview</li>
+            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Print-ready format</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA below templates -->
+    <div class="text-center mt-12 fade-in">
+      <button onclick="scrollToForm()" class="gradient-btn text-white font-bold py-4 px-10 rounded-2xl text-base shadow-lg inline-flex items-center gap-3">
+        <i class="fas fa-magic"></i>Generate Your Itinerary Now
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer class="bg-slate-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 text-center">
+    <div class="w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-xl">
+      <i class="fas fa-compass text-white text-2xl"></i>
+    </div>
+    <h3 class="text-2xl font-bold mb-3" style="font-family:'Playfair Display',serif">Ready to Explore Sri Lanka?</h3>
+    <p class="text-slate-400 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
+      Generate your personalised itinerary with real hotels, beautiful landmark photos, and a perfectly optimised route.
+    </p>
+    <button onclick="scrollToForm()" class="gradient-btn text-white font-bold py-3.5 px-8 rounded-xl shadow-lg inline-flex items-center gap-2">
+      <i class="fas fa-plane-departure"></i>Start Planning Now
+    </button>
+    <div class="mt-12 pt-8 border-t border-slate-800 text-slate-500 text-sm">
+      <p>© 2025 Ceylon Journey Weaver &nbsp;·&nbsp; AI-Powered &nbsp;·&nbsp; Real Supplier Data &nbsp;·&nbsp; 205 Cities</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════
+     LOADING MODAL
+══════════════════════════════════════════════ -->
+<div id="loadingModal" class="hidden fixed inset-0 bg-black/75 backdrop-blur-sm flex items-center justify-center z-50">
+  <div class="bg-white rounded-3xl p-10 max-w-sm mx-4 text-center shadow-2xl">
+    <!-- Animated icon -->
+    <div class="relative w-20 h-20 mx-auto mb-6">
+      <div class="absolute inset-0 rounded-full border-4 border-teal-100"></div>
+      <div class="absolute inset-0 rounded-full border-4 border-teal-500 border-t-transparent animate-spin"></div>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <i class="fas fa-compass text-teal-500 text-2xl"></i>
+      </div>
+    </div>
+    <h3 class="text-2xl font-bold text-slate-800 mb-2" style="font-family:'Playfair Display',serif">Crafting Your Journey</h3>
+    <p class="text-slate-500 text-sm mb-6" id="loadingStatus">Analysing your email…</p>
+    <!-- Progress bar -->
+    <div class="h-2 bg-slate-100 rounded-full overflow-hidden mb-2">
+      <div id="progressBar" class="h-full progress-shimmer rounded-full transition-all duration-500" style="width:0%"></div>
+    </div>
+    <p class="text-xs text-slate-400">This usually takes 15–30 seconds</p>
+  </div>
+</div>
+
+<script>
+// ── Sample emails ─────────────────────────────────────────
+const SAMPLES = {
+  luxury: `Dear Travel Team,\n\nMy partner and I are planning a luxury honeymoon in Sri Lanka for 10 nights.\nTotal budget: USD 6,000.\nWe would love Colombo, Sigiriya, Kandy, and finish by the beach in Galle or Bentota.\nWe prefer 5-star resorts or boutique luxury villas, with breakfast and dinner included.\nPrivate transfers and a dedicated guide would be ideal.\nTravel style: Romantic, cultural, leisurely.\n\nWarmly,\nJames & Amelia`,
+
+  family: `Hello,\n\nWe are a family of 2 adults and 2 children (ages 8 and 11) planning an 8-day trip to Sri Lanka.\nBudget: USD 2,500 total.\nWe are interested in wildlife (Yala safari), the hill country (Nuwara Eliya, Ella), and the cultural triangle (Sigiriya, Dambulla).\nWe need family-friendly hotels with breakfast included.\nThe kids love animals and outdoor activities.\n\nBest regards,\nThe Martins`,
+
+  budget: `Hi,\n\nI'm a solo backpacker — 5-day budget trip around Sri Lanka.\nTotal budget: USD 500.\nI want to see Colombo, Kandy, and Ella.\nBudget guesthouses are fine. Happy to use trains and local buses.\nInterested in hiking, local food, and cultural experiences.\n\nThanks,\nTom`,
+
+  wildlife: `Dear Sir,\n\nWe are 4 adults passionate about wildlife and nature photography.\nPlanning a 6-day Sri Lanka safari trip.\nBudget: USD 3,200 total.\nWe want to focus on Yala National Park, Udawalawe, and Minneriya.\nWe prefer eco-lodges or tented camps close to the parks.\nMeals included preferred. Early morning safari drives are a must.\n\nKind regards,\nThe Safari Group`
+};
+
+const SAMPLE_EMAIL = `Subject: Planning Our Dream Sri Lanka Trip - Family Vacation\n\nDear Travel Team,\n\nWe're excited to plan our family vacation to beautiful Sri Lanka!\n\nTravel Dates: December 20-27, 2024 (7 nights, 8 days)\nTravelers: 4 people - 2 adults and 2 children (ages 10 and 13)\nBudget: Mid-range - around USD 150-200 per night for hotels\n\nWhat We're Interested In:\n1. Historical Sites - ancient history and ruins\n2. Wildlife - the kids want to see elephants!\n3. Beautiful Beaches - some relaxing beach time\n4. Cultural Experiences - local culture and food\n5. Scenic Train Rides\n\nPlaces We'd Love to Visit:\n- Sigiriya Rock Fortress (a must!)\n- Temple of the Sacred Tooth in Kandy\n- Yala National Park for a safari\n- Galle Fort\n- Mirissa Beach\n- Tea plantations in Nuwara Eliya\n- Ella for hiking\n\nLooking forward to your itinerary!\n\nThe Johnson Family`;
+
+// ── DOM refs ──────────────────────────────────────────────
+const emailField = document.getElementById('emailContent');
+const charCountEl = document.getElementById('charCount');
+
+function updateCharCount() {
+  const n = emailField.value.length;
+  charCountEl.textContent = n ? `${n.toLocaleString()} chars` : '0 chars';
+  charCountEl.style.color = n > 30 ? '#0d9488' : '#9ca3af';
+}
+emailField.addEventListener('input', updateCharCount);
+
+// ── Quick fills ───────────────────────────────────────────
+document.querySelectorAll('.qf-chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    emailField.value = SAMPLES[btn.dataset.fill] || '';
+    updateCharCount();
+    emailField.focus();
+  });
+});
+
+// ── Clear ─────────────────────────────────────────────────
+function clearContent() {
+  emailField.value = '';
+  updateCharCount();
+  emailField.focus();
+}
+
+// ── File upload ───────────────────────────────────────────
+const emailFile = document.getElementById('emailFile');
+emailFile.addEventListener('change', function() {
+  if (!this.files.length) return;
+  const file = this.files[0];
+  document.getElementById('fileName').textContent = file.name;
+  document.getElementById('fileSize').textContent = formatSize(file.size);
+  document.getElementById('fileInfo').classList.remove('hidden');
+  const reader = new FileReader();
+  reader.onload = e => { emailField.value = e.target.result; updateCharCount(); };
+  reader.readAsText(file);
+});
+
+function removeFile() {
+  emailFile.value = '';
+  document.getElementById('fileInfo').classList.add('hidden');
+  emailField.value = '';
+  updateCharCount();
+}
+
+function formatSize(b) {
+  if (b === 0) return '0 B';
+  const s = ['B','KB','MB'];
+  const i = Math.floor(Math.log(b) / Math.log(1024));
+  return `${(b / Math.pow(1024, i)).toFixed(1)} ${s[i]}`;
+}
+
+// ── Tabs ──────────────────────────────────────────────────
+function switchTab(tab) {
+  const isEmail = tab === 'email';
+  document.getElementById('emailTab').classList.toggle('hidden', !isEmail);
+  document.getElementById('manualTab').classList.toggle('hidden', isEmail);
+  document.getElementById('emailTabBtn').classList.toggle('active', isEmail);
+  document.getElementById('manualTabBtn').classList.toggle('active', !isEmail);
+  document.getElementById('manualTabBtn').classList.toggle('text-slate-400', isEmail);
+  document.getElementById('emailTabBtn').classList.toggle('text-slate-400', !isEmail);
+}
+
+// ── Sample button ──────────────────────────────────────────
+document.getElementById('useSampleBtn').addEventListener('click', () => {
+  emailField.value = SAMPLE_EMAIL;
+  updateCharCount();
+  emailField.focus();
+});
+
+// ── Generate ──────────────────────────────────────────────
+document.getElementById('generateBtn').addEventListener('click', async function() {
+  let email = emailField.value.trim();
+
+  if (!document.getElementById('manualTab').classList.contains('hidden')) {
+    email = `Manual Input:\nDuration: ${document.getElementById('manualDuration').value}\nTravelers: ${document.getElementById('manualTravelers').value}\nBudget: ${document.getElementById('manualBudget').value}\nInterests: ${document.getElementById('manualInterests').value}`;
+  }
+
+  if (!email || email.length < 30) {
+    alert('Please paste your travel email or click "Use Sample Email" to try an example.');
+    return;
+  }
+
+  // Show loading modal
+  const modal = document.getElementById('loadingModal');
+  const bar = document.getElementById('progressBar');
+  const status = document.getElementById('loadingStatus');
+  modal.classList.remove('hidden');
+
+  const steps = [
+    'Analysing your email…',
+    'Extracting travel details…',
+    'Selecting hotels for your budget…',
+    'Fetching city images…',
+    'Building your daily programme…',
+    'Finalising your itinerary…'
+  ];
+
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress = Math.min(progress + (100 / steps.length), 95);
+    bar.style.width = progress + '%';
+    const idx = Math.min(Math.floor(progress / (100 / steps.length)), steps.length - 1);
+    status.textContent = steps[idx];
+    if (progress >= 95) clearInterval(interval);
+  }, 900);
+
+  try {
+    const formData = new FormData();
+    formData.append('email', email);
+    if (emailFile.files.length) formData.append('email_file', emailFile.files[0]);
+
+    const res = await fetch('/', { method: 'POST', body: formData });
+    clearInterval(interval);
+
+    if (res.ok) {
+      bar.style.width = '100%';
+      status.textContent = 'Redirecting to your itinerary…';
+      // Page replaces with the returned HTML (Flask renders itinerary.html)
+      const html = await res.text();
+      document.open(); document.write(html); document.close();
+    } else {
+      throw new Error(`Status ${res.status}`);
+    }
+  } catch (err) {
+    clearInterval(interval);
+    modal.classList.add('hidden');
+    console.error(err);
+    alert('Unable to generate itinerary. Please check the console for details.');
+  }
+});
+
+// ── Scroll helpers ─────────────────────────────────────────
+function scrollToForm() {
+  document.getElementById('formSection').scrollIntoView({ behavior: 'smooth' });
+}
+function scrollToTemplates() {
+  document.getElementById('templates').scrollIntoView({ behavior: 'smooth' });
+}
+window.scrollToForm = scrollToForm;
+window.switchTab = switchTab;
+window.clearContent = clearContent;
+window.removeFile = removeFile;
+
+// ── Scroll fade-in ─────────────────────────────────────────
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); fadeObserver.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+// ── Navbar shadow on scroll ────────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('nav-scrolled', window.scrollY > 10);
+});
+</script>
+</body>
+</html>

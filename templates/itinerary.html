@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ header_data.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Cinzel:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --cream:   #FDFAF5;
+      --cream2:  #F5F0E8;
+      --cream3:  #EBE4D8;
+      --brown:   #3D2B1F;
+      --brown2:  #6B4A35;
+      --rust:    #9B4F2E;
+      --gold:    #C4943A;
+      --gold2:   #E8C46A;
+      --slate:   #8A8078;
+      --border:  #DDD6CC;
+      --dark:    #1A1410;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--dark);
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════ */
+    .hero {
+      position: relative;
+      height: 100vh; min-height: 560px; max-height: 900px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: flex-end;
+      padding-bottom: 64px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .hero-bg-collage {
+      position: absolute; inset: 0;
+      display: grid;
+      grid-template-columns: repeat({{ images|length if images else 3 }}, 1fr);
+    }
+    .hero-bg-collage img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: brightness(.55) saturate(1.1);
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(26,20,16,.15) 0%,
+        rgba(26,20,16,.1) 40%,
+        rgba(26,20,16,.75) 75%,
+        rgba(26,20,16,.92) 100%
+      );
+    }
+    .hero-content { position: relative; z-index: 2; padding: 0 24px; width: 100%; max-width: 900px; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 16px;
+      font-family: 'Cinzel', serif;
+      font-size: 11px; letter-spacing: .35em; text-transform: uppercase;
+      color: var(--gold2);
+      margin-bottom: 16px;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after {
+      content: ''; display: block;
+      width: 40px; height: 1px; background: var(--gold2);
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(52px, 9vw, 100px);
+      font-weight: 400;
+      font-style: italic;
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: -.01em;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 24px rgba(0,0,0,.4);
+    }
+    .hero-meta {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 0;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 2px;
+      overflow: hidden;
+      margin: 0 auto;
+      max-width: 640px;
+    }
+    .hero-meta-item {
+      flex: 1 1 120px; padding: 14px 20px;
+      border-right: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.2);
+      backdrop-filter: blur(8px);
+    }
+    .hero-meta-item:last-child { border-right: none; }
+    .hero-meta-val {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px; font-weight: 400;
+      color: #fff; line-height: 1; margin-bottom: 3px;
+    }
+    .hero-meta-lbl {
+      font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+    }
+
+    /* ═══════════════════════════════════════
+       INTRO BAR
+    ═══════════════════════════════════════ */
+    .intro-bar {
+      background: var(--brown);
+      padding: 18px 32px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px;
+      font-family: 'Cinzel', serif;
+      font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+      color: rgba(255,255,255,.6);
+      flex-wrap: wrap;
+    }
+    .intro-bar .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold); }
+    .intro-bar span { color: var(--gold2); }
+
+    /* ═══════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════ */
+    .page { max-width: 960px; margin: 0 auto; padding: 0 28px; }
+
+    /* ═══════════════════════════════════════
+       DAY ENTRY
+    ═══════════════════════════════════════ */
+    .days-wrapper { padding: 64px 0 40px; }
+
+    .day-entry {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 0 40px;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+      opacity: 0; transform: translateY(20px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .day-entry.visible { opacity: 1; transform: translateY(0); }
+    .day-entry:first-child { border-top: 1px solid var(--border); }
+
+    /* Left col */
+    .day-left {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 14px; padding-top: 4px;
+    }
+    .day-circle {
+      width: 120px; height: 120px; border-radius: 50%;
+      overflow: hidden; flex-shrink: 0;
+      border: 3px solid var(--cream3);
+      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+      position: relative;
+    }
+    .day-circle img { width: 100%; height: 100%; object-fit: cover; }
+    .day-circle-placeholder {
+      width: 100%; height: 100%;
+      background: var(--cream3);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 4px; color: var(--slate); font-size: 24px;
+    }
+    .day-circle-placeholder small { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+    .day-num-badge {
+      font-family: 'Cinzel', serif;
+      font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--slate);
+      text-align: center;
+    }
+
+    /* Right col */
+    .day-right { display: flex; flex-direction: column; gap: 16px; }
+    .day-title-row { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+    .day-number-text {
+      font-family: 'Cinzel', serif;
+      font-size: 13px; letter-spacing: .18em;
+      color: var(--rust); text-transform: uppercase;
+    }
+    .day-city-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px; font-weight: 500;
+      color: var(--brown);
+      line-height: 1.1;
+    }
+    .day-multi-tag {
+      font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid var(--gold2);
+      padding: 3px 9px; border-radius: 2px;
+    }
+
+    /* Arrival / transfer */
+    .day-notice {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 12px; letter-spacing: .04em;
+      color: var(--slate);
+    }
+    .day-notice i { color: var(--rust); font-size: 11px; width: 14px; }
+
+    /* Hotel pill */
+    .hotel-pill {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--cream2);
+      border: 1px solid var(--border);
+      border-bottom: none;
+      padding: 12px 16px;
+      border-radius: 2px 2px 0 0;
+    }
+    .hotel-pill-img {
+      width: 48px; height: 48px; border-radius: 2px; overflow: hidden; flex-shrink: 0;
+      background: var(--cream3);
+    }
+    .hotel-pill-img img { width: 100%; height: 100%; object-fit: cover; }
+    .hotel-pill-img-ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--slate); font-size: 18px; }
+    .hotel-pill-info { flex: 1; min-width: 0; }
+    .hotel-pill-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px; font-weight: 500;
+      color: var(--brown); line-height: 1.2;
+    }
+    .hotel-pill-meta { font-size: 11px; color: var(--slate); margin-top: 2px; }
+    .hotel-pill-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+    .htag {
+      font-size: 10px; letter-spacing: .06em;
+      padding: 2px 7px; border-radius: 2px; border: 1px solid;
+    }
+    .htag-r { background: rgba(61,43,31,.05); color: var(--brown2); border-color: rgba(61,43,31,.15); }
+    .htag-m { background: rgba(196,148,58,.08); color: #7A5A18; border-color: rgba(196,148,58,.2); }
+    .htag-c { background: rgba(30,80,140,.06); color: #1a3a70; border-color: rgba(30,80,140,.15); }
+    .htag-p { background: rgba(120,60,160,.06); color: #5a2880; border-color: rgba(120,60,160,.15); }
+    .hotel-pill-link {
+      font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--rust); text-decoration: none; border-bottom: 1px solid rgba(155,79,46,.3);
+      padding-bottom: 1px; white-space: nowrap;
+      transition: border-color .2s;
+    }
+    .hotel-pill-link:hover { border-color: var(--rust); }
+
+    /* ── Accommodation description block ── */
+    .acc-desc {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-top: none;
+      padding: 10px 16px 14px;
+      border-radius: 0 0 2px 2px;
+      margin-bottom: 4px;
+    }
+    .acc-desc-tags {
+      display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px;
+    }
+    .acc-tag {
+      font-size: 10px; letter-spacing: .05em;
+      padding: 3px 9px; border-radius: 2px; border: 1px solid;
+      font-weight: 400;
+    }
+    .acc-tag-room  { background: rgba(61,43,31,.05);    color: var(--brown2); border-color: rgba(61,43,31,.18); }
+    .acc-tag-meal  { background: rgba(196,148,58,.08);  color: #7A5A18;       border-color: rgba(196,148,58,.22); }
+    .acc-tag-rate  { background: rgba(120,60,160,.06);  color: #5a2880;       border-color: rgba(120,60,160,.18); }
+    .acc-tag-curr  { background: rgba(30,80,140,.06);   color: #1a3a70;       border-color: rgba(30,80,140,.18); }
+    .acc-tag-active{ background: rgba(40,120,60,.07);   color: #1a5c30;       border-color: rgba(40,120,60,.2); }
+    .acc-desc-text {
+      font-size: 12px; line-height: 1.75; color: var(--slate);
+      margin: 0;
+    }
+
+    /* About text */
+    .day-about {
+      font-size: 13px; line-height: 1.8; color: var(--slate);
+      padding-left: 12px;
+      border-left: 2px solid var(--gold2);
+    }
+
+    /* Schedule table */
+    .schedule-table { width: 100%; border-collapse: collapse; }
+    .schedule-table tr { border-bottom: 1px solid var(--cream3); }
+    .schedule-table tr:last-child { border-bottom: none; }
+    .schedule-table td { padding: 10px 0; vertical-align: top; }
+    .sched-time {
+      font-family: 'Lato', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      color: var(--rust);
+      white-space: nowrap;
+      padding-right: 20px;
+      width: 90px;
+    }
+    .sched-dot-col { width: 16px; padding-right: 16px; padding-top: 6px; }
+    .sched-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      border: 1.5px solid var(--gold);
+      background: var(--cream);
+      margin: 0 auto;
+    }
+    .sched-activity {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px; font-weight: 500;
+      color: var(--brown);
+      display: block; margin-bottom: 1px;
+    }
+    .sched-desc {
+      font-size: 12px; color: var(--slate); line-height: 1.6;
+    }
+
+    /* Services strip */
+    .svc-strip { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+    .svc-chip {
+      font-size: 11px; color: var(--slate);
+      background: var(--cream2); border: 1px solid var(--border);
+      padding: 4px 10px; border-radius: 20px;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .svc-chip i { font-size: 9px; color: var(--rust); }
+
+    /* Divider ornament */
+    .divider {
+      display: flex; align-items: center; gap: 16px;
+      padding: 56px 0 24px;
+    }
+    .divider-line { flex: 1; height: 1px; background: var(--border); }
+    .divider-text {
+      font-family: 'Cinzel', serif;
+      font-size: 11px; letter-spacing: .28em; text-transform: uppercase;
+      color: var(--slate); white-space: nowrap;
+    }
+    .divider-diamond {
+      width: 7px; height: 7px; background: var(--gold);
+      transform: rotate(45deg);
+    }
+
+    /* ═══════════════════════════════════════
+       SUMMARY
+    ═══════════════════════════════════════ */
+    .summary {
+      background: var(--brown);
+      padding: 56px 32px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(130px,1fr));
+      gap: 0;
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 2px;
+      margin: 0 0 48px;
+    }
+    .summary-cell {
+      text-align: center; padding: 24px 16px;
+      border-right: 1px solid rgba(255,255,255,.08);
+    }
+    .summary-cell:last-child { border-right: none; }
+    .summary-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; font-weight: 400;
+      color: var(--gold2); line-height: 1;
+      display: block; margin-bottom: 8px;
+    }
+    .summary-lbl {
+      font-family: 'Cinzel', serif;
+      font-size: 9px; letter-spacing: .22em; text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+    }
+
+    /* ═══════════════════════════════════════
+       ACTIONS
+    ═══════════════════════════════════════ */
+    .actions {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 12px; padding-bottom: 56px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Cinzel', serif;
+      font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
+      padding: 14px 30px; border-radius: 2px;
+      cursor: pointer; text-decoration: none;
+      transition: all .2s;
+    }
+    .btn-dark { background: var(--brown); color: #fff; border: 1px solid var(--brown); }
+    .btn-dark:hover { background: var(--brown2); box-shadow: 0 4px 18px rgba(61,43,31,.25); }
+    .btn-outline { background: transparent; color: var(--brown); border: 1px solid var(--brown); }
+    .btn-outline:hover { background: var(--cream2); }
+    .btn-ghost { background: var(--cream2); color: var(--slate); border: 1px solid var(--border); }
+    .btn-ghost:hover { background: var(--cream3); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 40px;
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      font-size: 9px; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--slate);
+    }
+    footer .gold { color: var(--gold); margin: 0 10px; }
+
+    @media (max-width: 600px) {
+      .day-entry { grid-template-columns: 1fr; }
+      .day-left { flex-direction: row; align-items: center; }
+      .day-circle { width: 80px; height: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+{# ── Jinja lookups ── #}
+{% set MEAL_MAP = {'1':'Room Only','2':'Bed & Breakfast','3':'Half Board','4':'Full Board','7':'All Inclusive','9':'Room Only','10':'Full Board'} %}
+{% set ROOM_MAP = {'1':'Standard','2':'Deluxe','6':'Superior','7':'Executive','8':'Exec Suite','9':'Deluxe Suite','10':'Luxury Suite','22':'Suite','27':'Family Suite','33':'Super Deluxe','63':'Honeymoon','65':'Superior Sea View','66':'Deluxe Sea View','72':'Studio','78':'Cottage','91':'Whole Villa','103':'Premier Garden View','104':'Premier Ocean View','105':'Garden Pool Villa','109':'Deluxe Ocean View','111':'Presidential Suite','122':'Deluxe Suite Pool','123':'Mountain View','124':'Garden View','140':'Superior Bungalow','141':'Tower Suite','147':'Ulagalla Villa','148':'Std Bungalow','149':'Park Suite','150':'Residence Suite','151':'Superior Deluxe','163':'Deluxe Villa','164':'Garden Villa','165':'Family Bungalow','166':'Premium Deluxe','200':'Classic','209':'Tree House','244':'Full Villa','251':'Beach Villa','252':'Bay Suite','255':'Superior Chalet','256':'Deluxe Chalet','263':'Superior Family','270':'Villa w/ Jacuzzi','271':'Villa w/ Plunge Pool','282':'Tent','285':'Superior Mtn View','293':'2-Bedroom Villa','296':'Premium Suite','307':'Villa','311':'Superior Lodge','400':'Premier','446':'Lake View Suite','453':'Solo Suite','466':'Bawa Suite','469':'King Villa','470':'Queen Villa','471':'Gem Suite','485':'Boutique Luxury','491':'One Bedroom Suite','498':'Suite w/ Plunge Pool','501':'Mtn View Chalet','505':'Deluxe Villa','509':'Kandyan Suite','529':'Heritage Suite','530':'Grand Suite','531':'Tower Room'} %}
+{% set CURR_MAP = {'0':'LKR','1':'USD','2':'USD','3':'EUR','5':'GBP','8':'AUD','9':'LKR'} %}
+{% set RATE_MAP = {'1':'Fixed Rate','2':'Per Person','3':'Per Vehicle'} %}
+{% set RIDE_MAP = {'1':'Jeep','2':'Boat','3':'Boat','4':'Train'} %}
+{% set VCAT_MAP = {'1':'Car','3':'Van','4':'Micro Van','5':'33-Seater','6':'Large Coach','7':'Baggage Van','8':'Mini Coach','9':'KDH High Roof Van','10':'SUV'} %}
+
+{% macro rv(val, map) -%}
+  {%- if val and val|string|lower not in ('nan','none','null','','0.0','0') -%}
+    {%- set k = val|string -%}{%- if '.' in k -%}{%- set k = k.split('.')[0] -%}{%- endif -%}
+    {%- if map[k] is defined -%}{{- map[k] -}}{%- else -%}{{- val -}}{%- endif -%}
+  {%- endif -%}
+{%- endmacro %}
+
+{# ── HERO ── #}
+<div class="hero">
+  {% if images %}
+  <div class="hero-bg-collage">
+    {% for img in images %}
+    <img src="{{ img.url or 'https://via.placeholder.com/400x600?text=' ~ img.place }}" alt="{{ img.place }}">
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="hero-bg-collage" style="background:var(--brown)"></div>
+  {% endif %}
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">{{ header_data.days }} Day Trip</div>
+    <h1>{{ header_data.title }}</h1>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-val">{{ header_data.days }}</span>
+        <span class="hero-meta-lbl">Days</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-val">{{ header_data.total_travelers }}</span>
+        <span class="hero-meta-lbl">Travellers</span>
+      </div>
+      {% if header_data.budget %}
+      <div class="hero-meta-item">
+        <span class="hero-meta-val">${{ "{:,}".format(header_data.budget) }}</span>
+        <span class="hero-meta-lbl">Budget</span>
+      </div>
+      {% endif %}
+      <div class="hero-meta-item">
+        <span class="hero-meta-val">{{ header_data.total_cities }}</span>
+        <span class="hero-meta-lbl">Cities</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ── INTRO BAR ── #}
+<div class="intro-bar">
+  <span>{{ header_data.travel_style }}</span>
+  <div class="dot"></div>
+  <span>{{ header_data.budget_tier.tier | title }} Budget</span>
+  <div class="dot"></div>
+  <span>{{ header_data.meal_plan }}</span>
+  <div class="dot"></div>
+  <span style="color:rgba(255,255,255,.4)">
+    {% for city in header_data.route_cities %}{{ city }}{% if not loop.last %} → {% endif %}{% endfor %}
+  </span>
+</div>
+
+{# ── DAYS ── #}
+<div class="page">
+  <div class="days-wrapper">
+
+    {% for day in itinerary_days %}
+    {# Determine city image for circle #}
+    {% set circle_img = namespace(url=none) %}
+    {% for img in images %}
+      {% for city in day.cities %}
+        {% if img.place == city and circle_img.url is none %}{% set circle_img.url = img.url %}{% endif %}
+      {% endfor %}
+    {% endfor %}
+
+    <div class="day-entry">
+
+      {# LEFT: circle photo + day label #}
+      <div class="day-left">
+        <div class="day-circle">
+          {% if circle_img.url %}
+          <img src="{{ circle_img.url }}" alt="{{ day.cities[0] }}">
+          {% else %}
+          <div class="day-circle-placeholder"><i class="fas fa-map-marker-alt"></i><small>{{ day.cities[0][:3]|upper }}</small></div>
+          {% endif %}
+        </div>
+        <div class="day-num-badge">Day {{ "%02d"|format(day.day_num) }}</div>
+      </div>
+
+      {# RIGHT: all content #}
+      <div class="day-right">
+
+        {# Title row #}
+        <div class="day-title-row">
+          <span class="day-number-text">Day {{ day.day_num }}</span>
+          <span class="day-city-name">
+            {% for city in day.cities %}{{ city }}{% if not loop.last %} <span style="color:var(--gold);font-weight:300;font-size:24px">→</span> {% endif %}{% endfor %}
+          </span>
+          {% if day.is_multi_city %}<span class="day-multi-tag">Multi-City</span>{% endif %}
+        </div>
+
+        {# Arrival / Transfer #}
+        {% if day.arrival_note %}
+        <div class="day-notice"><i class="fas fa-plane-arrival"></i><span>{{ day.arrival_note }}</span></div>
+        {% endif %}
+        {% if day.transfer_note %}
+        <div class="day-notice"><i class="fas fa-bus"></i><span>{{ day.transfer_note }}</span></div>
+        {% endif %}
+
+        {# ── Hotel pill + Accommodation description — one per city ── #}
+        {% for city in day.cities %}
+        {% set hotels = day.hotel_images.get(city, []) %}
+        {% if hotels %}
+          {% set h = hotels[0] %}
+          {% set sk = ['nan','none','null',''] %}
+          {% set svcs = h.services if h.services is defined else [] %}
+
+          {%- set tier = day.budget_tier.tier if day.budget_tier is defined else 'medium' -%}
+          {%- if tier == 'luxury' -%}{%- set mp = ['Full Board','Half Board','Bed & Breakfast','All Inclusive'] -%}
+          {%- elif tier == 'budget' -%}{%- set mp = ['Bed & Breakfast','Room Only','Half Board'] -%}
+          {%- else -%}{%- set mp = ['Half Board','Bed & Breakfast','Full Board','All Inclusive'] -%}{%- endif -%}
+
+          {%- set best = namespace(s=none,sc=999) -%}
+          {%- for svc in svcs -%}
+            {%- set m = svc.meal_plan if svc.meal_plan and svc.meal_plan|lower not in sk else '' -%}
+            {%- for i in range(mp|length) -%}
+              {%- if m == mp[i] and i < best.sc -%}{%- set best.sc=i -%}{%- set best.s=svc -%}{%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+          {%- if best.s is none and svcs -%}{%- set best.s = svcs[0] -%}{%- endif -%}
+
+          {%- set room_v = best.s.room_category if best.s and best.s.room_category and best.s.room_category|lower not in sk else '' -%}
+          {%- set meal_v = best.s.meal_plan      if best.s and best.s.meal_plan      and best.s.meal_plan|lower      not in sk else '' -%}
+          {%- set curr_v = best.s.currency       if best.s and best.s.currency       and best.s.currency|lower       not in sk else '' -%}
+          {%- set rate_v = best.s.rate_type      if best.s and best.s.rate_type      and best.s.rate_type|lower      not in sk else '' -%}
+          {%- set svc_name_v = best.s.name       if best.s and best.s.name           and best.s.name|lower           not in sk else '' -%}
+
+          {# ── Hotel pill (top half of card) ── #}
+          <div class="hotel-pill">
+            <div class="hotel-pill-img">
+              {% if h.image_url %}<img src="{{ h.image_url }}" alt="{{ h.name }}">
+              {% else %}<div class="hotel-pill-img-ph"><i class="fas fa-hotel"></i></div>{% endif %}
+            </div>
+            <div class="hotel-pill-info">
+              <div class="hotel-pill-name">{{ h.name }}{% if h.rating_label %} <span style="font-size:11px;color:var(--gold);font-family:'Lato',sans-serif;font-weight:400">{{ h.rating_label }}</span>{% endif %}</div>
+              <div class="hotel-pill-meta">{{ city }} &nbsp;·&nbsp; Accommodation</div>
+              <div class="hotel-pill-tags">
+                {% if room_v %}<span class="htag htag-r">🛏 {{ room_v }}</span>{% endif %}
+                {% if meal_v %}<span class="htag htag-m">🍽 {{ meal_v }}</span>{% endif %}
+                {% if curr_v %}<span class="htag htag-c">💵 {{ curr_v }}</span>{% endif %}
+                {% if rate_v %}<span class="htag htag-p">🏷 {{ rate_v }}</span>{% endif %}
+              </div>
+            </div>
+            {% if h.website and h.website not in ('nan','None','NULL','') %}
+            <a href="{{ h.website }}" target="_blank" class="hotel-pill-link"><i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i> Book</a>
+            {% endif %}
+          </div>
+
+          {# ── Accommodation description (bottom half of card) ── #}
+          <div class="acc-desc">
+            <p class="acc-desc-text">
+              {{ h.name }} offers
+              {%- if svc_name_v %} {{ svc_name_v }}{% endif %}
+              {%- if room_v %} {{ room_v }} rooms{% endif %}
+              {%- if meal_v %} with {{ meal_v }} meal plan{% endif %}.
+              The property operates in {{ curr_v if curr_v else 'local' }} currency
+              {%- if rate_v %}, priced on a {{ rate_v | lower }} basis{% endif %}.
+              This accommodation falls under the Accommodation category and is currently active and available for booking.
+            </p>
+          </div>
+
+        {% endif %}
+        {% endfor %}
+
+        {# Services chips #}
+        {% for city in day.cities %}
+        {% set svc = day.full_services_by_city.get(city, {}) %}
+        {% if svc.rides or svc.transfers or svc.flight_train or svc.driver_guides %}
+        <div class="svc-strip">
+          {% for group in svc.rides %}{% for s in group.services %}
+          <div class="svc-chip"><i class="fas fa-car-side"></i>{{ s.service.supplier_service_name }}</div>
+          {% endfor %}{% endfor %}
+          {% for group in svc.transfers %}{% for s in group.services %}
+          <div class="svc-chip"><i class="fas fa-arrows-left-right"></i>{{ s.service.supplier_service_name }}</div>
+          {% endfor %}{% endfor %}
+          {% for group in svc.flight_train %}{% for s in group.services %}
+          <div class="svc-chip"><i class="fas fa-train"></i>{{ s.service.supplier_service_name }}</div>
+          {% endfor %}{% endfor %}
+          {% for group in svc.driver_guides %}{% for s in group.services %}
+          <div class="svc-chip"><i class="fas fa-user-tie"></i>{{ s.service.supplier_service_name }}</div>
+          {% endfor %}{% endfor %}
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {# About #}
+        {% set plan_lines = day.ai_plan.split('\n') %}
+        {% for line in plan_lines %}
+          {% if line.strip().startswith('📍') %}
+          <div class="day-about">{{ line.replace('📍 ABOUT:','').replace('📍','').strip() }}</div>
+          {% endif %}
+        {% endfor %}
+
+        {# Schedule table #}
+        <table class="schedule-table">
+          {% for line in plan_lines %}
+            {% if line.strip() and not line.startswith('📍') and not line.startswith('🍽 MEALS') and not line.startswith('🏨 HOTEL') %}
+              {% set parts = line.split(' — ', 1) %}
+              {% if parts|length > 1 %}
+              {% set time_str = parts[0]|replace('🌅','')|replace('🕙','')|replace('🌞','')|replace('🌆','')|replace('🍽','')|replace('🌇','')|replace('🌃','')|trim %}
+              {% set desc = parts[1] %}
+              {% set act_p = desc.split(':', 1) %}
+              <tr>
+                <td class="sched-time">{{ time_str }}</td>
+                <td class="sched-dot-col"><div class="sched-dot"></div></td>
+                <td>
+                  {% if act_p|length > 1 %}
+                  <span class="sched-activity">{{ act_p[0].strip() }}</span>
+                  <span class="sched-desc">{{ act_p[1].strip() }}</span>
+                  {% else %}
+                  <span class="sched-desc">{{ desc }}</span>
+                  {% endif %}
+                </td>
+              </tr>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </table>
+
+      </div>{# end day-right #}
+    </div>{# end day-entry #}
+    {% endfor %}
+
+    {# Ornament divider #}
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-diamond"></div>
+      <div class="divider-text">End of Itinerary</div>
+      <div class="divider-diamond"></div>
+      <div class="divider-line"></div>
+    </div>
+
+  </div>
+
+  {# Summary #}
+  <div class="summary">
+    <div class="summary-cell"><span class="summary-val">{{ days }}</span><span class="summary-lbl">Days</span></div>
+    <div class="summary-cell"><span class="summary-val">{{ header_data.total_cities }}</span><span class="summary-lbl">Cities</span></div>
+    <div class="summary-cell"><span class="summary-val">{{ adults + children }}</span><span class="summary-lbl">Travellers</span></div>
+    {% if budget %}<div class="summary-cell"><span class="summary-val">${{ "{:,}".format(budget) }}</span><span class="summary-lbl">Budget</span></div>{% endif %}
+  </div>
+
+  {# Actions #}
+  <div class="actions">
+    <a href="{{ url_for('download_json') }}" class="btn btn-dark"><i class="fas fa-download" style="font-size:10px"></i> Download JSON</a>
+    <a href="{{ url_for('index') }}" class="btn btn-outline"><i class="fas fa-plus" style="font-size:10px"></i> New Itinerary</a>
+    <button onclick="window.print()" class="btn btn-ghost"><i class="fas fa-print" style="font-size:10px"></i> Print</button>
+  </div>
+
+  <footer>
+    <span>Sri Lanka Travel</span><span class="gold">✦</span><span>Your Journey, Your Pace</span><span class="gold">✦</span><span>Crafted with Care</span>
+  </footer>
+
+</div>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.day-entry').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

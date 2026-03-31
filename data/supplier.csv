@@ -1,0 +1,1577 @@
+"supplier_id","supplier_code","supplier_name","contact_name","profile","supplier_address","supplier_credit_period","active_vat","add_tax","supplier_vat_reg_number","supplier_email","supplier_telephone","supplier_mobile","supplier_website","supplier_image","supplier_image1","supplier_rating_id","city_id","sub_city","latitude","longitude","deleted","created_by","created_date","update_by","update_date"
+"1","SUP00001","Aditya Hotel",NULL,NULL,"Galle
+","0","1","1",,," +94 91 2267 708",,"http://www.aditya-resort.com/",NULL,NULL,"8","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"2","SUP00002","Aida Ayurveda & Spa",NULL,NULL,,"0","0","1",,,"  +94 34 2271 137/9",,"http://www.aidaayurveda.com/",NULL,NULL,"3","55","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"3","SUP00003","Alpine Hotel",NULL,NULL,"Nuwara Eliya
+","0","1","1",,,"94 52 4907 171/94 52 2223 500",,"http://alpineecotravels.com/",NULL,NULL,"3","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"4","SUP00004","Amangalla",NULL,NULL,"Galle
+","0","1","1",,," +94 91 2233 388",,"http://www.amanresorts.com/amangalla/home.asp",NULL,NULL,"8","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"5","SUP00005","Sorowwa Resort & Spa",NULL,NULL,,"0","1","1",,," +94 66 2270 332-6",,"http://www.sorowwa.com/",NULL,NULL,"2","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"6","SUP00006","Kottukal Beach House by Jetwing",,,"Pottuvil
+","0","1","1",,," +94 91 2345 700",,"http://www.jetwinghotels.com/kottukalbeachhou",,,"9","157","0","0","0","0",NULL,NULL,NULL,NULL
+"7","SUP00007","La Maison Nil Manel",NULL,NULL,,"0","0","1",,," +94 91 2264 331, +94 91 2264 331",,,NULL,NULL,"8","3","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"8","SUP00008","Lady Hill",NULL,NULL,"Galle
+","0","1","1",,," +94 91 2244 322","91 5450 950","http://www.ladyhillsl.com/",NULL,NULL,"3","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"10","SUP00009","Nyne Hotels -  Lake Lodge Colombo",,,"Colombo
+","0","1","1",,," +94 11 2326 443",,"http://www.taruhotels.com/",,,"9","29","0","0","0","0",NULL,NULL,NULL,"2025-09-26"
+"11","SUP00010","Amanwella",NULL,NULL,"Tangalle
+","0","1","1",,," + 94 47 2241 093",,"http://www.amanresorts.com/amanwella/home.asp",NULL,NULL,"8","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"12","SUP00011","Lake Lodge Kandalama",,,,"0","0",NULL,,," +94 66 7429 930"," +94 66 2052 500","http://www.lakelodgekandalama.com/",,,"3","64","0","0","0","0",NULL,NULL,NULL,"2025-03-11"
+"13","SUP00012","Wild Grass Nature Resort",,,,"0","1","1",,,"  +94 66 5670 680",,"http://www.wildgrass.lk/",,,"9","134","0","0","0","0",NULL,NULL,NULL,NULL
+"14","SUP00013","Amaya Hills",NULL,NULL,"16 Heerassagala Peradeniya Kandy
+","0","1","1",,," +94 81 4474 022/8, +94 11 4767 842/888",,"http://www.amayahills.net/",NULL,NULL,"2","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"15","SUP00014","Langdale Boutique Hotel by Amaya",,,"Nuwara Eliya","0","1","1",,," +94 52 4924 959",,"http://www.langdalebyamaya.com/",,,"8","116","0","0","0","0",NULL,NULL,NULL,"2024-06-26"
+"16","SUP00015","Living Heritage Koslanda",NULL,NULL,,"0","0","1",,," / Fax  +94 57 2050 506",,"http://www.koslanda.com/",NULL,NULL,"8","18","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"17","SUP00016","Stardust Beach Hotel ",NULL,NULL,,"0","0","1",,," +94 63 2248 191",,"http://www.arugambay.com/",NULL,NULL,"3","11","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"18","SUP00017","Maalu Maalu",NULL,NULL,"Passikudah
+","0","1","1",,,"+94 65 7 388 388",,"http://www.maalumaalu.com/",NULL,NULL,"1","118","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"19","SUP00018","Amaya Lake",,,"Dambulla
+","0","1","1",,," +94 66 4461 500 , +94 66 2286 823/5",,"http://www.amayalake.com/",,,"2","30","0","0","0","0",NULL,NULL,NULL,"2025-07-16"
+"20","SUP00019","Sunils Beach Hotel",NULL,NULL,,"0","0","1",,,"  +94 91 2277 186",,"http://www.sunilsbeach.com/",NULL,NULL,"3","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"21","SUP00020","Mahaweli Reach Hotel",NULL,NULL,"Kandy
+","0","1","1",,," +94 81 2472 727"," + 94 81 4471 883/5 ","http://www.mahaweli.com/",NULL,NULL,"1","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"22","SUP00021","Apa Villa",NULL,NULL,"Apa Villa
+","0","0","1",,," +94 91 2283 320",,"http://www.villa-srilanka.com/apathalpe/",NULL,NULL,"8","140","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"23","SUP00022","Taj Samudra Hotel",NULL,NULL,,"0","1","1",,," +94 11 2446622",,"http://www.tajhotels.com/business/taj%20samud",NULL,NULL,"1","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"24","SUP00023","Mandara Resort",NULL,NULL,"Mirissa
+","0","1","1",,,"  +94 41 2253 993-4",,"http://www.mandararesort.com/",NULL,NULL,"2","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"25","SUP00024","Apa Villa Illuketia",NULL,NULL,"Galle
+","0","0","1",,," +94 91 4381 411",,"http://www.villa-srilanka.com/apailluketia/",NULL,NULL,"8","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"26","SUP00025","Mandara Rosen Hotel",NULL,NULL,"Kataragama
+","0","1","1",,,"  +94 47 2236 030 ","+94 71 6805 756","http://www.mandararosen.com/",NULL,NULL,"3","68","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"27","SUP00026","Avani Bentota",NULL,NULL,"Bentota
+","0","1","1",,," +94 34 227 5248",,"http://www.avanihotels.com/avanibentota/",NULL,NULL,"2","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"28","SUP00027","Mas Villa",NULL,NULL,"Kandy 
+","0","0","1",,,"  +94 77 7715 747",,"http://www.masvilla.com/",NULL,NULL,"8","82","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"29","SUP00028","Tamarind Lodge",NULL,NULL,,"0","1","1",,,"  94  81 2376 376 , 94 81 2376 371, 94 77 784",,"http://www.golfsrilanka.com/tamarind/",NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"30","SUP00029","Avani Kalutara",NULL,NULL,"Kalutara
+","0","1","1",,," +94 34 2226537",,"http://www.avanihotels.com/avanikalutara/",NULL,NULL,"2","63","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"31","SUP00031","Ayurveda Walauwa",NULL,NULL,"Bentota
+","0","0","1",,,,,"http://www.sribudhasa.com/",NULL,NULL,"2","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"32","SUP00032","Bandarawela Hotel",NULL,NULL,"Bandarawela
+","0","1","1",,," +94 57 2222 501  ",,"http://www.aitkenspencehotels.com/bandarawela",NULL,NULL,"3","18","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"33","SUP00033","Barberyn Beach Ayurveda Resort",NULL,NULL,"Weligama
+","0","0","1",,,"  +94 41 2252 994 -5",,"http://www.barberynresorts.com/english/beach/",NULL,NULL,"3","151","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"34","SUP00034","Barberyn Reef Ayurveda Resort",NULL,NULL,"Beruwela
+","0","0","1",,," +94 34 2276 036",,"http://www.barberynresorts.com/english/reef/",NULL,NULL,"3","23","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"36","SUP00036","Bentota Beach Hotel",NULL,NULL,"Bentota
+","0","1","1",,,,,"http://www.johnkeellshotels.com/BentotaBeachH",NULL,NULL,"3","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"37","SUP00037","Blue Magpie Lodge",NULL,NULL,"Sinharaja
+","0","0","1",,,"  +94 45 5670 498",,"http://www.bluemagpie.lk/",NULL,NULL,"6","135","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"38","SUP00038","Boulder Garden ",NULL,NULL,"Kalawana
+","0","0","1",,,"  +94 45 2255 812",,"http://www.bouldergarden.com/",NULL,NULL,"9","60","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"39","SUP00039","Brook Boutique Hotel & Spa",NULL,NULL,,"0","0","1",,," +94 66 7500 500",,"http://www.brook.lk/",NULL,NULL,"8","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"40","SUP00040","Buckingham Place",NULL,NULL,"Tangalle
+","0","1","1",,," +94 47 3489 447, +94 78 3004 394",,"http://www.buckinghamplace.lk/",NULL,NULL,"8","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"41","SUP00041","C & I Beach Hotel",NULL,NULL,"Chilaw
+","0","0","1",,," + 94 32 2256 455 + 94 77 0299 080",,"http://www.cibeachhotel.com/",NULL,NULL,"3","28","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"42","SUP00042","Tangerine Beach Hotel",NULL,NULL,"De Abrew Road, Wadduwa","0","1","1",,,"  +94 34 2237982/3, 2237295, 2237640",,"http://www.tangerinehotels.com/index.php?opti",NULL,NULL,"2","63","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"43","SUP00043","Taprobane Beach House",,,,"0","0","1",,,,,"http://www.thambapannileisure.com/thaproban/t",,,"9","143","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"45","SUP00044","Taprobane Island",NULL,NULL,,"0","1","1",,,"  +94  91 4380 275",,"http://www.taprobaneisland.com/taprobane.html",NULL,NULL,"8","151","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"46","SUP00046","Taprobane Pavilion",NULL,NULL,,"0","1","1",,,,,"http://www.thambapannileisure.com/thaproban_p",NULL,NULL,"9","143","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"47","SUP00047","Camelia Resort & Spa",NULL,NULL,"Sigiriya
+","0","1","1",,,"94 66 2054 100",,"http://www.camelliaresortspa.com/",NULL,NULL,"3","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"48","SUP00048","Camelot Beach Hotel",NULL,NULL,"Negombo
+","0","1","1",,,"  +94 31 2222 318, +94 31 2235 881-3",,"http://www.camelot.lk/",NULL,NULL,"3","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"49","SUP00049","Casa Colombo",NULL,NULL,"Colombo
+","0","1","1",,," +94 11 4520 130",,"http://www.casacolombo.com/",NULL,NULL,"8","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"50","SUP00045","Taprospa Footprints",NULL,NULL,"No.91/22, Maradana Rd, Moragalla, Beruwela, 12070, Sri Lanka","0","1","1",,," +94 34 2278 400 -2",,"http://www.taprospa.com/Footprints.aspx",NULL,NULL,"3","23","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"51","SUP00050","Casa Heliconia",NULL,NULL,"Kandy
+","0","0","1",,,"  +94 81 7201 115",,"http://www.casa-heliconia.com/",NULL,NULL,"9","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"52","SUP00051","Weligama Bay Beach Resort",,,,"0","1","1",,,"  +94 41 2253 920",,"http://www.weligamabayresort.com/en/",,,"2","151","0","0","0","0",NULL,NULL,NULL,"2025-03-28"
+"53","SUP00053","Vivanta by Taj",,,,"0","1","1",,," +94 34 5555 555 ",,"http://www.vivantabytaj.com/Bentota-Sri-Lanka",,,"1","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"54","SUP00054","Villa 700 by Jetwing ",,,,"0","1","1",,," +94 91 2223744",,"http://www.jetwinghotels.com/villa700/",,,"8","55","0","0","0","0",NULL,NULL,NULL,"2025-11-18"
+"55","SUP00055","Unawatuna Beach Resort",NULL,NULL,,"0","1","1",,,"  +94 91 4384 545-8",,"http://www.unawatunabeachresort.com/",NULL,NULL,"3","143","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"56","SUP00056","Ulagalla Resort",,,,"0","1","1",,,,,"http://www.ugaescapes.com/ulagalla/",,,"8","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"57","SUP00057","Uga Bay Resort",NULL,NULL,,"0","1","1",,," +94 65 5671 000",,"http://www.ugaescapes.com/ugabay/",NULL,NULL,"8","118","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"58","SUP00058","Tourmaline Hotel",NULL,NULL,,"0","1","1",,,,,"  +94 81 7389 000-6",NULL,NULL,"2","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"59","SUP00059","Tissawewa Resthouse",NULL,NULL,,"0","0","1",,," +94 25 2222 299, 25 2223 505",,"http://goo.gl/MQu3kO",NULL,NULL,"3","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"61","SUP00061","Centauria Tourist Hotel",NULL,NULL,"Embilipitiya
+
+","0","0","1",,," +94 47 2230 514, 47 2261 523",,"http://www.centauriahotel.com/centaurihotel/",NULL,NULL,"3","40","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"62","SUP00062","Chaaya Blu",,,,"0","1","1",,,"   +94 26 2222 307/ +94 26 2221 611",,"http://www.chaayahotels.com/ChaayaBlu.htm","chaaya-blu-trincomalee.jpg","chaaya-blu-trincomalee.jpg","1","158","0","0","0","0",NULL,NULL,NULL,"2026-02-11"
+"64","SUP00064","Chaaya Tranz ",NULL,NULL,"Hikkaduwa
+","0","1","1",,," +94 912 277188, +94 912 277 190",,"http://www.chaayahotels.com/chaayatranz.htm",NULL,NULL,"2","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"65","SUP00065","Habarana Village by Cinnamon",,,"Habarana
+","0","1","1",,," +94 66 227 0047 ",,"http://www.chaayahotels.com/ChaayaVillage.htm",,,"2","45","0","0","0","0",NULL,NULL,NULL,"2020-03-12"
+"66","SUP00066","Cinnamon Bey ",NULL,NULL,"Beruwela
+","0","1","1",,," +94 34 2297 000",,"http://www.cinnamonhotels.com/CinnamonBeyBeru",NULL,NULL,"1","23","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"67","SUP00067","Cinnamon Citadel",NULL,NULL,"Kandy
+","0","1","1",,,"  +94 81 2234 365 – 6 ",,"http://www.cinnamonhotels.com/CinnamonCitadel",NULL,NULL,"2","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"68","SUP00068","Cinnamon Grand",NULL,NULL,"Colombo
+","0","1","1",,," +94 11 2437 437",,"http://www.cinnamonhotels.com/CinnamonGrandCo",NULL,NULL,"1","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"69","SUP00069","Max Wadiya",NULL,NULL,"Ambalangoda
+","0","0","1",,,,"  +94 91 2257 926","http://www.maxwadiya.com",NULL,NULL,"10","6","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"70","SUP00070","Maya ",NULL,NULL,"Tangalle
+","0","0","1",,,"  +94 47 5679 025 / 6 ",,"http://www.mayatangallesrilanka.com/",NULL,NULL,"8","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"71","SUP00071","Melheim Resort",,,"Haputale
+","0","1","1",,," +94 57 5675 969","+94 75 7913 460","http://www.melheimresort.com/",,,"9","49","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"72","SUP00072","Mermaid Hotel & Club",NULL,NULL,"Kalutara
+","0","1","1",,," +94 34 2237613","+94 34 2238663","http://www.mermaidhotelnclub.com/",NULL,NULL,"2","63","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"73","SUP00073","Mirissa Hills",NULL,NULL,"Mirissa
+","0","0","1",,,"  94 41 2250 980",,"http://www.mirissahills.com",NULL,NULL,"3","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"74","SUP00074","Mosvold Villa",,,"Galle","0","1","1",,,,,,,,"8","2","0","0","0","0",NULL,NULL,NULL,"2023-10-11"
+"75","SUP00075","Mt. Lavinia Hotel		  		",NULL,NULL,"Mount Lavinia","0","1","1",,,"+94 11 2711 711",,"http://www.mountlaviniahotel.com/",NULL,NULL,"1","106","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"76","SUP00076","Nilaveli beach hotel",NULL,NULL,"Trincomalee","0","1","1",,,,,"http://www.tangerinehotels.com",NULL,NULL,"3","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"77","SUP00077","Nisala Arana	Bentota	 	",NULL,NULL,"Bentota	 ","0","0","1",,,"+94 34 4287 079	",,"http://www.nisalaarana.com/",NULL,NULL,"8","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"78","SUP00078","Nuwarawewa Resthouse		",NULL,NULL,"Anuradhapura","0","0","1",,," +94 25 2222 565","25 2223 265","http://goo.gl/z1RrLs",NULL,NULL,"3","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"79","SUP00079","Sigiriya Village",NULL,NULL,"Sigiriya
+","0","1","1",,," +94 66 2286 803-6",,"http://www.sigiriyavillage.com/",NULL,NULL,"2","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"80","SUP00080","Serene Garden Hotel",,,"Kandy	
+  
+","0","1","1","101118029",," +94 81 2227 915-7","81 7392 392	","http://www.serenegardenhotel.com/	",,,"3","66","0","0","0","0",NULL,NULL,NULL,NULL
+"82","SUP00082","Saman Villas",,,"Bentota	 
+","0","1","1",,,"+94 34 4936 200	","+94 34 2275 435","http://www.samanvilla.com/	",,,"8","21","0","0","0","0",NULL,NULL,NULL,NULL
+"83","SUP00083","Saffron & Blue by Jetwing",NULL,NULL,"Kosgoda	 ","0","1","1",,,"+94 91 2223744	",,"	http://www.jetwinghotels.com/saffronandblue/",NULL,NULL,"8","81","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"84","SUP00084","Riverina Hotel",NULL,NULL,"Beruwela	 	
+","0","0","1",,,"+94 34 2276 044-5",,"http://www.lolcleisure.com/riverina/	",NULL,NULL,"2","23","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"85","SUP00085","Ratnaloka Tour Inns",NULL,NULL,"Ratnapura	  	
+
+","0","0","1",,,"+94 45 2222 455","2224 565","http://www.rathnaloka.com/	",NULL,NULL,"3","130","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"86","SUP00086","Ranweli Holiday Village",,,"Waikkal	  	
+","0","1","1",,,"+94 31 2277 359	",,"http://www.ranweli.com/",,,"3","146","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"87","SUP00081","Ranna 212",NULL,NULL,"Tangalle	 
+","0","0","1",,,"+94 47 4934 999	",,"http://www.ranna212.com/	",NULL,NULL,"3","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"88","SUP00088","Randholee Resorts",,,"Kandy	 
+","0","0",NULL,,,"+94 81 2217 741-3	",,"http://www.randholeeresorts.com/	",,,"9","66","0","0","0","0",NULL,NULL,NULL,"2025-07-15"
+"89","SUP00087","Cinnamon Lakeside",NULL,NULL,"Cinnamon Lakeside
+","0","1","1",,," +94 11 2491 000",,"http://www.cinnamonhotels.com/CinnamonLakesid",NULL,NULL,"1","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"90","SUP00089","Ramada Katunayake",NULL,NULL,"Katunayake	 	
+","0","1","1",,," +94 11 2253 646"," 2253 647	","http://www.ramadakatunayake.com/",NULL,NULL,"3","69","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"91","SUP00091","Ramada Colombo	",NULL,NULL,"Colombo	 
+","0","1","1",,,"+94 11 2422001-9 	",,"http://www.ramadacolombo.com/	",NULL,NULL,"1","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"93","SUP00092","Priyankara Hotel	",NULL,NULL,"Tissamaharama	 ","0","1","1",,,"+94 47 2237 206","47 4378 378","http://www.priyankarahotel.com/	",NULL,NULL,"3","141","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"94","SUP00094","Pillaiyar Inn",NULL,NULL,"Jaffna	   	
+","0","0","1",,,"+94 21 222 2829",,"http://www.pillaiyarinn.com/	",NULL,NULL,"3","58","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"95","SUP00095","Pigeon Island Beach Resort	",NULL,NULL,"Trincomalee	 	
+","0","1","1",,," + 94 26 7388 388","26 4920 633","http://www.pigeonislandresort.com/	",NULL,NULL,"2","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"97","SUP00096","Pelwehera Village Resort",NULL,NULL,"Bulagala junction,habarana rodad damulla 21120
+","0","1","1",,,"+94 66 2284 281	","+94 66 5677 766	","http://www.pelweheraresort.com/",NULL,NULL,"3","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"98","SUP00097","Citrus Hikkaduwa",NULL,NULL,"Hikkaduwa
+","0","1","1",,," +94 91 4383 244-7",,"http://www.citrusleisure.com/hikkaduwa/",NULL,NULL,"3","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"99","SUP00098","Pegasus Reef Hotel",NULL,NULL,"Colombo	 ","0","1","1",,,"+94 11 2930 205-9 	",,"http://www.pegasusreefhotel.com/	",NULL,NULL,"3","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"100","SUP00099","Clingendael",,,"Kandy
+","0","1","1",,,"  +94 77 2515 457",,"http://www.theclingendael.com/",,,"8","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"101","SUP00100","Peacock Beach Hotel	",NULL,NULL,"Hambantota	 	
+","0","1","1",,,"+94 47 5671 000"," 47 2220 159","http://www.peacockbeachonline.com",NULL,NULL,"3","47","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"102","SUP00101","Closenberg Hotel",NULL,NULL,"Galle
+","0","1","1",,," +94 91 2224 313, 91 2232 241",,"http://www.closenburghotel.com/",NULL,NULL,"3","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"103","SUP00102","Park Street Hotel",NULL,NULL,"Colombo	
+","0","1","1",,," +94 11 2439 978	",,"http://www.asialeisure.lk/Parkstreet/	",NULL,NULL,"9","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"104","SUP00103","Clove Villa",,,"Kandy","0","1","1",,,"  +94 81 2212 999",,"http://www.clovevilla.com/",,,"9","66","0","0","0","0",NULL,NULL,NULL,"2024-10-19"
+"105","SUP00104","Paradise Road The Villa Bentota",,,"Bentota		
+","0","1","1",,," +94 34 2275 311 "," +94 34 4946 800 ","http://www.paradiseroadhotels.com/villabentot",,,"8","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"106","SUP00106","Paradise Beach",NULL,NULL,"Negombo	 	
+","0","1","1",,,"+94 31 2224 258 	","+ 94 31 2224 308","http://www.paradisebeachsrilanka.com/",NULL,NULL,"3","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"107","SUP00107","Palm Paradise Cabanas",NULL,NULL,"Tangalle		
+","0","1","1",,," +94 47 2240 338 ","2240 842	","http://www.palmparadisecabanas.net/",NULL,NULL,"3","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"108","SUP00108","Palm Garden Village Hotel	",NULL,NULL,"Anuradhapura	  	
+","0","1","1",,,"+94 25 2223 961/62 ",,"http://www.palmgardenvillage.com/	",NULL,NULL,"3","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"109","SUP00109","Palm Beach Hotel",NULL,NULL,"Mount Lavinia	  
+","0","1","1",,,"+94 11 2712 713	",,"http://www.palmbeach.lk/	",NULL,NULL,"3","106","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"110","SUP00110","Oasis Hotel	",NULL,NULL,"Hambantota	 ","0","1","1",,,"+94 47 2220 650-1	",,"http://www.oasis-ayurveda.com/	",NULL,NULL,"3","47","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"111","SUP00111","Club Bentota",NULL,NULL,"Bentota
+","0","1","1",,," +94 34 2275 167,+94 34 2275 168,",,"http://www.clubbentota.com/",NULL,NULL,"2","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"112","SUP00112","Club Hotel Dolphin",,,"Waikkal
+","0","1","1",,," +94 31 4877 100",,"http://www.serendibleisure.com/club-hotel-dol",,,"2","146","0","0","0","0",NULL,NULL,NULL,"2024-10-21"
+"114","SUP00114","Reef Villa & Spa	",NULL,NULL,"Wadduwa	  ","0","1","1",,,"+94 38 228 4442		",,"http://www.reefvilla.com/",NULL,NULL,"8","161","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"115","SUP00115","Serene Pavilion",NULL,NULL,"		Wadduwa	  ","0","0","1",,,"+94 38 2294 	",,"456 / 38 2685 009	http://www.serenepavilions.",NULL,NULL,"8","161","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"116","SUP00113","Club Villa by KK Collection ",,,"Bentota
+","0","1","1",,," +94 34 2275 312, 4923 037",,"http://club-villa.com/",,,"8","21","0","0","0","0",NULL,NULL,NULL,"2025-11-11"
+"117","SUP00117","Coco Bay Unawatuna",NULL,NULL,"Unawatuna
+","0","1","1",,,"  +94 91 2250560 / 912250561",,"http://www.cocobayunawatuna.com/",NULL,NULL,"9","143","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"118","SUP00118","Coco Tangalla",,,"Tangalle
+","0","1","1",,," +94 81 7201 115",,"http://www.cocotangalla.com/pg/",,,"8","139","0","0","0","0",NULL,NULL,NULL,NULL
+"119","SUP00116","Cocoon Hills",,,"Nuwara Eliya
+","0","1","1",,,"  +94 52 567 7000",,"http://cocoonhills.com/",,,"8","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"120","SUP00120","Cocoon Resort & Villas",,,"Induruwa
+","0","1","1",,," +94 34 227 2070",,"http://www.cocoonresortandvillas.com/",,,"8","55","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"121","SUP00121","Cocoon Sea Resort",NULL,NULL,"Kosgoda
+","0","0","1",,,"  +94 91 2264 067",,"http://www.cocoonsearesort.com/",NULL,NULL,"3","81","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"122","SUP00122","Colombo City Escapes Ceilao Villas",NULL,NULL,"Colombo
+","0","0","1",,," +94 (0) 11 7235231 / 32",,"http://www.ceilaovillas.com/colombo/",NULL,NULL,"9","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"123","SUP00123","Colombo Court Yard",NULL,NULL,"Colombo
+","0","1","1",,," +94 11 4645 333",,"http://www.colombocourtyard.com/",NULL,NULL,"8","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"124","SUP00124","Coral Rock By Amaya",NULL,NULL,"Hikkaduwa
+","0","1","1",,," +94 912 277 021 ",,"http://www.amayacoralrock.com/",NULL,NULL,"3","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"125","SUP00125","Coral Sands Hotel",NULL,NULL,"Hikkaduwa
+","0","1","1",,,"  +94 91 2277 436 / 513",,"http://www.coralsandshotel.com/",NULL,NULL,"3","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"126","SUP00126","Corbet's View",NULL,NULL,"Kandy
+","0","0","1",,,"  +94 11 2560450 / +94 77 7411339 ",,"http://www.corbetsview.com/",NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"127","SUP00127","Country Comfort",NULL,NULL,,"0","0","1",,," + 94 57 2228 532, + 94 57 2228 500",,"http://www.hotelcountrycomfort.lk/",NULL,NULL,"3","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"128","SUP00128","D Villas",NULL,NULL,"Colombo
+","0","0","1",,," +94 11 2806 818, +94 77 3847 855",,"http://www.dvillas.biz/",NULL,NULL,"9","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"129","SUP00129","Dalmanuta Gardens",NULL,NULL,"Bentota
+","0","0","1",,," +94 77 3434434",,"http://www.dalmanuta.com/",NULL,NULL,"9","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"130","SUP00130","Danish Villa",NULL,NULL,"Arugam Bay
+","0","0","1",,," +94  77 6957 936",,"http://www.thedanishvilla.dk/",NULL,NULL,"9","11","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"131","SUP00131","Deco on 44",,,"Galle
+","0","1","1",,," +94 91 2225 773 / + 94 91 2225 774",,"http://www.decoon44.com/",,,"8","41","0","0","0","0",NULL,NULL,NULL,NULL
+"132","SUP00132","Dedduwa Boat House by Jetwing",NULL,NULL,"Bentota
+","0","1","1",,," +94 71 4629 360",,"http://www.jetwinghotels.com/dedduwaboathouse",NULL,NULL,"8","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"133","SUP00133","Dickwella Resort & Spa",,,"Dickwella
+","0","1","1",,," + 94 41 2255 271 or + 94 41 2255 272",,"http://www.lolcleisure.com/dickwella/",,,"8","34","0","0","0","0",NULL,NULL,NULL,NULL
+"134","SUP00134","Dutch House",NULL,NULL,"Galle
+","0","0","1",,," +94 91 4380 275",,"http://www.thedutchhouse.com/dutch.html",NULL,NULL,"8","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"135","SUP00135","Earls Regency Hotel",,,"Kandy
+","0","1","1",,,"  +94 81 2422 122  ",,"http://www.aitkenspencehotels.com/earlsregenc","Slide4.jpg","Slide4.jpg","1","66","0","0","0","0",NULL,NULL,NULL,"2026-02-13"
+"137","SUP00137","Elephant Corridor",NULL,NULL,"Sigiriya
+","0","1","1",,," +94 66 2286 950 - 5",,"http://www.elephantcorridor.com/",NULL,NULL,"2","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"138","SUP00138","Elephant Reach",NULL,NULL,"Kirinda
+","0","1","1",,,"   +94 47 5677 544/ 45",,"http://www.elephantreach.com/",NULL,NULL,"3","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"139","SUP00139","Ella Adventure Park",NULL,NULL,"Ella
+","0","0","1",,," +94 55 3555 038, +94 553556 610",,"http://www.wildholidays.lk/ella-jungle-resort",NULL,NULL,"3","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"140","SUP00140","Ellerton Bungalow",,,"Kandy
+","0","1","1",,,"  +94 81 2415 137 ",,"http://www.ellertonsrilanka.com/",,,"8","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"141","SUP00141","Era Beach by Jetwing",NULL,NULL,"Galle
+","0","0","1",,," +94 91 228 2212  Fax +94 91 228 2212",,"http://www.jetwinghotels.com/jetwingerabeach/",NULL,NULL,"8","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"143","SUP00143","Expo Pavilion - Margosa",NULL,NULL,"Jaffna
+","0","0","1",,,"  +94 21 222 3790/ 772 601093",,"http://www.jaffna.travel/expo-pavilion---marg",NULL,NULL,"9","58","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"144","SUP00144","Fort Printers",NULL,NULL,"Galle
+","0","1","1",,," +94 91 2247 977",,"http://www.thefortprinters.com/",NULL,NULL,"9","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"145","SUP00145","Fortaleza",,,"Galle
+","0","1","1",,,"  +94 91 2233 415",,"http://www.fortaleza.lk/",,,"9","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"146","SUP00146","Galadari Hotel",NULL,NULL,"Colombo
+","0","1","1",,," +94 11 2544 544",,"http://www.galadarihotel.lk/~",NULL,NULL,"2","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"147","SUP00147","Galle Face Hotel",NULL,NULL,"Colombo
+","0","1","1",,," +94 11 2541 010-16",,"http://www.gallefacehotel.com/",NULL,NULL,"1","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"148","SUP00148","Galle Fort Hotel",,,"Galle
+","0","1","1",,," +94 91 2232 870",,"http://www.galleforthotel.com/",,,"8","41","0","0","0","0",NULL,NULL,NULL,"2025-01-20"
+"149","SUP00149","Galle Heritage Villa by Jetwing",NULL,NULL,"Galle
+","0","1","1",,," +94 91 2223 744",,"http://www.jetwinghotels.com/galleheritagevil",NULL,NULL,"8","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"150","SUP00150","Galway Forest Lodge",NULL,NULL,"Nuwara Eliya
+","0","1","1",,," +94 52 2234 717, 2223 728",,"http://www.galwayforest.lk/",NULL,NULL,"3","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"151","SUP00151","Galway Miridiya",NULL,NULL,"Anuradhapura
+","0","0","1",,," +94 25 7213 626 / +94 25 7213 627 / +94 25 7",,"http://www.galway.lk/home.html",NULL,NULL,"3","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"152","SUP00152","Giritale Hotel",,,"Giritale 
+","0","1","1",,,"+94 27 2246 311",,"http://www.giritalehotel.com/",,,"3","44","0","0","0","0",NULL,NULL,NULL,NULL
+"153","SUP00153","Glendower Hotel",NULL,NULL,"Nuwara Eliya
+","0","0","1",,," +94 52 2222 501",,"http://www.hotelglendower.com/",NULL,NULL,"3","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"154","SUP00154","Global Towers",NULL,NULL,"Colombo
+","0","1","1",,," +94 11 2591 000, 4539 000",,"http://www.globallanka.com/",NULL,NULL,"3","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"155","SUP00155","Golden Star Beach Hotel",NULL,NULL,"Negombo
+","0","0","1",,,"+94 31 2233 564-65, 5310 818",,"http://www.goldenstarbeachhotel.com/",NULL,NULL,"3","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"156","SUP00156","Goldi Sands Hotel",,,"Negombo
+","0","1","1",,,"   +94 31 2279 021",,"http://www.goldisands.com/",,,"3","113","0","0","0","0",NULL,NULL,NULL,"2025-07-10"
+"157","SUP00157","Governors Chalets",NULL,NULL,,"0","1","1",,,,,"http://www.governorschalets.com/",NULL,NULL,"8","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"158","SUP00158","Governors Mansion",NULL,NULL,,"0","0","1",,,,,"http://www.governorsmansion.com/",NULL,NULL,"8","33","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"159","SUP00159","Grand Hotel",NULL,NULL,"Nuwara Eliya
+","0","1","1",,,"  +94-52-2222881/7",,"http://www.tangerinehotels.com/index.php?Item",NULL,NULL,"2","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"161","SUP00161","Grand Oriental Hotel",NULL,NULL,"Colombo
+","0","1","1",,," +94 11 2320 320 , 5221 100",,"http://www.grandoriental.com/",NULL,NULL,"3","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"162","SUP00162","Grand Udawalawe Safari Resort",NULL,NULL,"Udawalawe
+","0","1","1",,," +94 47 2232 000 / +94 47 2232 004-06",,"http://www.udawalawesafari.com/",NULL,NULL,"3","142","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"163","SUP00163","Oakray Haridra Resort & Spa",,,"Wadduwa
+","0","1","1",,,,,,,,"6","161","0","0","0","0",NULL,NULL,NULL,NULL
+"164","SUP00164","Havelock Place Bungalow",,,"Colombo
+","0","1","1",,," +94 11 2585191/+94 11 2506153/+94 11 2506154",,"http://havelockbungalow.com/",,,"9","29","0","0","0","0",NULL,NULL,NULL,NULL
+"165","SUP00165","Helgas Folly",NULL,NULL,,"0","0","1",,,"  +94 81 2234 571/ 81 4474 314",,"http://www.helgasfolly.com/",NULL,NULL,"9","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"166","SUP00166","Heritance Ahungalla",NULL,NULL,"Ahungalla
+","0","1","1",,," +94 91 5555000,",,"http://www.heritancehotels.com/ahungalla/",NULL,NULL,"1","3","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"167","SUP00167","Heritance Ayurveda Maha Gedara",,,"Beruwela
+","0","1","1",,," +94 34 5555 000",,"http://www.heritancehotels.com/ayurvedamahage",,,"2","23","0","0","0","0",NULL,NULL,NULL,"2025-09-03"
+"168","SUP00168","Heritance Kandalama Hotel",NULL,NULL,"Kandalama
+","0","1","1",,," +94 66 5555 000",,"http://www.heritancehotels.com/kandalama/",NULL,NULL,"1","64","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"169","SUP00169","Heritance Negombo",NULL,NULL,"Negombo
+","0","1","1",,," +94 312 222 031, 222638",,"http://www.heritancehotels.com/negombo/",NULL,NULL,"1","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"170","SUP00170","Heritance Tea Factory",NULL,NULL,"Nuwara Eliya
+","0","1","1",,," +94 52 5555 000, +94 52 2229 600",,"http://www.heritancehotels.com/teafactory/",NULL,NULL,"1","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"171","SUP00171","Hibiscus Beach Hotel",NULL,NULL,"Kalutara
+","0","1","1",,,"  +94 34 5582 272, 34 5082 222",,"http://www.hibiscusbeachhotel.com/",NULL,NULL,"3","63","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"172","SUP00172","Hibiscus Garden Hotel",,,"Tissamaharama
+","0","1","1",,," +94 47 4925 617, +94 77 3735 097",,"http://www.hibiscus-garden.com/",,,"3","141","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"173","SUP00173","Hideaway Wathuregama",NULL,NULL,"Colombo
+","0","0","1",,," +94 11 2599 900",,"http://www.srilankan-hideaway.com/",NULL,NULL,"8","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"174","SUP00174","Hikkaduwa Beach Hotel",NULL,NULL,"Hikkaduwa
+","0","1","1",,,"  +94 91 2277 327",,"http://www.hbeachhotel.com/",NULL,NULL,"3","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"175","SUP00175","Hill Club",,,"Nuwara Eliya
+","0","1","1",,,"  +94 52 2222 653",,"http://www.hillclubsrilanka.net/",,,"3","116","0","0","0","0",NULL,NULL,NULL,"2024-10-19"
+"176","SUP00176","Hilton Colombo",NULL,NULL,"Colombo
+","0","1","1",,," +94 11 2437177, 2492492",,"http://www3.hilton.com/en/hotels/sri-lanka/hi",NULL,NULL,"1","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"177","SUP00177","Hilton Residencies",NULL,NULL,"Colombo
+","0","1","1",,," +94 11 2300613, 4793 600",,"http://www3.hilton.com/en/hotels/sri-lanka/hi",NULL,NULL,"1","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"178","SUP00178","Horathapola Estate",NULL,NULL,"Negombo
+","0","0","1",,,"  +94 71 5338 230",,"http://www.horathapola.com/",NULL,NULL,"8","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"179","SUP00179","Hotel Hill Top",NULL,NULL," 200/21 Bahirawakande Peradeniya Road Kandy Sri Lanka ","0","1","1",,,"  +94 81 2224 162",,"http://www.aitkenspencehotels.com/hotelhillto",NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"180","SUP00180","Hotel Lanka Supercorals",NULL,NULL,"Hikkaduwa
+","0","0","1",,,"  +94 91 2277 387 / 91 4383 385",,"http://www.hotellankasupercorals.com/",NULL,NULL,"3","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"181","SUP00181","Hotel Olympus Plaza",NULL,NULL,"Haputale
+","0","1","1",,," +94 57 2268 544, 57 4925 126",,"http://www.olympusplazahotel.com/",NULL,NULL,"3","49","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"182","SUP00182","Hotel Sapphire",NULL,NULL,"Colombo
+","0","1","1",,," +94 11 2363306 ",,"http://www.hotelsapphirelk.com/",NULL,NULL,"3","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"183","SUP00183","Hotel Sigiriya",NULL,NULL,"Sigiriya
+","0","1","1",,," +94 66 2286 815, 66 2286 818",,"http://www.serendibleisure.com/hotel-sigiriya",NULL,NULL,"2","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"184","SUP00184","Hotel Suisse",NULL,NULL,"Kandy
+","0","1","1",,,"  +94 81 22233 024",,"http://www.hotelsuisse.lk/",NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"185","SUP00185","Hotel Topaz",NULL,NULL,"Kandy
+","0","1","1",,,"  +94 81 7389 000-6",,"http://www.mclarenshotels.lk/hotels/topaz.htm",NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"186","SUP00186","Hunas Falls by Amaya",NULL,NULL,"Kandy
+","0","1","1",,,"  +94 81 4940 320, +94 81 4940 320/1/2/3",,"http://www.hunasfallskandy.com/",NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"187","SUP00187","Indisch",NULL,NULL,"Ahangama
+","0","0","1",,,"+94 91 2283 541 / +94 71 8502 577",,"http://www.indischsrilanka.com/",NULL,NULL,"8","2","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"189","SUP00189","Jayasinghe Holiday Resort",NULL,NULL,"Kataragama
+","0","0","1",,,"  +94 47 2235 146",,"http://www.jayasinghehotel.com/",NULL,NULL,"6","68","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"190","SUP00190","Jetwing Ayurveda Pavilions",NULL,NULL,"Negombo
+","0","1","1",,," +94 31 2276719, +94 31 4870764",,"http://www.jetwinghotels.com/jetwingayurvedap",NULL,NULL,"3","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"191","SUP00191","Jetwing Beach",NULL,NULL,"Negombo
+","0","1","1",,,"+94 31 2277 140, +94 31 2273 500-5",,"http://www.jetwinghotels.com/jetwingbeach/",NULL,NULL,"1","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"192","SUP00192","Jetwing Blue",NULL,NULL,"Negombo
+","0","1","1",,," +94 31 2277140, +94 31 2279000-3,",,"http://www.jetwinghotels.com/jetwingblue/",NULL,NULL,"2","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"193","SUP00193","Jetwing Kurulubedda",NULL,NULL,"Galle
+","0","1","1",,," +94 91 2223 744",,"http://www.jetwinghotels.com/jetwingkurulubed",NULL,NULL,"8","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"194","SUP00194","Jetwing Lagoon",NULL,NULL,"Negombo
+","0","1","1",,," +94 31 2233 777",,"http://www.jetwinghotels.com/jetwinglagoon/",NULL,NULL,"2","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"195","SUP00195","Jetwing Lighthouse",NULL,NULL,"Galle
+","0","1","1",,," +94 91 2224 017, 91 2223 744",,"http://www.jetwinghotels.com/jetwinglighthous",NULL,NULL,"1","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"196","SUP00196","Jetwing Sea",,,"Negombo
+","0","1","1",,," +94 31 2277 140, +94 31 2279 062",,"http://www.jetwinghotels.com/jetwingsea/",,,"2","113","0","0","0","0",NULL,NULL,NULL,"2024-10-19"
+"197","SUP00197","Jetwing St. Andrews Hotel",NULL,NULL,"Nuwara Eliya
+","0","1","1",,," +94 52 2222 445, 52 2223 031",,"http://www.jetwinghotels.com/jetwingstandrews",NULL,NULL,"2","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"198","SUP00198","Jetwing Vil Uyana",NULL,NULL,"Sigiriya
+","0","1","1",,," +94 66 4923 583-6",,"http://www.jetwinghotels.com/jetwingviluyana/",NULL,NULL,"8","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"199","SUP00199","Jetwing Warwick Gardens",NULL,NULL,"Ambewela
+","0","1","1",,," +94 11 2345700, +94 77 3237862",,"http://www.jetwinghotels.com/jetwingwarwickga",NULL,NULL,"8","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"200","SUP00200","Jetwing Yala",NULL,NULL,"Yala
+","0","1","1",,,,,"http://www.jetwinghotels.com/jetwingyala/",NULL,NULL,"2","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"201","SUP00201","Tea Trails Castlereagh Bungalow",NULL,NULL,,"0","0","1",,,"+94 51 7388 401",,"http://www.teatrails.com/bungalows",NULL,NULL,"8","33","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"202","SUP00202","Tea Trails Norwood Bungalow ",NULL,NULL,,"0","0","1",,," +94 51 7388 400",,"http://www.teatrails.com/bungalows",NULL,NULL,"8","33","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"203","SUP00203","Tea Trails Summerville Bungalow ",NULL,NULL,,"0","0","1",,," +94 51 7388 402",,"http://www.teatrails.com/bungalows",NULL,NULL,"8","33","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"204","SUP00204","Tea Trails Tientsin Bungalow ",NULL,NULL,,"0","0","1",,,"+94 51 7388 403",,"http://www.teatrails.com/bungalows",NULL,NULL,"8","33","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"205","SUP00205","Jungle Beach Resort ",NULL,NULL,"Trincomalee
+","0","1","1",,," +94 26 5671 000",,"http://www.ugaescapes.com/junglebeach/",NULL,NULL,"8","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"206","SUP00208","Temple Tree Resort",NULL,NULL,,"0","1","1",,," +94 34 2270 700, 2270699",,"http://www.templetreeresortandspa.com/",NULL,NULL,"2","55","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"207","SUP00206","Kabalana Gat Away Ceilao Villas",NULL,NULL,"Ahangama
+","0","0","1",,," +94  77 6957 936",,"http://www.thedanishvilla.dk/",NULL,NULL,"9","2","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"208","SUP00207","Thambapanni Retreat",NULL,NULL,,"0","0","1",,,"Tel  +94-91 2234 588 , +94-77 7901 559 ",,"http://www.thambapannileisure.com/thambapanni",NULL,NULL,"3","143","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"209","SUP00209","Kadju House",NULL,NULL,"Tangalle
+","0","0","1",,," + 94 47 5677 184, +94 77 3022 276",,"http://www.kadjuhouse.com/",NULL,NULL,"8","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"210","SUP00210","Kahanda Kanda Beach",,,"Galle
+","0","1","1",,," +94  91 4943 700, +94 91 2286 717",,"http://www.kahandakanda.com/",,,"8","41","0","0","0","0",NULL,NULL,NULL,"2025-01-20"
+"211","SUP00211","Thilanka Resort & Spa",NULL,NULL,,"0","1","1",,," +94 66 4468 001",,"http://www.thilankaresortandspa.com/",NULL,NULL,"3","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"212","SUP00212","Thilanka Hotel",NULL,NULL,,"0","1","1",,,"  +94 81 4475 200, 4475 201",,"http://www.thilankahotel.com/",NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"213","SUP00213","Wallawwa - Tear Drop ",,,,"0","1","1",,," +94 11 2281 050",,"http://www.thewallawwa.com/",,,"8","113","0","0","0","0",NULL,NULL,NULL,"2025-05-29"
+"214","SUP00214","The Tourmaline",NULL,NULL,,"0","1","1",,,"  +94-81 7389 000-6",,"http://www.mclarenshotels.lk/hotels/tourmalin",NULL,NULL,"2","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"215","SUP00215","The Theva Residency ",NULL,NULL,,"0","1","1",,,"  +94 81 7388 296-99",,"http://theva.lk/theva.html",NULL,NULL,"8","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"216","SUP00216","The Tamarind Tree Hotel",NULL,NULL,,"0","0","1",,,"  +94 11 2253 802, 2254 297",,"http://www.tamarindtreehotels.com/",NULL,NULL,"9","69","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"217","SUP00217","The Tamarind Hill",,,,"0","1","1",,,"  +94 11 5769500-2",,"http://www.tamarindhill-gallehotel.com/ppc/",,,"8","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"218","SUP00218","Kalus Hideaway",,,,"0","1","1",,,"0094 47 4929 930",,"http://www.kalushideaway.com/",,,"3","142","0","0","0","0",NULL,NULL,NULL,"2024-10-19"
+"219","SUP00219","Kamili Beach Villa",,,"Kalutara
+","0","1","1",,,"  +94 34 2231 777/ 34 2231 677 / 34 2231 977",,"http://kamilibeach.com/",,,"3","63","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"220","SUP00220","Adigar Manor (Kandy House) ",,,"Kandy
+","0","1","1",,,"  +94 81 4921 394, 81 7201 115",,"http://www.thekandyhouse.com/pg/",,,"8","66","0","0","0","0",NULL,NULL,NULL,"2025-12-15"
+"221","SUP00221","Kassapa Lions Rock",NULL,NULL,"Sigiriya
+","0","1","1",,," + 94 66 5677440,441,442",,"http://www.kassapalionsrock.com/",NULL,NULL,"2","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"222","SUP00222","Kirchhayn Bungalow",NULL,NULL,"Bandarawela
+","0","0","1",,," +94 57 4920 556, +94 57 222 3560",,"http://www.kirchhaynbungalow.com/",NULL,NULL,"8","18","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"223","SUP00223","Kirinda Jungle Retreat Ceilao Villas",NULL,NULL,"Kirinda
+","0","0","1",,," +94 11 7235 231 / 32",,"http://www.ceilaovillas.com/kirinda/",NULL,NULL,"9","75","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"224","SUP00224","The  Lake - Polonnaruwa",,,,"0","1","1",,," +94 27 2222 411",,"http://ceylonhotelscorporation.com/explore-ou",,,"3","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"225","SUP00225","The Blue Water",,,,"0","1","1","114135380-7000",," +94 38 2235 067-8",,"http://www.bluewatersrilanka.com/",,,"1","148","0","0","0","0",NULL,NULL,NULL,NULL
+"226","SUP00226","The Bungalow by Amaya",NULL,NULL,,"0","1","1",,," +94 814 474 022/8",,"http://www.bungalowbyamaya.com/",NULL,NULL,"9","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"227","SUP00227","The Cove",NULL,NULL,,"0","0","1",,,," +94 77 1292 559","http://thecove.uk.com/",NULL,NULL,"3","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"228","SUP00228","The Deer Park",NULL,NULL,,"0","1","1",,," +94 27 2246 272, 2246 470",,"http://www.deerparksrilanka.com/",NULL,NULL,"2","44","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"229","SUP00229","The Fortress",,,,"0","1","1",,,"  +94 91 4389 400",,"http://www.fortressresortandspa.com/",,,"8","79","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"230","SUP00230","The Frangipani Tree",NULL,NULL,,"0","0","1",,," +94 91 2283711",,"http://www.thefrangipanitree.com/",NULL,NULL,"8","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"232","SUP00232","The Kingsbury",NULL,NULL,,"0","1","1",,," +94 11 2421 221",,"http://thekingsbury.lk/",NULL,NULL,"1","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"233","SUP00233","The Last House",NULL,NULL,"Tangalle
+","0","0","1",,," +94 81 7201 115",,"http://www.thelasthouse.com/pg/",NULL,NULL,"8","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"234","SUP00234","The Lavender House",NULL,NULL,"Kandy
+","0","0","1",,,"   +94 52 2259 928",,"http://www.thelavenderhouseceylon.com/",NULL,NULL,"8","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"235","SUP00235","The Palms",NULL,NULL,"Beruwela
+","0","1","1",,," +94 34 2276 041-3",,"http://www.forthotels.lk/palms/home.htm",NULL,NULL,"3","23","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"236","SUP00236","The Paradise",NULL,NULL,"Dambulla
+","0","1","1",,," +94 66 2286 300 - 4 ",,"http://www.greenparadise.net/",NULL,NULL,"8","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"237","SUP00237","The Royal Lotus",NULL,NULL,"Polonnaruwa
+","0","0","1",,," +94 27 2246 316",,"http://www.theroyallotus.com/",NULL,NULL,"3","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"239","SUP00239","The Sovereign",NULL,NULL,"Colombo
+","0","0","1",,," + 94 11288 35 41/43",,"http://www.thesovereignhotel.com/",NULL,NULL,"3","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"249","SUP00249","The Sun House",,,,"0","0",NULL,,,"  +94 91 4380 275",,"http://thesunhouse.com/sunhouse.html",,,"8","41","0","0","0","0",NULL,NULL,NULL,"2024-11-26"
+"250","SUP00250","The Surf",NULL,NULL,,"0","1","1",,," +94 34 2275 126",,"http://ceylonhotelscorporation.com/explore-ou",NULL,NULL,"2","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"251","SUP00251","98 Acres Resort",NULL,NULL,"Greenland`Estate, Namunukula Rd. Ella","1","1","1",,"alam@resort98acres.com","0572050050/1",,,NULL,NULL,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"252","SUP00252","The Gateway Hotel",NULL,NULL,"Seeduwa/ Katunayake","1","1","1",,"gateway.colombo@tajhotels.com","11 5440000",,,NULL,NULL,"2","69","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"253","SUP00253","Earl's Regent Hotel",NULL,NULL,"Kandy","0","1","1",,,,,,NULL,NULL,"2","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"254","SUP00254","Radisson Colombo ",,,"colombo","0","1","1",,,,"0114715021",,,,"6","29","0","0","0","0",NULL,NULL,NULL,"2024-10-19"
+"257","SUP00257","Turyaa Kalutara",,,"waskaduwa","0","1","1","174714185",,,,,,,"2","63","0","0","0","0",NULL,NULL,NULL,NULL
+"258","SUP00258","Cinnamon Lodge",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"2","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"259","SUP00259","Concord Grand",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"265","SUP00265","The Secret ",NULL,NULL,"Kandy","0","0","1",,,"0572226333",,,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"266","SUP00266","Senani Hotel",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"267","SUP00267","Palwehera Village ",NULL,NULL,"Dambulla","0","1","1",,,,,,NULL,NULL,"6","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"268","SUP00268","Fresco water villa ",NULL,NULL,"Sigiriya","0","1","1",,,,,,NULL,NULL,"3","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"269","SUP00269","Oak-Ray summer hill breeze ",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"3","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"270","SUP00270","Oak-Ray Tea Bush ",,,"Ramboda","0","1","1",,,,,,,,"6","128","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"271","SUP00271","Oak-Ray Regency ",NULL,NULL,"Kandy","0","1","1",,,,,,NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"272","SUP00272","Ceylon Tea Trails",,,,"0","1","1",,,,,,,,"6","50","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"273","SUP00273","Eden Resort & Spa",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","23","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"274","SUP00274","Cinnamon Wild",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"1","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"276","SUP00276","Chinthana",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","141","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"277","SUP00277","Amethyst Resort",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","118","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"278","SUP00278","Inamulla",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"279","SUP00279","Anuradhapura Ruins",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"280","SUP00280","Polonnaruwa Ruins",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"281","SUP00281","Sigiriya Rock",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"282","SUP00282","Sri Maha Bodhiya",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"283","SUP00283","Aukana Statues",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","12","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"284","SUP00284","Dambulla Cave Temple",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"285","SUP00285","Temple of Tooth Relic",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"286","SUP00286","Embekke Temple",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"287","SUP00287","Gadaladeniya Temple",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"288","SUP00288","Lankathilaka Temple",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"289","SUP00289","Aluvihare Temple",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","97","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"290","SUP00290","Vewurukannala Temple",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","98","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"291","SUP00291","Elephant Orphanage",,,,"0","0","1",,,,,,,,"7","122","0","0","0","0",NULL,NULL,NULL,NULL
+"292","SUP00292","Club Concept & Elephant Bath",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","71","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"293","SUP00293","Royal Botanical Gardens",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","120","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"294","SUP00294","Hakgala Botanical Gardens",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","46","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"295","SUP00295","Henarathgoda Botanical Gardens",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","43","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"296","SUP00296","Minneriya National Park",,,,"0","0","1",,,,,,"wildlife-12days-1.jpg","DSC_1146.webp","7","102","0","0","0","0",NULL,NULL,NULL,"2026-02-13"
+"297","SUP00297","Udawalawe National Park",,,,"0","0","1",,,,,,"Gemini_Generated_Image_7os7v17os7v17os7.png","Gemini_Generated_Image_7os7v17os7v17os7.png","7","142","0","0","0","0",NULL,NULL,NULL,"2026-02-13"
+"298","SUP00298","Hurulu Eco-Park",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"299","SUP00299","Cultural Show ",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"300","SUP00300","National Museum",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"301","SUP00301","Air Magic (PVT) Ltd",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"302","SUP00302","Yala National Park ",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"303","SUP00303","Horton Plains National Park",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","54","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"304","SUP00304","Hiriwaduna Trek - Elephant Voyage",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","53","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"305","SUP00305","Pigeon Island Beach",,,,"0","1","1",,,,,,"Sarah8000beach-water-waves-sand-sun.jpg","Sarah8000beach-water-waves-sand-sun.jpg","7","158","0","0","0","0",NULL,NULL,NULL,"2026-02-13"
+"306","SUP00306","Sinharaja Nature Park",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","135","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"307","SUP00307","Galle National Museum",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"308","SUP00308","Knuckles Trekking",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","78","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"309","SUP00309","Udawatta Kele Entrance",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"310","SUP00310","Kaudulla Park Safari Entrance",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","70","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"311","SUP00311","Gangarama Temple",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"312","SUP00312","Turtle Protection Centre",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","81","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"313","SUP00313","Light House Entrance Fee",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","37","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"314","SUP00314","Pedro Tea Factory",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"315","SUP00315","Mulkirigala Entrance",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"316","SUP00316","Mirissa Whale Watching",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"317","SUP00317","Yapahuwa Entrance",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","156","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"318","SUP00318","Nalanda Gedige Entrance",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","97","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"319","SUP00319","Buduruwagala Entrance",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","25","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"320","SUP00320","Ella Trekking",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"321","SUP00321","Bundala National Park",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","27","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"322","SUP00322","Wilpattu National Park",,,,"0","0","1",,,,,,,,"7","154","0","0","0","0",NULL,NULL,NULL,"2026-01-06"
+"323","SUP00323","Sigiriya Museum",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"324","SUP00324","Wasgomuwa National Park",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","147","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"325","SUP00325","Ritigala Entrance",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"326","SUP00326","Rekawa Turtle",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"327","SUP00327","Mackwoods Labookellie Tea Estate",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"328","SUP00328","Zoological Gardens",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","31","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"329","SUP00329","Kitulgala White Water Rafting",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","76","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"330","SUP00330","Hindu Temple-Colombo",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"331","SUP00331","Hindu Temple-Kandy",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"332","SUP00332","Hindu Temple-Trincomalee",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"333","SUP00333","Mountain Bike Ride",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"334","SUP00334","Kumana Jeep Safari",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","87","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"335","SUP00335","Laahugala Jeep Safari",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","89","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"336","SUP00336","Maduru Oya Jeep Safari",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","91","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"337","SUP00337","Muthurajawela Boat Ride",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"338","SUP00338","Madu River Boat Ride",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","16","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"339","SUP00339","Hotel J",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"340","SUP00340","Heritage Pusellawa Resort",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","125","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"341","SUP00341","Ella Resort",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"342","SUP00342","Belihuloya Resort",,,,"0","1","1",,,,,,,,"6","20","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"343","SUP00343","Hanwella Resort",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","48","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"344","SUP00344","Heritage Dambulla Resort",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"345","SUP00345","Three by Jetwing",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","2","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"346","SUP00346","Heritage Habarana Resort ",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"347","SUP00347","Mihintale Resort",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","101","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"348","SUP00348","Kitulgala Rest House",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","76","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"349","SUP00349","Heritage Weligama Resort",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","151","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"350","SUP00350","Medawachchiya Resort",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","99","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"351","SUP00351","Sigiriya Resort",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"352","SUP00352","Club Palm Bay ",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","95","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"353","SUP00353","Galkadawala",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"354","SUP00354","The Beach",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"355","SUP00355","Ambalama Leisure Lounge",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","48","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"356","SUP00356","Baywatch Eco Resort",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","62","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"357","SUP00357","Big Game Tented Camps",,,,"0","0","1",,,,,,,,"6","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"358","SUP00358","Calamander Lake Gregory",NULL,NULL,"Nuwara eliya","0","0","1",,,,,,NULL,NULL,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"359","SUP00359","Chalet Hotel",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"361","SUP00361","Calamander Unawatuna Beach",NULL,NULL,"Parangiya Watta, Unawatuna, ","0","1","1",,,,,,NULL,NULL,"2","143","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"362","SUP00362","Citrus Waskaduwa",NULL,NULL,"# 427, Samanthara Road, Kuda Waskaduwa","0","1","1",,,,,,NULL,NULL,"2","148","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"363","SUP00363","Royal Cocoon ",,,,"0","1","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"364","SUP00364","Deer Park",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"365","SUP00365","Hotel Heavens",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"366","SUP00366","Governor's Gangula",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"367","SUP00367","Jafna Heritage Villa",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","58","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"368","SUP00368","Luxe Asia",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"369","SUP00369","Michelle Boutique Hote",NULL,NULL,"AH43, Balapitiya 80550","0","1","1",,,"091 2 254430",,,NULL,NULL,"8","16","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"370","SUP00370","Thalahena Villa",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"371","SUP00371","Littlemore Bungalow",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","88","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"372","SUP00372","Cinnamon Tree",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"373","SUP00373","Ferncliff Boutique Bungalow",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"374","SUP00374","Hotel Orchid",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"375","SUP00375","Cape Weligama",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","151","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"376","SUP00376","Anantara Peace Haven Resort - Tangalle",,,,"0","1","1",,,,,,,,"6","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"377","SUP00377","Big Game Tented Camps - Wilpatu",,,,"0","1","1",,,,,,,,"6","154","0","0","0","0",NULL,NULL,NULL,NULL
+"380","SUP00380","Kalundewa Retreat",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"381","SUP00381","Shinagawa Beach ",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","16","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"382","SUP00382","Taprobana Wadduwa ",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","161","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"383","SUP00383","The River House ",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","16","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"384","SUP00384","Madulkelle Tea & Eco Lodge",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"385","SUP00385","Queens Hotel",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"386","SUP00386","Palm Village Hotel",NULL,NULL,"No: 262, Old Colombo Road, Uswetakeiyawa, Hendala, Wattala, 20000","0","1","1",,,"011 7 828114",,,NULL,NULL,"6","144","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"387","SUP00387","Heritage Hotel",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"388","SUP00388","Sea Lotus",,,,"0","1","1",,,,,,,,"6","158","0","0","0","0",NULL,NULL,NULL,NULL
+"389","SUP00389","Eco Team",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","217","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"390","SUP00390","Fisherman's Bay ",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","151","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"391","SUP00391","Taprospa spas & Resorts",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","58","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"392","SUP00392","Polwaththa Eco-Lodges",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"393","SUP00393","None",NULL,NULL,,"0","0","1","0",,,,,NULL,NULL,"6","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"394","SUP00394","Stone House Kandy",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"395","SUP00395","Ulpotha",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","88","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"396","SUP00396","Centara Ceysands Resort & Spa",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"2","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"397","SUP00397","Lanka Princess",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"398","SUP00398","Leopard Trails Yala",,,,"0","1","1",,,,,,,,"6","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"399","SUP00399","Leopard Trails - Wilpattu",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","154","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"400","SUP00400","Gal Oya Lodge",,,,"0","1","1",,,,,,,,"6","42","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"401","SUP00401","Hotel Sudu Araliya",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"402","SUP00402","Elephas Resorts & Spa",,,,"0","1","1",,,,,,,,"6","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"403","SUP00403","Pandanus Beach Resort",,,,"0","1","1",,,,,,,,"6","55","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"404","SUP00404","Uga Escapes Resort",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"8","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"405","SUP00405","Yathra By Jetwing",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"406","SUP00406","Thaproban Beach House Hotel",,,,"0","0","1",,,,,,,,"6","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"407","SUP00407","Sir John's Bungalow",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","97","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"408","SUP00408","Signature By Amaya",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"409","SUP00409","The Langdale By Amaya",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"410","SUP00410","Amaya Beach",NULL,NULL,,"0","1","1",,,"065 2 050200",,,NULL,NULL,"2","118","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"411","SUP00411","Kaluthara Holiday Resort",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","127","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"412","SUP00412","The Rainforest Ecolodge",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","135","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"413","SUP00413","Dananjaya Bogamuwa",NULL,NULL,,"0","0","1",,,,"0717776669",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"414","SUP00414","S.Karunanayaka",NULL,NULL,,"0","0","1",,,,"0716897300",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"425","SUP00416","Jayasundara",NULL,NULL,"159/1 Wewalduwa,Kelaniya","0","0","1",,,"0112937039",,,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"426","SUP00417","Manjula",NULL,NULL,,"0","0","1",,,,"0713174253",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"427","SUP00418","M.D Savithra",NULL,NULL,,"0","0","1",,,,"0723375248",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"428","SUP00419","Gamini Jayatissa",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"429","SUP00420","Sumith Hemantha",NULL,NULL,,"0","0","1",,,,"0771859504",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"430","SUP00421","Chinthaka Prasanna",NULL,NULL,,"0","0","1",,,,"0718026406",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"431","SUP00422","R.M.K Rathnayake",NULL,NULL,,"0","0","1",,,,"0775508648",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"432","SUP00423","Upul Senarathna",NULL,NULL,,"0","0","1",,,,"0716371983",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"433","SUP00424","Eranga Sanjeewa",NULL,NULL,,"0","0","1",,,,"0772384482",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"434","SUP00425","Wijerathna",NULL,NULL,,"0","0","1",,,,"0776955727",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"435","SUP00426","Asiri Susil",NULL,NULL,,"0","0","1",,,,"0777347882",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"436","SUP00427","H.S.T Mendis",NULL,NULL,,"0","0","1",,,,"0776914250",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"437","SUP00428","Darshana Pushpakumara",NULL,NULL,,"0","0","1",,,,"0776338938",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"438","SUP00429","Kithsiri",NULL,NULL,,"0","0","1",,,,"0714785882",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"439","SUP00430","Nishan",NULL,NULL,,"0","0","1",,,,"0779321851",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"440","SUP00431","Priyantha Amarasinghe",NULL,NULL,,"0","0","1",,,,"0771648488",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"441","SUP00432","Sumedha Katawala",NULL,NULL,,"0","0","1",,,,"0773752352",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"442","SUP00433","Wasantha",NULL,NULL,,"0","0","1",,,,"0729294317",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"443","SUP00434","Mahesh Perera",NULL,NULL,,"0","0","1",,,,"0772612525",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"444","SUP00435","Fareen",NULL,NULL,,"0","0","1",,,,"0774563783",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"445","SUP00436","Ashantha Silva",NULL,NULL,,"0","0","1",,,,"0714610056",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"446","SUP00437","Shanna Ferando",NULL,NULL,,"0","0","1",,,,"0776234363",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"447","SUP00438","Ajantha",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"448","SUP00439","Anil Ganegoda",NULL,NULL,,"0","0","1",,,,"0778918984",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"449","SUP00440","Chaminda Sampath",NULL,NULL,,"0","0","1",,,,"0774345675",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"450","SUP00441","Sisira Gunasekara",NULL,NULL,,"0","0","1",,,,"0773185955",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"451","SUP00442","Tiral",NULL,NULL,,"0","0","1",,,,"0718257086",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"452","SUP00443","Ranjan",NULL,NULL,,"0","0","1",,,,"0722794911",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"453","SUP00444","Asanga Kumar ",NULL,NULL,,"0","0","1",,,,"0772740114",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"454","SUP00445","Ranasinage Ranjith",NULL,NULL,,"0","0","1",,,,"0779701650",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"455","SUP00446","Chamil",NULL,NULL,,"0","0","1",,,,"0775140203",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"456","SUP00447","Manjula Kumara",NULL,NULL,,"0","0","1",,,,"0713001576",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"457","SUP00448","Nawarathna Bandara",NULL,NULL,,"0","0","1",,,,"0777851538",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"458","SUP00449","Sadun Madushanka",NULL,NULL,,"0","0","1",,,,"0719950995",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"459","SUP00450","Fawmy",NULL,NULL,,"0","0","1",,,,"0714714804",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"460","SUP00451","Chamindasiri",NULL,NULL,,"0","0","1",,,,"0714972360",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"461","SUP00452","Fazal",NULL,NULL,,"0","0","1",,,,"0777255058",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"462","SUP00453","Upul Chaminda",NULL,NULL,,"0","0","1",,,,"0777304220",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"463","SUP00454","Pathirage Wijepala",NULL,NULL,,"0","0","1",,,,"0723547771",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"464","SUP00455","Hiran Rangana",NULL,NULL,,"0","0","1",,,,"0770134874",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"465","SUP00456","Anton Ferando",NULL,NULL,,"0","0","1",,,,"0778456538",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"466","SUP00457","Idunil Prasanna",NULL,NULL,,"0","0","1",,,,"0777609455",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"467","SUP00458","Eranga Indrajith",NULL,NULL,,"0","0","1",,,,"0773164089",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"468","SUP00459","Dilshan Senevirathna",NULL,NULL,,"0","0","1",,,,"0773759562",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"469","SUP00460","Sumedha Gayan",NULL,NULL,,"0","0","1",,,,"0718443036",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"470","SUP00461","Eric Perera",NULL,NULL,,"0","0","1",,,,"0776228220",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"471","SUP00462","A.M Renuka",NULL,NULL,,"0","0","1",,,,"0712292498",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"472","SUP00463","A.Vigneshwaran",NULL,NULL,,"0","0","1",,,,"0715109423",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"473","SUP00464","Chaminda Kumar",NULL,NULL,,"0","0","1",,,,"0779203558",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"474","SUP00465","Somasiri",NULL,NULL,,"0","0","1",,,,"0718743111",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"475","SUP00466","Nalin Nalaka",NULL,NULL,,"0","0","1",,,,"0776226009",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"476","SUP00467","Thushara",NULL,NULL,,"0","0","1",,,,"0716931780",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"477","SUP00468","Collin Phillips",NULL,NULL,,"0","0","1",,,,"0714496801",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"478","SUP00469","Nandana Peiris",NULL,NULL,,"0","0","1",,,,"0714414996",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"479","SUP00470","Gayan Abeynayaka",NULL,NULL,,"0","0","1",,,,"0772953292",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"480","SUP00471","Sarath Kumara",NULL,NULL,,"0","0","1",,,,"0755845070",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"481","SUP00472","Nihal Ferando",NULL,NULL,,"0","0","1",,,,"0723581170",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"482","SUP00473","Malin Madawa",NULL,NULL,,"0","0","1",,,,"0788446969",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"483","SUP00474","Roshan Perera",NULL,NULL,,"0","0","1",,,,"0718544244",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"484","SUP00475","K.T.S Gunarathna",NULL,NULL,,"0","0","1",,,,"0773260410",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"485","SUP00476","A.Rathnayaka",NULL,NULL,,"0","0","1",,,,"0776303107",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"486","SUP00477","Susil Ranjith",NULL,NULL,,"0","0","1",,,,"0722964717",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"487","SUP00478","Ranga Kalutara",NULL,NULL,,"0","0","1",,,,"0771924520",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"488","SUP00479","Weeramanthree",NULL,NULL,,"0","0","1",,,,"0717398808",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"489","SUP00480","Madura Neelanga",NULL,NULL,,"0","0","1",,,,"0711858896",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"490","SUP00481","Linton Premasiri",NULL,NULL,,"0","0","1",,,,"0766487657",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"491","SUP00482","Lakshan Perera",NULL,NULL,,"0","0","1",,,,"0721999941",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"492","SUP00483","Rodney",NULL,NULL,,"0","0","1",,,,"0777770617",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"493","SUP00484","Prasanna Suranga",NULL,NULL,,"0","0","1",,,,"07133220214",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"494","SUP00485","Thilak Samarasinghe",NULL,NULL,,"0","0","1",,,,"0777209813",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"495","SUP00486","Sanjeewa Roshan",NULL,NULL,,"0","0","1",,,,"0777727671",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"496","SUP00487","Hasantha Lahiru",NULL,NULL,,"0","0","1",,,,"0770601543",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"497","SUP00488","Amarakoon",NULL,NULL,,"0","0","1",,,,"0723393939",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"498","SUP00489","Prasad Chaminda",NULL,NULL,,"0","0","1",,,,"0776610011",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"499","SUP00490","Angelo Thilak",NULL,NULL,,"0","0","1",,,,"011237594",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"500","SUP00491","Bandara",NULL,NULL,,"0","0","1",,,,"0777381588",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"501","SUP00492","Eliyan",NULL,NULL,,"0","0","1",,,,"0719099071",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"502","SUP00493","G.Rupersena",NULL,NULL,,"0","0","1",,,,"0777105712",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"503","SUP00494","Gayan Gunarathne",,,,"0","0","1",,,,"0777873894",,,,"7","29","0","0","0","0",NULL,NULL,NULL,"2026-01-23"
+"504","SUP00495","Iresh Sandaruwan",NULL,NULL,,"0","0","1",,,,"0717153737",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"505","SUP00496","Janaka",NULL,NULL,,"0","0","1",,,,"0718356410",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"506","SUP00497","Lakshman Ramanayaka",NULL,NULL,,"0","0","1",,,,"0777041021",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"507","SUP00498","Luxman",NULL,NULL,,"0","0","1",,,,"0773634282",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"508","SUP00499","Mahesh Marasinghe",NULL,NULL,,"0","0","1",,,,"0713127978",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"509","SUP00500","Nalin Liyanaarachchi",NULL,NULL,,"0","0","1",,,,"0727919661",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"510","SUP00501","Nimal de silva",NULL,NULL,,"0","0","1",,,,"0714019448",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"511","SUP00502","Niran",NULL,NULL,,"0","0","1",,,,"0777326072",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"512","SUP00503","Nuwan",NULL,NULL,,"0","0","1",,,,"0716097795",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"513","SUP00504","Oshada",NULL,NULL,,"0","0","1",,,,"0772348707",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"514","SUP00505","Padmasiri",NULL,NULL,,"0","0","1",,,,"0776156368",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"515","SUP00506","Prasad Adikari",NULL,NULL,,"0","0","1",,,,"0718537834",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"516","SUP00507","Shiran",NULL,NULL,,"0","0","1",,,,"0777426275",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"517","SUP00508","Sunil Guyes",NULL,NULL,,"0","0","1",,,,"0773775531",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"518","SUP00509","Udara Sampath",NULL,NULL,,"0","0","1",,,,"0728492314",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"519","SUP00510","Upendra",NULL,NULL,,"0","0","1",,,,"0777317636",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"520","SUP00511","Vicky",NULL,NULL,,"0","0","1",,,,"0779709636",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"521","SUP00512","Vipula channa",NULL,NULL,,"0","0","1",,,,"0713525233",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"522","SUP00513","Tissa Samarasinghe",NULL,NULL,,"0","0","1",,,,"0777719843",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"523","SUP00514","Bubsy",NULL,NULL,,"0","0","1",,,,"0773228879",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"524","SUP00515","Nevil Ferando",NULL,NULL,,"0","0","1",,,,"0766057197",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"525","SUP00516","Sunil perera",NULL,NULL,,"0","0","1",,,,"0775875859",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"526","SUP00517","Shelton Wijesinghe",NULL,NULL,,"0","0","1",,,,"0724385049",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"527","SUP00518","Mohomad Maharoof",NULL,NULL,,"0","0","1",,,,"0777311627",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"528","SUP00519","Anoj Ferando",NULL,NULL,,"0","0","1",,,,"0773034247",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"529","SUP00520","Deshappriya Silva",NULL,NULL,,"0","0","1",,,,"0777820311",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"530","SUP00521","Nimal",NULL,NULL,,"0","0","1",,,,"0779363913",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"531","SUP00522","Anil Perera",NULL,NULL,,"0","0","1",,,,"0774552836",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"532","SUP00523","Noel Reman",NULL,NULL,,"0","0","1",,,,"0776027276",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"533","SUP00524","Janaka Chaminda",NULL,NULL,,"0","0","1",,,,"0777123344",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"534","SUP00525","M.Aruna",NULL,NULL,,"0","0","1",,,,"0775981552",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"535","SUP00526","Sarath Silva",NULL,NULL,,"0","0","1",,,,"0775246667",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"536","SUP00527","Sachintha Prasad",NULL,NULL,,"0","0","1",,,,"0770254089",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"537","SUP00528","N.Jeewaka",NULL,NULL,,"0","0","1",,,,"0777821585",,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"538","SUP00529","Anantaya Resort & Spa",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","28","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"539","SUP00530","Hotel Chandrika",NULL,NULL,,"0","1","1",,"chandrikahotel@sltnet.lk","2237143",,,NULL,NULL,"2","141","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"540","SUP00531","Lavendish Beach Resort",NULL,NULL,,"0","0","1",,"reservations@lavendishbr.lk","94912283201",,,NULL,NULL,"3","143","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"541","SUP00532","Reefs Edge Resorts",NULL,NULL,,"0","1","1",,,"0117891111",,,NULL,NULL,"2","144","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"542","SUP00533","Kirinda beach Resort",,,,"0","0","1",,,,"077 207 5696",,,,"6","75","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"543","SUP00534","Avian Breeze - Nuwara Eliya",NULL,NULL,,"0","1","1",,,"052 2 222416",,,NULL,NULL,"3","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"544","SUP00535","The Hideout Sigiriya",,,,"0","0","1",,,,"0777716088",,,,"4","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"545","SUP00536","Welcombe Hotel",NULL,NULL,,"0","1","1",,,"262222373",,,NULL,NULL,"3","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"546","SUP00537","Suriya Resort",NULL,NULL,,"0","1","1",,,"31 2278222 ",,,NULL,NULL,"2","146","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"547","SUP00538","Mirage Colombo",NULL,NULL,,"0","1","1",,,"011 2 363471",,,NULL,NULL,"2","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"548","SUP00539","Amagi Lagoon",NULL,NULL,,"0","1","1",,,"031 2 238385",,,NULL,NULL,"2","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"549","SUP00540","Anantamaa Hotel",NULL,NULL,,"0","1","1",,,,"0777 345 229",,NULL,NULL,"3","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"550","SUP00541","Aliya Resort & Spa",NULL,NULL,,"0","1","1",,,"066 2 040400",,,NULL,NULL,"2","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"551","SUP00542","Mambo's Hotel",NULL,NULL,,"0","1","1",,,,"0777822524",,NULL,NULL,"3","11","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"552","SUP00543","Forest Rock Garden",NULL,NULL,,"0","1","1",,,"94 252 033 000",,,NULL,NULL,"2","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"553","SUP00544","The Safari hotel",NULL,NULL,,"0","1","1",,,"011 5 585858",,,NULL,NULL,"2","141","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"554","SUP00545","Kandy City Hotel By Earls",NULL,NULL,,"0","1","1",,,"081 2 220002",,,NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"555","SUP00546","Berjaya Hotel",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"2","106","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"556","SUP00547","Sea world Resort",NULL,NULL,,"0","0","1",,,,"071 818 2506",,NULL,NULL,"3","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"557","SUP00548","The Sovereign Kandy",NULL,NULL,,"0","0","1",,,,"075 560 4980",,NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"558","SUP00549","Ocean Beach Hotel Arugam Bay",NULL,NULL,,"0","1","1",,,"063 2 248405",,,NULL,NULL,"3","11","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"559","SUP00550","Steuart by Citrus ",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"2","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"560","SUP00551","Mangrove Boat",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"561","SUP00552","Araliya Green Hills Hotel",NULL,NULL,,"0","1","1",,,"052 2 224150",,,NULL,NULL,"2","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"562","SUP00553","Carolina Beach Hotel",NULL,NULL,,"0","1","1",,,"032 2 243110",,,NULL,NULL,"2","28","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"563","SUP00554","Onreech Hotel",NULL,NULL,,"0","1","1",,,"011 2 258585",,,NULL,NULL,"2","133","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"564","SUP00555","Full Moon Garden Hotel",,,,"0","0","1",,,"011 5 353534",,,,,"3","69","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"565","SUP00556","Paradise Beach Club",NULL,NULL,,"0","1","1",,,"041 2 251206",,,NULL,NULL,"2","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"566","SUP00557","Pello Lake Resort",NULL,NULL,,"0","1","1",,,,"077 777 8504",,NULL,NULL,"3","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"567","SUP00558","Hotel Randiya",,,,"0","0","1",,,"25 2222 868",,,,,"3","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"568","SUP00559","Ruwala Resort ",NULL,NULL,,"0","1","1",,,"32 3 299 299","727 655 665 ",,NULL,NULL,"2","62","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"569","SUP00560","Big game camp-uda walawe",NULL,NULL,,"0","1","1",,,"94115830833",,,NULL,NULL,"6","142","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"570","SUP00561"," Alakamanda",,,,"0","1","1",,,"025 5 620277",,,,,"3","10","0","0","0","0",NULL,NULL,NULL,NULL
+"571","SUP00562","Aarya Lagoon Kalpitiya",NULL,NULL,,"0","1","1",,,"011 4 975555",,,NULL,NULL,"2","62","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"572","SUP00563","Chinatry Dish",NULL,NULL,,"0","1","1",,,"(011) 268-6600",,,NULL,NULL,"12","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"573","SUP00564","Sunlight Garden",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"12","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"574","SUP00565","Xilaton",NULL,NULL,,"0","1","1",,,"011 2 351425",,,NULL,NULL,"12","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"575","SUP00566","Rampart Hote",NULL,NULL,,"0","1","1",,,,"091 074 380103",,NULL,NULL,"12","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"576","SUP00567","CHC Restaurant",NULL,NULL,,"0","1","1",,,"+94 37 223 4186",,,NULL,NULL,"12","88","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"577","SUP00568","Polonnaruwa side",,,,"0","0","1",,,,,,,,"7","123","0","0","0","0",NULL,NULL,NULL,NULL
+"578","SUP00569","Mihintale Rock",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","101","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"579","SUP00570","Tintagel Colombo",,,,"0","1","1",,,"011 4 602060",,,,,"2","29","0","0","0","0",NULL,NULL,NULL,"2025-08-05"
+"580","SUP00571","Taylors Hill",,,,"0","1","1",,,"081 7 201115",,,,,"2","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"581","SUP00572","Sri Syam",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"12","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"582","SUP00573","Oak Ray Galle",,,,"0","1","1",,,,"+94773526440",,,,"12","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"583","SUP00574","chc ambepussa",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"12","7","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"584","SUP00575","Longteng Chinese Restaurant",NULL,NULL,,"0","1","1",,,"0352267080",,,NULL,NULL,"12","7","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"585","SUP00576","The Lake House",NULL,NULL,,"0","1","1",,,"011 5 585858",,,NULL,NULL,"2","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"586","SUP00577","Imagine Villa Hotel",NULL,NULL,,"0","1","1",,,"041 2 232088",,,NULL,NULL,"1","98","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"587","SUP00578","Coco Royal Beach Resort",,,,"0","1","1",,,,,,,,"3","63","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"588","SUP00579","Anilana Pasikuda",,,,"0","1","1",,,"065 2 030900",,,,,"2","118","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"589","SUP00580","Anilana Nilaveli",NULL,NULL,,"0","1","1",,,"011 2 030900",,,NULL,NULL,"2","114","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"590","SUP00581","Kithala Resort",,,,"0","1","1",,,"011 7 386389",,,,,"2","141","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"591","SUP00582","Banyan Camp",,,,"0","0","0",,,,"077 734 9878",,,,"2","142","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"592","SUP00583","kulu safari",NULL,NULL,,"0","1","1",,,,"0712733630",,NULL,NULL,"1","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"593","SUP00584","Lagoon Paradise Beach Resort",,,,"0","1","1",,,"047 2 242528",,,,,"2","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"594","SUP00585","Laya Safari",,,,"0","0","1",,,"047 2 239851",,,,,"2","155","0","0","0","0",NULL,NULL,NULL,NULL
+"595","SUP00586","Laya beach",,,,"0","0","1",,,,"0773792246",,,,"3","161","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"596","SUP00587","Mango House",NULL,NULL,,"0","1","1",,,"94912247212",,,NULL,NULL,"2","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"597","SUP00588","Zylan Luxury Villa",NULL,NULL,,"0","1","1",,,"011 2 686883",,,NULL,NULL,"2","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"598","SUP00589","Gaga Bees Yala",,,,"0","0","1",,,,,,,,"2","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"599","SUP00590","The Mudhouse",NULL,NULL,,"0","0","1",,,,,"020 3411 2867",NULL,NULL,"1","9","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"600","SUP00591","Palagama Beach ",NULL,NULL,,"0","1","1",,,,"077 781 8970",,NULL,NULL,"2","62","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"601","SUP00592","The Kandyan Manor ",,,,"0","0","1",,,,"077 745 5914",,,,"2","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"602","SUP00593","Ella Flower Garden Resort",,,,"0","0","1",,,"057 2 050480",,,,,"3","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"603","SUP00594","Stardust Beach Hotel ",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"2","11","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"604","SUP00595","wila safari",,,,"0","0","1",,,,,,,,"6","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"605","SUP00596","Paradise Holiday Village",NULL,NULL,,"0","1","1",,,"031 2 274589",,,NULL,NULL,"3","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"606","SUP00597","Rafters Retreat",,,,"0","0","1",,,,"077 341 4308",,,,"3","76","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"607","SUP00598","The Elephant Stables, Kandy",NULL,NULL,,"0","1","1",,,"011 2 888450",,,NULL,NULL,"2","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"608","SUP00599","Mahoora Tented Safari Camp",NULL,NULL,,"0","1","1",,,,"071 066 2260",,NULL,NULL,"6","142","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"609","SUP00600","Mahoora Tented Safari ",NULL,NULL,,"0","1","1",,,"011 5 830833",,,NULL,NULL,"6","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"610","SUP00601","Radisson Kandy ",,,,"0","1","1",,,"081 2 030700",,,,,"2","66","0","0","0","0",NULL,NULL,NULL,"2025-05-11"
+"611","SUP00602","Willys Safari Hotel",NULL,NULL,,"0","1","1",,,"066 3669815",,,NULL,NULL,"6","147","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"612","SUP00603","The Secret Yala",NULL,NULL,,"0","0","1",,,,"071 455 5400",,NULL,NULL,"6","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"613","SUP00604","The Ocean",NULL,NULL,,"0","1","1",,,"011 5 110000",,,NULL,NULL,"2","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"614","SUP00605","The Other Corner",NULL,NULL,,"0","1","1",,,"011 7 399500",,,NULL,NULL,"2","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"615","SUP00606","Windsor",NULL,NULL,,"0","1","1",,,"011 5 373305",,,NULL,NULL,"4","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"616","SUP00607","kingston by remo hotel",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"3","106","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"617","SUP00608","Hotel Wunderbar",NULL,NULL,,"0","0","1",,,,,"034 2 275908",NULL,NULL,"2","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"618","SUP00609","Fort Bliss ",,,,"0","0","1",,,"091 2 248168",,,,,"2","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"619","SUP00610","Calamander Bay Resort ",NULL,NULL,,"0","1","1",,,"94 112 897 944 ",,,NULL,NULL,"2","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"620","SUP00611","D Pavilion Inn",NULL,NULL,,"0","1","1",,,"011 2 553436",,,NULL,NULL,"2","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"621","SUP00612","Devon Hotel",NULL,NULL,,"0","1","1",,,"081 2 235164",,,NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"622","SUP00613","Kandy-ella",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"623","SUP00614","Divyaa Lagoon Resort",NULL,NULL,,"0","1","1",,,"011 5 666262",,,NULL,NULL,"3","62","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"624","SUP00615","Ella Jungle Inn",NULL,NULL,,"0","1","1",,,,"077 735 2352",,NULL,NULL,"3","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"625","SUP00616","Footprints Villa",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"626","SUP00617","Ellen's Place",,,"31, Shady Grove Ave, Colombo","0","1","1","174873356",,"011 2 680062",,,,,"9","29","0","0","0","0",NULL,NULL,NULL,NULL
+"627","SUP00618","FARCRY, ",NULL,NULL,,"0","0","1",,,"+94 112 581 584",,,NULL,NULL,"6","147","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"628","SUP00619","Lantern Hotel",,,"Lantern Boutique Hotel, Matara, Sri Lanka.","0","0","1",,,,,,,,"8","103","0","0","0","0",NULL,NULL,NULL,NULL
+"629","SUP00620","Dolphin Beach Resort",NULL,NULL,"Illanthadiya
+Kalpitiya
+Sri Lanka.","0","0","1",,"reservations@dolphinbeach.lk",,"777 72 32 72",,NULL,NULL,"6","62","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"630","SUP00621","Cinnamon Red ",,,"59 Ananda Coomaraswamy Mawatha, Colombo","0","1","1",,,"011 2 145145",,,,,"2","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"631","SUP00622","Mountbatten Bungalow",NULL,NULL,"Gangawatakorale","0","1","1",,,"081 2 054400",,,NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"632","SUP00623","The steuart by citrus",NULL,NULL,"No 45,Hospital Lane,Off Chatham Street,Colombo 01, Sri Lanka","0","0","1",,,"94 11 5575 575",,,NULL,NULL,"8","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"633","SUP00624","Refresh Seafood Restaurant",,,,"0","0","1",,,,,,,,"12","141","0","0","0","0",NULL,NULL,NULL,"2024-10-08"
+"634","SUP00625","Ayubowan guest house",NULL,NULL,,"0","0","1",,,"034 2 275913",,,NULL,NULL,"10","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"635","SUP00626","Number one mirissa",,,"Mirissa Beach,
+Galle,
+Sri Lanka","0","1","1",,,"+94 41 225 4884.",,,,,"2","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"636","SUP00627","Nilaveli Crystal Blue Hotel",NULL,NULL,,"0","0","1",,,"026 2 232228",,,NULL,NULL,"3","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"637","SUP00628","Orient Hotel",NULL,NULL,"Vishaka Rd, Bandarawela","0","0","1",,,"057 2 222377",,,NULL,NULL,"3","18","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"638","SUP00629","Villa Ocean View",NULL,NULL," Samanthara Rd, Wadduwa","0","0","1",,,"038 4 299699",,,NULL,NULL,"2","161","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"639","SUP00630","Oruthota Chalets",NULL,NULL,"Oruthota Chalets,Digana,Rajawella., Kandy","0","0","1",,,"077 634 7922",,,NULL,NULL,"2","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"640","SUP00631","Palm Villa",NULL,NULL,"Matara Road, Mirissa","0","0","1",,,"041 2 250022",,,NULL,NULL,"2","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"641","SUP00632","The Eden Resort & Spa",NULL,NULL,"Kaluwamodara, Beruwala 12070","0","1","1",,,"034 2 276075",,,NULL,NULL,"2","23","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"642","SUP00633","The Blue Magpie Lodge",NULL,NULL,"kudawa, Veddagala 70005","0","0","1",,,,"072 744 6776",,NULL,NULL,"3","135","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"643","SUP00634","Bougainvillea Retreat",,,"Victoria Golf and Country Resort,, Rajawella,, Kandy 20180","0","0",NULL,,,,"077 029 1896",,,,"2","66","0","0","0","0",NULL,NULL,NULL,"2024-12-12"
+"644","SUP00635","Hotel Acme",NULL,NULL,"Maradankadawala-Habarana-Thirukkondaiadimadu Highway, Habarana","0","0","1",,,,"077 722 9965",,NULL,NULL,"4","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"645","SUP00636","41 lighthouse street",NULL,NULL,"Galle Fort, 
+Sri Lanka. ","0","0","1",,,,"94 77 363 8381",,NULL,NULL,"6","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"646","SUP00637","Hotel 9 Arch",NULL,NULL,"39 Passara Rd","0","0","1",,,,"077 730 5613",,NULL,NULL,"2","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"647","SUP00638","Albany Villa",NULL,NULL,"Albany,
+No 11/4,Upper Lake Road,Nuwara Eliya.
+
+","0","1","1",,,,"+94 767 934234",,NULL,NULL,"3","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"648","SUP00639","Pearl Oceanic Resort",NULL,NULL,"Ward No.3, Sampalthivu, Nilaweli Road, Trincomalee.","0","1","1",,,"026 2 051051",,,NULL,NULL,"2","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"649","SUP00640","Pledge3 ",NULL,NULL,"Negombo","0","1","1",,,"031 2 224005",,,NULL,NULL,"2","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"650","SUP00641","Punsisi Rest",NULL,NULL,"Ademspeak, Delhousie, Sri Lanka.","0","0","1",,,,"071 573 3450",,NULL,NULL,"3","1","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"651","SUP00642","Baan@25 Villa",NULL,NULL,"25, Layn Baan Street, Galle","0","1","1",,,,"071 998 0992",,NULL,NULL,"2","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"652","SUP00643","bay beach hotel",NULL,NULL," ERAKKANDI , NILAVELI","0","0","1",,,,"94 711744093",,NULL,NULL,"3","114","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"653","SUP00644","Magampura Eco Village Resort",NULL,NULL,"Tissamaharama Rd","0","1","1",,,"047 4 935005",,,NULL,NULL,"2","141","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"654","SUP00645","Maya thangalle",NULL,NULL,"The Old House, Tangalle","0","1","1",,,"047 5 679026",,,NULL,NULL,"2","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"656","SUP00647","Sea Rock Villa",NULL,NULL,"Yalegama, Induruwa, Bentota 80500","0","1","1",,,"034 2 275444",,,NULL,NULL,"2","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"657","SUP00648","The secret ella",NULL,NULL,"234/1, Udu Kumbalwala, Ella, Sri Lanka","0","1","1",,,,"77 599 5 999",,NULL,NULL,"2","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"658","SUP00649","Art and Craft ",NULL,NULL,"839 Peradeniya Rd, Kandy","0","1","1",,,"081 2 229825",,,NULL,NULL,"12","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"659","SUP00650","Diyadahara Hotel ",,,"Lake Round Road, Kurunegala","0","0","1",,,"037 2 223452",,,,,"2","88","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"660","SUP00651","navayuga indian restaurant",,,"9 Abdul Caffoor Mawatha, Colombo 00300","0","1","1",,,"011 2 301302",,,,,"12","29","0","0","0","0",NULL,NULL,NULL,NULL
+"661","SUP00652","Avasta Resort and Sp",NULL,NULL,"92.Niwaththaka Chethiya Road Puttalam-Anuradhapura","0","0","1",,,"025 2 227777",,,NULL,NULL,"3","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"662","SUP00653","Royal Retreat Hotel",,,"Sigiriya Sri Lanka","0","1","1",,,,"077 609 1624",,,,"2","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"663","SUP00654","Airport",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","164","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"664","SUP00655","Misc",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"665","SUP00656","Green Paradise Agro Eco Hotel",NULL,NULL,"Kubukkadanwela, Dambulla 21100","0","1","1",,,"066 2 286300",,,NULL,NULL,"2","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"666","SUP00657","Villa Araliya ",NULL,NULL,"St Joseph Mawatha, Negombo","0","1","1",,,,"071 272 8504",,NULL,NULL,"6","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"667","SUP00658","Three temples",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"668","SUP00659","Elephant ride",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"669","SUP00660","Elephant safari",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","176","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"670","SUP00661","kalum homestay",,," 97/1,., Hotel Rd, Sigiriya 21120","0","0","1",,,,"071 888 7140",,,,"11","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"671","SUP00662","Athgira River Camping",NULL,NULL,"aha Ara Road, Udawalawe, Udawalawe 70190","0","0","1",,,,"077 037 5857",,NULL,NULL,"6","142","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"672","SUP00663","Rosaanne Beach Resort",NULL,NULL,"Kalpitiya road, Alankuda, Sri Lanka
+","0","1","1",,,,"077 182 5455",,NULL,NULL,"3","62","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"673","SUP00664","Amaara Forest Hotel ",,,"Indigasweva, Sigiriya, 21120, Sri Lanka","0","1","1",,,,,,,,"2","134","0","0","0","0",NULL,NULL,NULL,NULL
+"674","SUP00665","Emerald Hill Hotel",NULL,NULL,"70/18, Riverdale Road, Aniwatte, Kandy, Kandy 20000","0","0","1",,,"081 4 651651",,,NULL,NULL,"2","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"675","SUP00666","Elephant Trail",NULL,NULL,"5th Mile Post, Udawalawe, Udawalawa","0","0","1",,,,"077 037 5857",,NULL,NULL,"2","142","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"676","SUP00667","Hotel Sunset Beach",NULL,NULL,"Wellaweediya, Negombo","0","1","1",,,"031 2 222350",,,NULL,NULL,"3","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"677","SUP00668","Gimanhala Hotel",NULL,NULL,"754, Anuradhapura Road, Kandy - Jaffna Hwy, Dambulla","0","1","1",,,"066 2 284864",,,NULL,NULL,"2","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"678","SUP00669","Tamarind Gardens Homestay",NULL,NULL,"Tamarind Gardens, Aluthgangapitiya, Aluthwatte, Digana, Kandy., Digana","0","0","1",,,,"077 251 9461",,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"679","SUP00670","Stamford Star Hotel",NULL,NULL,"Badulla Rd, Nuwara Eliya","0","1","1",,,"052 2 222708",,,NULL,NULL,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"680","SUP00671","Induruwa Beach Resort",NULL,NULL,"Colombo-Galle-Hambantota-Wellawaya Highway","0","1","1",,,"034 2 275445",,,NULL,NULL,"3","55","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"681","SUP00672","White Elephant Hotel",NULL,NULL,"Hatton Road, Dalhousie, Nuwara Eliya","0","0","1",,,"051 3 507377",,,NULL,NULL,"6","1","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"682","SUP00673","Marina Bentota",NULL,NULL,"National Holiday Resort, Paradise Island, Bentota","0","1","1",,,,"077 344 2067",,NULL,NULL,"3","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"683","SUP00674","Dumbanagala Chalet",NULL,NULL,"Kandy","0","0","1",,,,,,NULL,NULL,"7","78","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"684","SUP00675","Koggala Beach Hotel",NULL,NULL,"Matara Road, Koggala","0","1","1",,,,,,NULL,NULL,"6","79","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"685","SUP00676","Rajarata Hotel",NULL,NULL,"77 Rowing Club Rd, Anuradhapura","0","1","1",,,"025 2 030000",,,NULL,NULL,"3","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"686","SUP00677","Bay Vista Hotel",NULL,NULL,"Arugam Bay","0","0","1",,,"063 2 248577",,,NULL,NULL,"2","11","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"687","SUP00678","Chena huts",NULL,NULL,,"0","1","1",,,"94 11 2331 322",,,NULL,NULL,"8","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"688","SUP00679","Mirissa Bay Resort",NULL,NULL,"Udupila, Mirissa, Mirissa","0","1","1",,,"071 244 3344",,,NULL,NULL,"3","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"689","SUP00680","Villa Rosa",NULL,NULL,"71/18, Dodanwala Passage, Asgiriya, Kandy, Sri Lanka","0","1","1",,,"081 2 215556",,,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"690","SUP00681","Thalsevana Holiday Resort",NULL,NULL," Thalsevana Holiday Resort,Kankesanthurai,Jaffna,Sri Lanka., ","0","0","1",,,"021 2 219777",,,NULL,NULL,"3","58","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"691","SUP00682","Hotel Ahash",NULL,NULL,"110/80 Thalvupadu, Mannar","0","0","1",,,"023 2 223300",,,NULL,NULL,"6","94","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"692","SUP00683","The Palmyrah House",NULL,NULL,"Thalaimannar Road, Medawachchiya-Talaimannar Hwy, Mannar","0","0","1",,,"011 2 594467",,,NULL,NULL,"6","94","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"693","SUP00684","Rani Beach Resort",,,"Lewis Pl, Negombo","0","0","1",,,"031 2 223106",,,,,"3","113","0","0","0","0",NULL,NULL,NULL,NULL
+"694","SUP00685","Swiss Residence",NULL,NULL," 23, Bahirawakanda Bahirawakanda Ln, Kandy","0","1","1",,,"081 2 204646",,,NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"695","SUP00686","Heaven Seven Hotel",,,,"0","1","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"696","SUP00687","W15",,,"506, New Galle Road, Weligama 81700","0","1","1",,,"041 2 254422",,,,,"2","151","0","0","0","0",NULL,NULL,NULL,"2024-10-19"
+"697","SUP00688","Suriya Resort",NULL,NULL,,"0","1","1",,,"031 22 77 775",,,NULL,NULL,"1","146","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"698","SUP00689","Colombo GSH",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"3","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"699","SUP00690","SEE KANDY",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"700","SUP00691","Lake Serenity Boutique Hotel",NULL,NULL,"Gonapitiya Road, Ratnapura","0","1","1",,,,,,NULL,NULL,"3","130","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"701","SUP00692","Melheim Resort Kandy",NULL,NULL,"Gangawatakorale","0","0","1",,,,,,NULL,NULL,"3","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"702","SUP00693","Elephant Bay ",,,,"0","1","1",,,,,,,,"6","122","0","0","0","0",NULL,NULL,NULL,NULL
+"703","SUP00694","Kumana Birds Park",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","87","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"704","SUP00695","Silvas Beach Hotel",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"705","SUP00696","Isurumuniya",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"706","SUP00697","Galviharaya",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"707","SUP00698","Isurumuniya",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"708","SUP00699","Galviharaya",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"709","SUP00700","Ranweli Spice Garden",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"12","97","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"710","SUP00701","Xilaton Restaurant",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"12","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"711","SUP00702","Saruketha",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"12","88","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"712","SUP00703","Diyadhara",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"12","88","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"713","SUP00704","Sudu Araliya, Polonnaruwa",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"12","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"714","SUP00705","The Trevene Hotel",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"715","SUP00706","Lakraj Heritage ",,,,"0","0","1",,,,,,,,"6","98","0","0","0","0",NULL,NULL,NULL,NULL
+"716","SUP00707","GSH Colombo",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"3","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"717","SUP00708","Garton's Cape",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"3","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"718","SUP00708","Garton's Cape",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"3","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"719","SUP00710","French Garden",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"720","SUP00711","Amaranthe Bay",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"721","SUP00712","Miridiya Lake Resort",,,,"0","1","1",,,,,,,,"2","10","0","0","0","0",NULL,NULL,NULL,NULL
+"722","SUP00713","Luckgrove Spice Garden",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"12","97","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"723","SUP00714","Oak-Ray Lake Resort",,,,"0","1","1",,,,,,,,"3","141","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"724","SUP00715","The Safari",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"725","SUP00716","Turtle Hatchery ",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"7","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"726","SUP00717","Beach Boutique",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"727","SUP00718","Nilaveli Beach Resort",,,,"0","0","1",,,,,,,,"6","114","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"728","SUP00719","The Lake Wind Hotel",,,,"0","0","1",,,,,,,,"6","141","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"729","SUP00720","Mihintale",,,,"0","0","1",,,,,,,,"7","101","0","0","0","0",NULL,NULL,NULL,NULL
+"730","SUP00721","Nildiya Mankada ",,,,"0","0","1",,,,,,,,"6","142","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"731","SUP00722","Eden Garden",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"732","SUP00723","Kamu Restuarant ",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"733","SUP00724","Wilpattu House",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","154","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"734","SUP00725","Lake Leisure ",,,,"0","0","1",,,,,,,,"6","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"735","SUP00726","Mount Heaven ",,,,"0","0","1",,,,,,,,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"736","SUP00727","Maussawa Estate Eco Lanka Villa",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"737","SUP00728","Sun Flower Hotel ",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","68","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"738","SUP00729","Kamatha Eco Lodge ",,,,"0","0","1",,,,,,,,"6","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"739","SUP00730","Colombo City Hotel",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"740","SUP00731","Nice Place Bungalow",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"741","SUP00732","Slightly Chilled",,,,"0","0","1",,,," ",,,,"6","1","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"742","SUP00733","Jungle Beach Hostel",,,,"0","0","1",,,,,,,,"6","143","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"743","SUP00734","Ajith Safari Lodge ",,,,"0","0","1",,,,,,,,"6","155","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"744","SUP00735","Ranmal Beach Resort",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"745","SUP00736","Ranagala House",,,,"0","0","1",,,,,,,,"6","78","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"746","SUP00737","Clock Inn Colombo",,,,"0","0","1",,,,,,,,"6","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"747","SUP00738","Wathsala Inn",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","1","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"748","SUP00739","Leopard Den Hotel",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"12","154","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"749","SUP00740","Mulativ War Museum",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"7","58","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"750","SUP00741","Giman Free Beach Resort",,,,"0","0","1",,,,,,,,"6","118","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"751","SUP00742","Raja Bojun",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"12","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"752","SUP00743","Wilpattu Rodrigo Camp",NULL,NULL,,"0","0","1",,,,,,NULL,NULL,"6","154","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"753","SUP00744","Misty Hill",,,,"0","0","1",,,,,,,,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"754","SUP00745","JKAB Park Hotel",,,,"0","1","1",,,,,,,,"6","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"755","SUP00746","Cinnamon Air",,,,"0","1","1",,,,,,,,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"756","SUP00747","Rockside Beach Resort",,,"Galle Road, Athurwella, Induruwa","0","1","1",,,"034 2 271273",,,,,"3","55","0","0","0","0",NULL,NULL,NULL,NULL
+"757","SUP00748","The Blackpool",NULL,NULL,"Nuwara Eliya
+","0","1","1",,,"011 3 047373",,,NULL,NULL,"2","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"758","SUP00749","Wilpattu Tree House Hotel",NULL,NULL,"Wilpattu Sanctuary Rd","0","0","1",,,,"077 376 7113",,NULL,NULL,"7","154","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"759","SUP00750","Unique Cottages",NULL,NULL,"Nuwara Eliya","0","1","1",,,"052 2 223135",,,NULL,NULL,"2","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"760","SUP00751","Oak-Ray City Hotel",NULL,NULL,,"0","1","1",,,,,,NULL,NULL,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"761","SUP00752","Captains Boat House",,,,"0","0","1",,,,,,,,"12","16","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"762","SUP00753","Hotel Yapahuwa Paradise",NULL,NULL,"Kingdom Road, Yapahuwa","0","0","1",,,"037 3975055",,,NULL,NULL,"4","156","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"763","SUP00754","Priyamali gedara",NULL,NULL,"Bendiwewa, Polonnaruwa","0","0","1",,,,"071 721 6480",,NULL,NULL,"12","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"764","SUP00755","Saunter Paradise Hotel",NULL,NULL,"Trincomalee road, Awdangawa, Kimbissa, Habarana, Sigiriya","0","0","1",,,"066 2 270700",,,NULL,NULL,"2","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"765","SUP00756","The Fort Bazaar",,,"The Fort Bazaar, 26 Church Street, Galle Fort","0","1","1","114428612",,,"077 363 8381",,,,"8","41","0","0","0","0",NULL,NULL,NULL,NULL
+"766","SUP00757","High Park Hotel",,,"Ward No. 1, 9th Mile Post, Nilaveli,, 31010","0","0","1",,,"026 2 232466",,,,,"2","114","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"767","SUP00758","Pedlar62",,,"no 62, Pedlar St, Galle","0","0","1",,,,"077 318 2389",,,,"7","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"768","SUP00759","Ayubowan Guesthouse","Ron & Brenda Cornelius ",,"Ayubowan Guest House
+47/55 School Lane,
+Ettukala, Negombo, Sri Lanka.","0","0","1",,"reservations.ayubowan@gmail.com","+94 3122 38673","+94 7785 82875","http://www.ayubowanguesthouse.com/",,,"10","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"769","SUP00760","Glenfall Reach Hotel",,,"Glenfall Rd, Nuwara Eliya","0","1","1",,,"052 2 223645",,,"Glen-Fall-Restaurant-1.jpg","Glen-Fall-Restaurant-1.jpg","7","116","0","0","0","0",NULL,NULL,NULL,"2026-02-13"
+"770","SUP00761","Hatton Summer House",,," B71","0","0","1",,,,"077 703 8410",,,,"11","50","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"771","SUP00762","Sky Green Resort",,,"Ella, Kithalella, Ella City","0","0","1",,,"057 2 228854",,,,,"3","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"772","SUP00763","Catamaran Beach Hotel",,,"No.209, Lewis Place, Negombo 11500","0","1","1",,,"011 2 824500",,,,,"3","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"774","SUP00765","Wilpattu Teal Cottage",,,"Trincomalee Road, Pahala Maragahawewa","0","0","1",,,,"077 784 4998",,,,"6","154","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"775","SUP00766","Sampath Rest Guesthouse",,,"8 A, Wedderburn Rd, Nuwara Eliya, Sri Lanka","0","0","1",,,,,,,,"10","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"776","SUP00767","Polonnaruwa Ancient city via bicycles",,,,"0","0","1",,,,,,,,"7","123","0","0","0","0",NULL,NULL,NULL,NULL
+"777","SUP00768","Day Program at Tamarind Garden",,,,"0","0","1",,,,,,,,"7","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"778","SUP00769","Udawalawe Elephant Transit Home",,,,"0","0","1",,,,,,,,"7","142","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"779","SUP00770","Sri Lanka Railway Department",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"780","SUP00771","PJ Hotels",,,"Avarangal Junction, Atchuvely","0","0","1",,,"021 2 058181",,,,,"6","58","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"781","SUP00772","Palm Beach Resort",,,,"0","0","1",,,,,,,,"6","114","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"783","SUP00774","Sanka Rest",,,,"0","0","1",,,,,,,,"6","81","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"784","SUP00775","Kandy Randhole Perahara",,,,"0","0","1",,,,,,,,"7","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"785","SUP00776","Hotel Heaven's Edge",,,,"0","1","1",,,,,,,,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"786","SUP00777","The Plantation Hotel",,,,"0","1","1",,,,,,,,"6","76","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"787","SUP00778","Firs Luxury Boutique Bungalow",,,"85/2 Upper Lake Road 22200 Nuwara Eliya Town, Sri Lanka, Nuwara Eliya","0","0","1",,,,,,,,"2","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"788","SUP00779","Tastes of Sigiriya",,,,"0","0","1",,,,,,,,"7","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"789","SUP00780","Stilt fishing",,,,"0","0","1",,,,,,,,"7","151","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"790","SUP00781","Arika Luxury Villa",,,,"0","1","1",,,,,,,,"6","30","0","0","0","0",NULL,NULL,NULL,NULL
+"791","SUP00782","Silver Beach Hotel",,,,"0","0","1",,,,,,,,"6","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"792","SUP00783","Jetwing Jaffna",,,,"0","1","1",,,,,,,,"3","58","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"793","SUP00784","The Long Beach Resort",,,,"0","1","1",,,,,,,,"6","79","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"794","SUP00785","Nature Walk Holiday Resort",,,,"0","0","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"795","SUP00786","Wild Life Circuit Bungalows - Mahaeliya",,,,"0","1","1",,,,,,,,"6","54","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"796","SUP00787","Ravana Heights",,,,"0","0","1",,,,,,,,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"797","SUP00788","Bansei by Hotel J",,,,"0","1","1",,,,,,,,"6","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"798","SUP00789","Tropical Village Restaurant",,,,"0","0","1",,,,,,,,"12","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"799","SUP00790","Xiang Yung Authentic Chinese Restaurant",,,,"0","0","1",,,,,,,,"12","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"800","SUP00791","Yuan Heng Chinese Restaurant",,,,"0","0","1",,,,,,,,"12","55","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"801","SUP00792","The Change Hotel",,,,"0","0","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"802","SUP00793","Ella Mount View Guest Inn",,,,"0","0","1",,,,,,,,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"803","SUP00794","Amaara Sky Hotel ",,,,"0","1","1",,,,,,,,"6","66","0","0","0","0",NULL,NULL,NULL,NULL
+"804","SUP00795","Amarantha Classic Retreat",,,,"0","0","1",,,,,,,,"6","30","0","0","0","0",NULL,NULL,NULL,NULL
+"805","SUP00796","Bar Reef Resort",,,,"0","1","1",,,,,,,,"6","62","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"806","SUP00797","Hill Pride City Hotel",,,,"0","0","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"807","SUP00798","Polwatta Homestay",,,,"0","0","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"808","SUP00799","Camping at Bambarakanda",,,,"0","0","1",,,,,,,,"6","167","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"809","SUP00800","Maresia Beach Villa",,,,"0","0","1",,,,,,,,"6","161","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"810","SUP00801","Nuit en Tent",,,,"0","0","1",,,,,,,,"6","78","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"811","SUP00802","Levels Unawatuna ",,,,"0","1","1",,,,,,,,"6","143","0","0","0","0",NULL,NULL,NULL,"2024-12-20"
+"812","SUP00803","Elegant Hotel",,,,"0","0","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"813","SUP00804","Portofino Resort",,,,"0","0","1",,,,,,,,"6","98","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"814","SUP00805","Oakray Ella Gap Hotel",,,,"0","1","1",,,,,,,,"3","39","0","0","0","0",NULL,NULL,NULL,"2024-06-13"
+"815","SUP00806","Hotel Tree of Life",,,,"0","1","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"816","SUP00807","Mount Royal",,,,"0","1","1",,,,,,,,"6","220","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"817","SUP00808","palace mirissa",,,"Coparamulla, Mirissa North","0","1","1",,"admin@palacemirissa.com","0094 41 2251303",,"www.palacemirissa.com",,,"6","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"818","SUP00809","Palpatha Eco Safari Lodge",,," Ranaviru Mahesh Mawatha,, Saliyaweva - Wilpattu","0","1","1",,"info@palpatha.com","(94) 770310310",,"www.palpatha.com",,,"6","154","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"819","SUP00810","Royal River Resort",,," Belilena Road, Kitulgala 12500","0","1","1",,,"011 2 732755",,,,,"4","38","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"820","SUP00811","Haus Chandra Hotel",,," Beach Rd, 10350","0","1","1",,,"011 2 732755",,,,,"6","106","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"821","SUP00812","Forest Edge",,," Avissawella-Hatton-Nuwara Eliya Hwy, Ginigathhena","0","1","1",,,"051 4 924733",,,,,"12","221","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"822","SUP00813","Sergeant House",,,"381, Matara Road,Ganahena,Unawatuna,Galle, Sri Lanka, Galle 80600","0","1","1",,,," 077 356 5433",,,,"6","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"823","SUP00814","sri sharavi beach villas&spa",,,"153 Km Post, Ruhunupura, Thalaramba, Kamburugamuwa, Mirissa","0","1","1",,"reservations@srisharavibeachvillas.com","+94 41 745 1090",," www.srisharavibeachvillas.com",,,"6","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"824","SUP00815","Cantaloupe Aqua",,,,"0","1","1",,,,,,,,"2","140","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"825","SUP00816","Beacon Beach",,,,"0","1","1",,,,,,,,"6","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"826","SUP00817","Casa Colombo Collection Mirissa",,,,"0","1","1",,,,,,,,"8","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"827","SUP00818","Ceylon Tea Bungalows",,,,"0","0","1",,,,,,,,"8","18","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"828","SUP00819","Owl and the Pussycat",,,,"0","0","1",,,,,,,,"6","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"829","SUP00820","Stafford Estate Bungalow",,,"Stafford Estate Bungalow, Local Rd, Ragala","0","1","1",,"reservations@staffordbungalow.com","+94 11 4731307","+94 77 2731731","www.staffordbungalow.com",,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"830","SUP00821","SUN AQUA PASIKUDAH",,," Pasikudah, Kalkudah 30410","0","1","1",,"sales@sunaqua.com"," 065 2 055555",,"www.sunaqua.com/pasikudah","Pasikudah_.webp","Pasikudah_.webp","1","118","0","0","0","0",NULL,NULL,NULL,"2026-02-13"
+"831","SUP00822","Avenra Beach Hotel",,,,"0","1","1",,,,,,,,"6","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"832","SUP00823","Anantara kalutara resort",,," St Sebastian Road, Katukurunda, Kalutara 12000","0","1","1",,," 011 4 790500",,,,,"6","63","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"833","SUP00824","Turtle Bay",,,,"0","1","1",,,,,,,,"6","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"834","SUP00825","Hotel Travellers Nest",,,,"0","0","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"835","SUP00826","Insight Resort",,,,"0","1","1",,,,,,,,"6","2","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"836","SUP00827","Crescat Apartments",,,,"0","0","1",,,,,,,,"6","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"837","SUP00828","Marina Passikudah",,,,"0","1","1",,,,,,,,"6","118","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"838","SUP00829","Danawwa Resort",,,"HABARANA","0","1","1",,"gm@sorowwa.com",,"0777 579006",,,,"6","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"839","SUP00830","Jetwing Blue",,,"Negombo","0","0","1",,," 031 2 279000",,"http://www.jetwinghotels.com/jetwingblue/",,,"1","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"840","SUP00831","Gloria Grand hotel",,,"Yaddehimulla, Unawatuna 80600","0","1","1",,"reservations@gloriagrandunawatuna.com","0094 91 2250770/ 71/ 72","0094 77 6378608","gloriagrandunawatuna.com",,,"6","143","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"841","SUP00832","Kudaoya Villa",,,,"0","1","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"842","SUP00833","Residence by Uga Escapes",,,"Park St, Colombo","0","1","1",,"ramli@ugaescaapes.com","011 5 673000",,"www.ugaescapes.com/residence/",,,"1","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"843","SUP00834","Back of Beyond",,,,"0","0","1",,,,,,,,"6","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"844","SUP00835","Sungreen Hotel ",,,,"0","0","1",,,,,,,,"6","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"845","SUP00836","Royal Bar & Hotel ",,,,"0","1","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"846","SUP00837","Fort Hammenheil",,,,"0","0","1",,,,,,,,"6","58","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"847","SUP00838","Ariyawan Hotel",,,,"0","0","1",,,,,,,,"6","8","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"848","SUP00839","The Heritage Hotel",,,,"0","0","1",,,,,,,,"6","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"849","SUP00840","Camellia Grand ",,,,"0","0","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"850","SUP00841","Hotel YO ",,,,"0","1","1",,,,,,,,"6","66","0","0","0","0",NULL,NULL,NULL,NULL
+"851","SUP00842","Minn Gee Resort",,,,"0","1","1",,,,,,,,"6","118","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"852","SUP00843","Grand Kandyan Hotel",,,"No. 89/10, Lady Gordon's Drive, Kandy, Sri Lanka","0","1","0",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"853","SUP00844","Royal Hills Hotel",,,"109. Upper Lake Road,
+Nesby Road, Nuwara Eliya, Sri Lanka.","0","0","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"854","SUP00845","Raintree Hotel",,,,"0","0","1",,,,,,,,"6","141","0","0","0","0",NULL,NULL,NULL,"2025-04-02"
+"855","SUP00846","Hotel Alta Vista",,,"Ella Wellawaya Road, Ella","0","0","1",,,,,,,,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"856","SUP00847","Hotel Rivinka",,,,"0","0","1",,,,,,,,"6","68","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"858","SUP00849","Nuwarawewa Lakeside hotel",,,,"0","1","1",,,,,,,,"4","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"859","SUP00850","The sanctuary At tissawewa",,,,"0","1","1",,,,,,,,"4","10","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"860","SUP00851","Shangri La's Hambantota",,,,"0","1","1",,,,,,,,"1","47","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"861","SUP00852","Ajith Ranasinghe",,,,"0","0","1",,,,,,,,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"862","SUP00853","Hotel Okrin",,,,"0","0","1",,,,,,,,"6","141","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"863","SUP00855","Ramboda Falls",,,,"0","1","1",,,,,,,,"3","128","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"864","SUP00856","Bollywood Restaurant Negambo",,,,"0","0","0",,,,,,,,"12","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"865","SUP00857","Water Garden Sigiriya",,,,"0","1","1",,,,,,,,"9","134","0","0","0","0",NULL,NULL,NULL,"2024-10-19"
+"866","SUP00858","Riverdale Restaurant",,,,"0","1","1",,,,,,,,"12","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"867","SUP00859","Oakray Bentota",,,,"0","1","1",,,,,,,,"12","21","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"868","SUP00860","Coco Bay Arugambay",,,,"0","0","1",,,,,,,,"6","11","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"869","SUP00861","Misty Mountain Villas",,,,"0","0","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"870","SUP00862","Whispering Palms Hotel",,,,"0","1","1",,,,,,,,"6","55","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"871","SUP00863","Maniumpathy",,,"129, Kynsey Road, Colombo 07.","0","1","1",,"chiranjeewa@theme-resorts.com","+94112696988",,"www.maniumpathy.com",,,"6","29","0","0","0","0",NULL,NULL,NULL,"2025-12-09"
+"872","SUP00864","Scottish Planter Glendevon Bungalow",,,"Ragala, Halgran Oya","0","1","1",,"reservations1@theme-resorts.com","+94522265894 / +94772403688",,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"873","SUP00865","Wild Trails",,,,"0","1","1",,,,,,,,"6","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"874","SUP00866","Habarana Village by Cinnamon",,,"117, Sir Chittampalam A.
+Gardiner Mawatha, Colombo 02","0","1","1",,"info@cinnamonhotels.com","+94 - 11- 2306600",,"www.cinnamonhotels.com",,,"6","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"875","SUP00867","Hikka Tranz by Cinnamon",,,"Galle Road, Hikkaduwa, 
+Sri Lanka.","0","1","1",,"reservations@cinnamonhotels.com","(91) 227 7188 / 90",,"www.cinnamonhotels.com",,,"6","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"876","SUP00868","Villa 46",,,,"0","0","1",,,,,,,,"6","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"877","SUP00869","Trinco Blu by Cinnamon",,,,"0","1","1",,,,,,,,"2","158","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"878","SUP00870","Heaven Seven - Kandy",,,,"0","1","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"879","SUP00871","Rangiri Dambulla Resort",,,,"0","1","1",,,,,,,,"6","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"880","SUP00872","Passi Villas",,,,"0","1","1",,,,,,,,"13","223","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"881","SUP00873","River Side Aluthgama",,,,"0","1","1",,,,,,,,"8","4","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"882","SUP00874","Ashburnham Estate Guest House",,,,"0","1","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"883","SUP00875","Ceylon City Hotel",,,,"0","1","1",,,,,,,,"6","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"884","SUP00876","Coconut Grove",,,,"0","1","1",,,,,,,,"14","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"885","SUP00877","Skye House",,,,"0","1","1",,,,,,,,"14","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"886","SUP00878","Kumara",,,,"0","1","1",,,,,,,,"14","151","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"887","SUP00879","Ivory House",,,,"0","1","1",,,,,,,,"14","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"888","SUP00880","Pointe Sud",,,,"0","1","1",,,,,,,,"14","224","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"889","SUP00881","Mandalay",,,,"0","1","1",,,,,,,,"14","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"890","SUP00882","Red Cliffs",,,,"0","1","1",,,,,,,,"14","151","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"891","SUP00883","Blue Heights",,,,"0","1","1",,,,,,,,"14","34","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"892","SUP00884","Walatta House",,,,"0","1","1",,,,,,,,"14","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"893","SUP00885","Claughton House",,,,"0","1","1",,,,,,,,"14","34","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"894","SUP00886","Suriyawatta",,,,"0","1","1",,,,,,,,"14","151","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"895","SUP00887","Lassana Kanda",,,,"0","1","1",,,,,,,,"14","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"896","SUP00888","Wetakeiya House",,,,"0","1","1",,,,,,,,"14","34","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"897","SUP00889","Ranawara House",,,,"0","1","1",,,,,,,,"14","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"898","SUP00890","Eden villa Management",,,,"0","1","1",,,,,,,,"14","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"899","SUP00891","Jetwing Kaduruketha",,,,"0","1","1",,,,,,,,"2","153","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"900","SUP00892","C Negombo",,,"7, Poruthota Road,, Negombo 11500, Sri Lanka","0","0","1",,,,,,,,"12","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"901","SUP00893","NIshantha Restaurants",,,,"0","0","1",,,,,,,,"12","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"902","SUP00894","Sri Gemunu Beach Resort",,,,"0","1","1",,,,,,,,"6","143","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"903","SUP00895","INN on the Tree ",,,,"0","0","1",,,,,,,,"6","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"904","SUP00896","Thidas Arana",,,,"0","0","1",,,,,,,,"12","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"905","SUP00897","Valampuri Hotel",,,,"0","0","1",,,,,,,,"6","58","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"906","SUP00898","Horton Towers and Cottages",,,,"0","1","1",,,,,,,,"6","116","0","0","0","0",NULL,NULL,NULL,NULL
+"907","SUP00899","Hotel Riu Sri Lanka",,,,"0","1","1",,,,,,,,"6","3","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"908","SUP00900","Ceylon Tea Factory",,,,"0","0","1",,,,,,,,"12","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"909","SUP00901","Ella Jungle Resort",,,,"0","1","1",,,,,,,,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"910","SUP00902","Athulya Villas",,,"Panabokke, Wattappola, Kandy, Sri Lanka","0","0","1",,"info@athulyavillas.com","081 2 573333",,"www.athulyavillas.com",,,"6","66","0","0","0","0",NULL,NULL,NULL,NULL
+"911","SUP00903","Sandriana Lake View Hotel ",,,,"0","0","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"912","SUP00904","East Lagoon",,,,"0","0","1",,,,,,,,"6","19","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"913","SUP00905","Mapakada Village ",,,,"0","0","1",,,,,,,,"6","92","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"914","SUP00906","Sea Green",,,,"0","0","1",,,,,,,,"6","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"915","SUP00907","Suite Lanka",,,,"0","0","1",,,,,,,,"6","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"916","SUP00908","Calamansi Cove by Jetwing",,,"Wijerama Road, Brahakmanawatte, Balapitiya 80550","0","1","1",,"resv.calamansi@jetwinghotels.com","114 709 400",,"www.jetwinghotels.com/calamansi",,,"6","16","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"917","SUP00909","Lavanga Resort",,,,"0","1","1",,,,,,,,"6","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"918","SUP00910","Amaloh by Jetwing",,,"36/9, 1st Cross Road, Polhena, Matara 81000","0","1","1",,"resv.amaloh@jetwinghotels.com","114 709 400",,"www.jetwinghotels.com/amalohbyjetwing",,,"6","98","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"919","SUP00911","The Cottage by Jetwing",,,"No. 10,, Lady Mccollum Drive, Nuwara Eliya 22200","0","1","1",,"resv.andrews@jetwinghotels.com","94 522224988",,"www.jetwinghotels.com/thecottage",,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"920","SUP00912","Jetwing Tented Villas",,,"JETWING TENTED VILLAS,
+PALATUPANA,
+YALA,
+KIRINDA","0","1","1",,"resv.yalatentedcamps@jetwinghotels.com","+94 47 4710 710",,"www.jetwinghotels.com/jetwingtentedvillasyala",,,"6","75","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"921","SUP00913","Jetwing LightHouse Club",,,"433 B,
+DADELLA,
+GALLE,
+SRI LANKA","0","1","1",,"lighthouseclub@jetwinghotels.com","+94 91 2222 111",,"www.jetwinghotels.com/jetwinglighthouseclub",,,"6","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"922","SUP00914","Sunrise by Jetwing",,,"Passikudah,
+Sri Lanka","0","1","1",,"resv.sunrise@jetwinghotels.com","+94 652 058 865",,"www.jetwinghotels.com/sunrisebyjetwing",,,"6","118","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"923","SUP00915","Jie Jie Beach by Jetwing",,,"UYANKELE CROSS ROAD,
+PANADURA","0","1","1",,"reservations@jetwinghotels.com"," +94 114 709 400",,"www.jetwinghotels.com/jiejiebeachbyjetwing",,,"6","117","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"924","SUP00916","Jetwing Lake",,,"WIJAYA KUMARATUNGA MAWATHA,
+YAPAGAMA, DAMBULLA","0","1","1",,,"114 709 400",,,,,"6","30","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"925","SUP00917","MountView Cottage",,,,"0","0","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"926","SUP00918","Taru Villas - Mawella",,,,"0","1","1",,,,,,,,"8","139","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"927","SUP00919","Planter's Bungalow",,,,"0","0","1",,,,,,,,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"928","SUP00920","Villa Tranquil",,,,"0","0","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"929","SUP00921","Saga Heritage",,,,"0","0","1",,,,,,,,"6","45","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"930","SUP00922","Sound of Nature",,,,"0","0","1",,,,,,,,"6","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"931","SUP00923","Bird Paradise",,,,"0","0","1",,,,,,,,"6","135","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"932","SUP00924","Kalla Bongo Lake Resort",,,,"0","1","1",,,,,,,,"6","52","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"933","SUP00925","Kaya Residence",,,,"0","0","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"934","SUP00926","Villa de Roshe",,,,"0","0","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"935","SUP00927","Ruins Chaaya Hotel",,,,"0","0","1",,,,,,,,"12","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"936","SUP00928","Ambeypussa Rest",,,,"0","1","1",,,,,,,,"12","7","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"937","SUP00929","Wadiya Resturant",,,,"0","0","1",,,,,,,,"12","123","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"938","SUP00930","Club Waskaduwa ",,,,"0","1","1",,,,,,,,"6","148","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"939","SUP00931","Galavilla Boutique Hotel & Spa",,,,"0","1","1",,,,,,,,"6","66","0","0","0","0",NULL,NULL,NULL,NULL
+"940","SUP00932","Tea Bush Hotel",,,,"0","0","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"941","SUP00933","Pinalanda",,,,"0","1","1",,,,,,,,"12","122","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"942","SUP00934","Rosyth Estate House",,,"Rosyth Estate House, Pusella,
+Kegalle","0","1","1",,"Estatehouse@rosyth.lk","94 352 051265","94 715 337765","www.rosyth.lk",,,"6","71","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"943","SUP00935","Knuckles Misty",,,,"0","0","1",,,,,,,,"6","225","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"944","SUP00936","Victoria Golf Club",,,,"0","1","1",,,,,,,,"6","66","0","0","0","0",NULL,NULL,NULL,NULL
+"945","SUP00937","Ocean View",,,,"0","0","1",,,,,,,,"6","113","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"946","SUP00938","Kumbura Eco Lodge",,,,"0","0","1",,,,,,,,"6","134","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"947","SUP00939","Ella's Edge Resort",,,,"0","0","1",,,,,,,,"6","39","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"948","SUP00940","'t En Zal",,,,"0","0","1",,,,,,,,"6","49","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"949","SUP00941","Hotel Casamara",,,,"0","1","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"950","SUP00942","Matale Spice Garden Cookery Demonstration",,,,"0","0","0",,,,,,,,"7","97","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"951","SUP00943","Karunakarala Ayurveda Spa And Resort",,,"Centra Paradise Park, Jesu Nasarenu Mawatha, Thoppu Thota, Waikkal","0","0","1",,,,,,,,"6","146","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"952","SUP00944","Nagala Bungalow",,,,"0","0","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"953","SUP00945","ZMAX Fairway Colombo",,,,"0","1","1",,,,,,,,"6","29","0","0","0","0",NULL,NULL,NULL,NULL
+"954","SUP00946","Queensbury Hotel",,,,"0","1","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"955","SUP00947","Mandira Craig Appin Bungalow",,,,"0","1","1",,,,,,,,"6","50","0","0","0","0",NULL,NULL,NULL,NULL
+"956","SUP00948","The Gallery Café",,,,"0","1","1",,,,,,,,"12","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"957","SUP00949","JF TOURS & TRAVELS ( CEY) LTD",,,,"0","1","1",,,,,,,,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"958","SUP00950","The Layard's Sinharaja Lodge",,,,"0","1","1",,,,,,,,"6","135","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"959","SUP00951","Blue Beach Exotica",,,,"0","0","1",,,,,,,,"6","161","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"960","SUP00952","Sail-lanka charter",,,,"0","1","1",,,,,,,,"7","29","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"961","SUP00953","Hotel East Lagoon",,,,"0","1","1",,,,,,,,"6","19","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"962","SUP00954","Santani Kandy ",,,,"0","1","1",,,,,,,,"6","66","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"963","SUP00955","The Calm Resort & Spa",,,,"0","1","1",,,,,,,,"6","118","0","0","0","0",NULL,NULL,NULL,NULL
+"964","SUP00956","Manudi Glenfallsedge Rest",,,,"0","0","1",,,,,,,,"6","116","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"965","SUP00957","Taru Villas - Rampart Street",,,,"0","1","1",,,,,,,,"6","41","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"966","SUP00958","Hotel Irena",,,,"0","0","1",,,,,,,,"6","103","0",NULL,NULL,"0",NULL,NULL,NULL,NULL
+"967","SUP00959","Jaga Food, Polonnaruwa",,,,"0","0","0",,,,,,,,"12","123","0","0","0","0",NULL,NULL,NULL,NULL
+"968","SUP00960","Geragama Tea Factory",,,,"0","0","0",,,,,,,,"7","66","0","0","0","0",NULL,NULL,NULL,NULL
+"969","SUP00961","Villa 49",,,,"0","0","1",,,,,,,,"14","66","0","0","0","0",NULL,NULL,NULL,NULL
+"970","SUP00962","Haus Berlin",,,,"0","0","1",,,,,,,,"6","21","0","0","0","0",NULL,NULL,NULL,NULL
+"971","SUP00963","Millennium Airlines - Simplifly",,,,"0","1","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"972","SUP00964","Romance Hills Hotel",,,,"0","0","1",,,,,,,,"6","66","0","0","0","0",NULL,NULL,NULL,NULL
+"973","SUP00965","Expo Rail",,,,"0","0","0",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"974","SUP00966","Huma Terra Lodge",,,,"0","0","1",,,,,,,,"6","41","0","0","0","0",NULL,NULL,NULL,NULL
+"975","SUP00967","Topaz Beach Hotel",,,,"0","0","1",,,,,,,,"6","113","0","0","0","0",NULL,NULL,NULL,NULL
+"976","SUP00968","Sigiriya Jungles",,,,"0","1","1",,,,,,,,"6","134","0","0","0","0",NULL,NULL,NULL,"2025-07-24"
+"977","SUP00969","Hideaway Resort",,,,"0","1","1",,,,,,,,"6","11","0","0","0","0",NULL,NULL,NULL,NULL
+"978","SUP00970","Blue Elephant",,,,"0","0","1",,,,,,,,"6","113","0","0","0","0",NULL,NULL,NULL,NULL
+"979","SUP00971","Cinnamon Palace Hotel",,,,"0","0","1",,,,,,,,"6","141","0","0","0","0",NULL,NULL,NULL,NULL
+"980","SUP00972","Classic Travel",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"981","SUP00973","Zion View Guest House",,,,"0","0","1",,,,,,,,"7","39","0","0","0","0",NULL,NULL,NULL,NULL
+"982","SUP00974","Kings Pavilion Kandy",,,,"0","1","1",,,,,,,,"6","66","0","0","0","0",NULL,NULL,NULL,NULL
+"983","SUP00975","The Empire Cafe","+94-0813839233",,,"0","1","1",,,,,,,,"12","66","0","0","0","0",NULL,NULL,NULL,NULL
+"984","SUP00976","Mövenpick Hotel ",,,,"0","1","1",,,,,,,,"1","29","0","0","0","0",NULL,NULL,NULL,NULL
+"985","SUP00977","Wewa Addara Hotel",,,,"0","0","1",,,,,,,,"6","134","0","0","0","0",NULL,NULL,NULL,NULL
+"986","SUP00978","Esperanza Beach",,,,"0","0","1",,,,,,,,"3","139","0","0","0","0",NULL,NULL,NULL,NULL
+"988","SUP00980","Hill Club, Nuwara Eliya",,,,"0","1","1",,,,,,,,"9","116","0","0","0","0",NULL,NULL,NULL,NULL
+"989","SUP00981","K.K.Eranga Sanjeewa",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"990","SUP00982","E.A.D.P.Suranga",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"991","SUP00983","J.I.Fernando",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"992","SUP00984","H.M.D.P.Gunawardhana",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"993","SUP00985","W.M.S.Dilshan",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"994","SUP00986","H.D.Perera",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"995","SUP00987","W.A.Priyanka",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"996","SUP00988","H.A.C.S.Hatharasinghe",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"997","SUP00989","Niroshani Rajapaksha",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"998","SUP00990","E.H.D.B.Piyasoma",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"999","SUP00991","A.M.B.G.A.Shahmi ",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1000","SUP00992","Rinsi Eneterprises",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1001","SUP00993","A.S.Alugolla",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1002","SUP00994","M.P.DE.Silva",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1003","SUP00995","M.H.N.C.P.Wimalasiri",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1004","SUP00996","P.L.S.D.Cooray",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1005","SUP00997","E.A.G.K.DE.Alwis",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1006","SUP00998","W.S.Ranaweera",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1007","SUP00999","K.R.Susantha",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1008","SUP01000","D.A.B.S.Dissanayaka",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1009","SUP01001","R.M.C.D.Rathnayaka",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1010","SUP01002","Z.M.Fawmy",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1011","SUP01003","Fish Pedicure Center",,,,"0","0","1",,,,,,,,"7","21","0","0","0","0",NULL,NULL,NULL,NULL
+"1012","SUP01004","Marble Beach ",,,,"0","0","1",,,,,,,,"6","158","0","0","0","0",NULL,NULL,NULL,NULL
+"1013","SUP01005","Mahoora Camping ",,,,"0","1","1",,,,,,,,"6","42","0","0","0","0",NULL,NULL,NULL,NULL
+"1014","SUP01006","S.P. Pathiranage (Shan)","Shan Prageeth",,,"0","0","1",,,,"0772310247 / 0776246598",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1015","SUP01007","Pearl Grand Hotel",,,,"0","1","1",,,,,,,,"2","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1016","SUP01008","Morning Star, Negambo",,,,"0","0","1",,,,,,,,"4","113","0","0","0","0",NULL,NULL,NULL,NULL
+"1017","SUP01009","Chaminda Jayawardhana","Jayawardhana Chaminda",,"No 13,Gangewatta,Polgolla,Kandy","0","0","0","0",,,"0779203558",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1018","SUP01010","Dulip Fernando","Dulip Fernando",,"Negombo","0","0","0","0",,,"0767736700",,,,"7","113","0","0","0","0",NULL,NULL,NULL,NULL
+"1019","SUP01011","Barberyn Art and Jungle Hideaway",,,,"0","0","1",,,,,,,,"14","30","0","0","0","0",NULL,NULL,NULL,NULL
+"1020","SUP01012","Thilak Rathnayaka","Thilak Rathnayaka",,"Negombo","0","0","0",,,,"0776602042",,,,"7","113","0","0","0","0",NULL,NULL,NULL,NULL
+"1021","SUP01013","G.Dilan Victoria","Dilan",,"140/15,Pulinatharama Road,Magammana,Ragama","0","0","0",,,,"0772636781",,,,"7","113","0","0","0","0",NULL,NULL,NULL,NULL
+"1022","SUP01014","S.A.D.Chamila Kushan","Chamila Kushan",,"97/31/A.Twin City,Dampe,Madapatha","0","0","0",,,,"0772297009",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1023","SUP01015","R.M.Roshan Rathnayaka","Roshan",,"21/b,Mahawatta Pahala,Kundasale","0","0","0",,,,"0774895077",,,,"7","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1024","SUP01016","R.A.D.S.Krishnarathna","Krishnarathna",,"17/1,Gurudeniya Road,Ampitiya.kandy","0","0","0",,,,"0774363914",,,,"7","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1025","SUP01017","Y.P.P.Jayathilaka","Jayathilaka",,"212/C/5/,Suripaluwa,Ganemulla","0","0","0",,,,"0779412030",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1026","SUP01018","Anantaya Resorts & Spa",,,,"0","1","1",,,,,,,,"2","118","0","0","0","0",NULL,NULL,NULL,NULL
+"1027","SUP01019","Pradeep Nalaka Kahandagoda","Pradeep Kahandugoda",,"No 84/3,Wedamulla Mawatha,Waragoda rd,Kelaniya","0","0","0",,,,"0722659052",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1028","SUP01020","N.D.J.Thushari","Kithsiri",,"Dodangoda,Klautara","0","0","0",,,,"0714785882",,,,"7","63","0","0","0","0",NULL,NULL,NULL,NULL
+"1029","SUP01021","J.N.Zoysa",,,"Batapola.Ambalangoda","0","0","0",,,,"0776718316",,,,"7","6","0","0","0","0",NULL,NULL,NULL,NULL
+"1030","SUP01022","D.A.D.M.WIJESINGHE","Anthony",,"Kandy","0","0","0",,,,"0723450859",,,,"7","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1031","SUP01023","K.T.D.T. DE SILVA","Tharuka ",,"548/1/D,Sandoris Jayantha mawatha,Hokandara North,Hokandara","0","0","0",,"hirutharukatravels@gmail.com","0773543840","0773577324",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1032","SUP01024","J.L.Ranjan Silva","Ranjan",,"No 17/6,Maha Vidana rd,Koralawella,Moratuwa","0","0","0",,,,"0763474711",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1033","SUP01025","H.K.A.N.BADDEGAMA","Ashoka",,"146 A,Kandy rd,Kadawatha","0","0","0",,,"0112928633","0770215639",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1034","SUP01026","Kikili Hotel",,,,"0","0","1",,,,,,,,"6","41","0","0","0","0",NULL,NULL,NULL,NULL
+"1035","SUP01027","W.S.N.Wimalarathna","Nishan Wimalarathna",,"NO 387/4,Isuru Uyana,Mahara,Kadawatha","0","0","0",,,"0766111366","0779321851",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1036","SUP01028","H.R.Siripala","Siripala",,"Elpitiya rd,Bentota","0","0","0",,,,"0763825631 / 0775364380",,,,"7","4","0","0","0","0",NULL,NULL,NULL,NULL
+"1037","SUP01029","Mandarina Colombo",,,,"0","1","1",,,,,,,,"2","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1038","SUP01030","Blue Water Beach Resort, Trinco",,,,"0","0","1",,,,,,,,"6","158","0","0","0","0",NULL,NULL,NULL,NULL
+"1039","SUP01031","Anilana Craigbank, Nuwara Eliya",,,,"0","1","1",,,,,,,,"9","116","0","0","0","0",NULL,NULL,NULL,NULL
+"1040","SUP01032","See Lake Holiday Resort, Nuwara Eliya",,,,"0","0","1",,,,,,,,"6","116","0","0","0","0",NULL,NULL,NULL,NULL
+"1041","SUP01033","See Lake Holiday Resort, Nuwara Eliya",,,,"0","0","1",,,,,,,,"6","116","0","0","0","0",NULL,NULL,NULL,NULL
+"1042","SUP01034","Villa Rosa, Kandy",,,,"0","1","1",,,,,,,,"9","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1043","SUP01035","Hotel Coral Bay, Trincomalee","026 3 266199",,"Fischermanslane, Nilaveli, Trincomalee","0","0","1",,,,,,,,"6","158","0","0","0","0",NULL,NULL,NULL,NULL
+"1044","SUP01036","Leopard Safari, Yala ",,,,"0","1","1",,,,,,,,"6","155","0","0","0","0",NULL,NULL,NULL,NULL
+"1045","SUP01037","Tea Plant, Nuwara Eliya",,,,"0","0","1",,,,,,,,"9","116","0","0","0","0",NULL,NULL,NULL,NULL
+"1046","SUP01038","Seerock The King's Domain, Dambulla",,,,"0","0","1",,,,,,,,"2","30","0","0","0","0",NULL,NULL,NULL,NULL
+"1047","SUP01039","Sumedha Kotuwegedara","Sumedha",,"25E,Vajirarama rd,primerose garden,Kandy","0","0","0",,,,"0712475475",,,,"7","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1048","SUP01040","H.M.Janaka Hemantha","Janaka Hemantha",,"212/6,Demel road,Lakshapathiya,Moratuwa","0","0","0",,"hemantha_janaka@yahoo.com","0112623187","0775241924",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1049","SUP01041","G.Rohana Priyadarshana","Rohana Gamage",,"nekeathwatta,Gomate,Bentota","0","0","0",,,,"0777464639",,,,"7","21","0","0","0","0",NULL,NULL,NULL,NULL
+"1050","SUP01042","Thuruliya Lodge, Ramboda",,,,"0","0","1",,,,,,,,"6","128","0","0","0","0",NULL,NULL,NULL,NULL
+"1053","SUP01045","W.A.S.S.WEERASINGHE","Supun",,"460/B4,WELI PARA,THALAWATHUGODA","0","0","0",,"transport@sakauralanka.com",,"0772298243",,,,"12","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1054","SUP01046","Ranjana zoysa","Ranjana",,"NO 62 B,National housing scheme,Siridamma rd,Colombo 9.","0","0","0",,,,"0776041563",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1055","SUP01047","P.A.D.C.Prasanna Jayathilaka","PrasannanJayathilaka",,"No 217,St Marys rd,Uswetakaiyawa","0","0","0",,,"0112948048","0773652344",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1056","SUP01048","Samadhi Center, Kandy",,,,"0","0","1",,,,,,,,"9","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1057","SUP01049","The Muse, Bentota",,,,"0","1","1",,,,,,,,"8","21","0","0","0","0",NULL,NULL,NULL,NULL
+"1058","SUP01050","E.D.P.Suranga","Prasheeth Suranga",,"195/1C,Kadurugasmulla,Munhena,Maggona","0","0","0",,,"0342278123","0774488203 / 0712184502",,,,"7","23","0","0","0","0",NULL,NULL,NULL,NULL
+"1059","SUP01051","Y.P.P.Jayathilaka","Jayathilaka",,"212,C/5/ Suriyapaluwa,Ganemulla","0","0","0",,,,"0779412030",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1060","SUP01052","The Golden Crown, Kandy",,,,"0","1","1",,,,,,,,"1","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1061","SUP01053","D.R.Priyantha","Priyantha",,"Ranjith,Wedawatta,Meetiyagoda,Ambalangoda","0","0","0",,,,"0775128629",,,,"7","6","0","0","0","0",NULL,NULL,NULL,NULL
+"1062","SUP01054","M.Chandrasiri Perera","Chandrasiri Perera",,"223/18,Sarojini Garden,Thalawathugoda,Hokandara south,Hokandara","0","0","0",,,,"0771819707",,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1063","SUP01055","H.R..R.Dishantha","Rashika Dishantha",,"No 74,Massalagoda,Dope,Bentota","0","0","0",,,,"0711813796 / 0771749221",,,,"7","21","0","0","0","0",NULL,NULL,NULL,NULL
+"1064","SUP01056","Roman Beach, Hikkaduwa",,,,"0","1","1",,,,,,,,"6","52","0","0","0","0",NULL,NULL,NULL,NULL
+"1065","SUP01057","Dambale Boutique Chalets",,,,"0","0","1",,,,,,,,"6","30","0","0","0","0",NULL,NULL,NULL,NULL
+"1066","SUP01058","Palm Stone Retreat, Kitulgala",,,,"0","1","1",,,,,,,,"6","76","0","0","0","0",NULL,NULL,NULL,NULL
+"1067","SUP01059","Saraii Village, Tissamaharama",,,,"0","1","1","174805990-7000",,,,,,,"6","141","0","0","0","0",NULL,NULL,NULL,NULL
+"1068","SUP01060","N.W.Muditha Kaushalya","Muditha",,"30E,Mullapitiya,Beruwala","0","0","0",,,,"0774059752",,,,"7","23","0","0","0","0",NULL,NULL,NULL,NULL
+"1069","SUP01061","The Covanro",,,,"0","1","1",,,,,,,,"6","43","0","0","0","0",NULL,NULL,NULL,NULL
+"1070","SUP01062","Wild Coast tented Lodge",,,,"0","1","1",,,,,,,,"6","155","0","0","0","0",NULL,NULL,NULL,"2024-10-19"
+"1071","SUP01063","Araliya Green City Hotel",,,,"0","1","1",,,,,,,,"1","116","0","0","0","0",NULL,NULL,NULL,NULL
+"1072","SUP01064","Athreya Ayurveda Ashram, Ritigala",,,,"0","1","0",,,,,,,,"6","132","0","0","0","0",NULL,NULL,NULL,NULL
+"1073","SUP01065","Shangri-La Hotel, Colombo",,,,"0","1","1",,,,,,,,"13","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1074","SUP01066","Weligama Bay Marriott Resort & Spa",,,,"0","1","1",,,,,,,,"1","151","0","0","0","0",NULL,NULL,NULL,NULL
+"1075","SUP01067","Pinthaliya Resort & Spa",,,,"0","0","1",,,,,,,,"3","45","0","0","0","0",NULL,NULL,NULL,NULL
+"1076","SUP01068","Gangaaddara Hotel, Kandy",,,,"0","1","1",,,,,,,,"3","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1077","SUP01069","Gangaaddara Hotel, Kandy",,,,"0","1","1",,,,,,,,"3","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1078","SUP01070","Villa Shanthi, Hikkaduwa",,,,"0","0","1",,,,,,,,"14","52","0","0","0","0",NULL,NULL,NULL,NULL
+"1079","SUP01071","Oak Ray Heritage, Kandy",,,,"0","1","1",,,,,,,,"3","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1080","SUP01072","Elysium Villa",,,,"0","0","1",,,,,,,,"6","41","0","0","0","0",NULL,NULL,NULL,NULL
+"1081","SUP01073","Amari Galle",,,,"0","1","1",,,,,,,,"2","41","0","0","0","0",NULL,NULL,NULL,NULL
+"1082","SUP01074","Serendib Beach Hotel, Bentota",,,,"0","0","1",,,,,,,,"3","21","0","0","0","0",NULL,NULL,NULL,NULL
+"1083","SUP01075","serendip stone bungalow - kandy",,,,"0","0","1",,,,,,,,"6","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1084","SUP01076","Café Ceylon – Ahangama",,,,"0","1","1",,,,,,,,"12","2","0","0","0","0",NULL,NULL,NULL,NULL
+"1085","SUP01077","Avenra Gardens, Negambo",,,,"0","0","1",,,,,,,,"2","113","0","0","0","0",NULL,NULL,NULL,NULL
+"1086","SUP01078","New Old Dutch House, Galle",,,,"0","0","1",,,,,,,,"6","41","0","0","0","0",NULL,NULL,NULL,NULL
+"1087","SUP01079","Mahoora Camping - Wilpattu",,,,"0","1","1",,,,,,,,"6","154","0","0","0","0",NULL,NULL,NULL,NULL
+"1088","SUP01080","Ibbankatuwa",,,,"0","0","1",,,,,,,,"7","30","0","0","0","0",NULL,NULL,NULL,NULL
+"1089","SUP01081","Talalla Retreat",,,,"0","1","1",,,,,,,,"6","226","0","0","0","0",NULL,NULL,NULL,"2025-01-31"
+"1090","SUP01082","Talalla Retreat",,,,"0","1","1",,,,,,,,"6","226","0","0","0","0",NULL,NULL,NULL,"2025-01-31"
+"1091","SUP01083","Damro Labookelie Tea Lounge",,,,"0","0","1",,,,,,,,"12","116","0","0","0","0",NULL,NULL,NULL,NULL
+"1092","SUP01084","Jetwing Surf",,,,"0","1","1",,,,,,,,"8","11","0","0","0","0",NULL,NULL,NULL,NULL
+"1094","SUP01086","Ruwan Nayanakantha",,,,"0","0","1",,,,,,,,"7","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1095","SUP01088","Grand Adams Peak",,,,"0","0","1",,,,,,,,"6","1","0","0","0","0",NULL,NULL,NULL,NULL
+"1096","SUP01089","Thambili House",,,,"0","0","1",,,,,,,,"8","41","0","0","0","0",NULL,NULL,NULL,NULL
+"1097","SUP01090","Tri Koggala",,,,"0","0","1",,,,,,,,"8","2","0","0","0","0",NULL,NULL,NULL,NULL
+"1098","SUP01091","Tri Koggala",,,,"0","0","1",,,,,,,,"8","2","0","0","0","0",NULL,NULL,NULL,NULL
+"1099","SUP01092","Senani Restuarent",,,,"0","1","1",,,,,,,,"12","66","0","0","0","0",NULL,NULL,NULL,NULL
+"1100","SUP01093","Indian Summer",,,,"0","1","1",,,,,,,,"12","116","0","0","0","0",NULL,NULL,NULL,NULL
+"1101","SUP01094","Golden Grill",,,,"0","1","1",,,,,,,,"12","21","0","0","0","0",NULL,NULL,NULL,NULL
+"1102","SUP01095","Madras Masala",,,,"0","1","1",,,,,,,,"12","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1103","SUP01096","Indian Summer / Colombo",,,,"0","1","1",,,,,,,,"12","29","0","0","0","0",NULL,NULL,NULL,NULL
+"1104","SUP01097","Indian Summer / Bentota",,,,"0","1","1",,,,,,,,"12","21","0","0","0","0",NULL,NULL,NULL,NULL
+"1105","SUP01098","Goatfell",,,,"0","1","1",,,,,,,,"6","116","0","0","0","0",NULL,NULL,NULL,NULL
+"1106","SUP01099","MOUNTAIN HEAVENS",,,,"0","1","1",,,,,,,,"6","39","0","0","0","0",NULL,NULL,NULL,NULL
+"1107","SUP01100","Oak Ray Wild",,,,"0","1","1",,,,,,,,"2","141","0","0","0","0",NULL,NULL,NULL,NULL
+"1108","SUP01101","Royal River Resort",,,,"0","1","1",,,,,,,,"6","76","0","0","0","0",NULL,NULL,NULL,NULL
+"1109","SUP01102","Chaarya Resort & Spa",,,,"0","1","1",,,,,,,,"3","155","0","0","0","0",NULL,NULL,NULL,NULL
+"1110","SUP01103","Royal Kandyan",,,,"0","0","1",,,,,,,,"6","66","0","0","0","0",NULL,"2020-03-13",NULL,NULL
+"1111","SUP01104","Hotels Jojos",,,,"0","0","1",,,,,,,,"6","116","0","0","0","0",NULL,"2020-03-13",NULL,NULL
+"1112","SUP01105","Sheraton Kosgoda Turtle Beach Resort",,,"1 Okanda Road Hiddaruwa, Naape, Kosgoda 80570","0","1","1",,,,,,,,"1","81","0","0","0","0",NULL,"2023-06-06",NULL,NULL
+"1113","SUP01106","EKHO Ella",,,,"0","1","1",,,,,,,,"2","39","0","0","0","0",NULL,"2023-06-06",NULL,NULL
+"1117","SUP01107","Margosa Lake Resort",,,,"0","0",NULL,,,,,,,,"3","10","0","0","0","0",NULL,"2023-07-14",NULL,NULL
+"1118","SUP01108","Kandy City tour by Tuk Tuk",,,,"0","0",NULL,,,,,,"Gemini_Generated_Image_uel27puel27puel2.png","Gemini_Generated_Image_uel27puel27puel2.png","7","66","0","0","0","0",NULL,"2023-07-14",NULL,"2026-02-13"
+"1119","SUP01109","Nuwara Eliya Garden Visit",,,,"0","0",NULL,,,,,,,,"7","116","0","0","0","0",NULL,"2023-07-17",NULL,NULL
+"1120","SUP01110","Galle Village Trek",,,,"0","0",NULL,,,,,,,,"7","41","0","0","0","0",NULL,"2023-07-17",NULL,NULL
+"1121","SUP01111","Cinnamon Bentota Beach",,,,"0","1","1",,,,,,,,"1","21","0","0","0","0",NULL,"2023-07-19",NULL,NULL
+"1122","SUP01112","Pidurangala Entrance",,,,"0","0",NULL,,,,,,,,"7","121","0","0","0","0",NULL,"2023-07-25",NULL,NULL
+"1123","SUP01113","Picnic Snack at Pidurangala",,,,"0","0",NULL,,,,,,,,"7","121","0","0","0","0",NULL,"2023-07-25",NULL,NULL
+"1124","SUP01114","Sigiriya Lake Kayaking",,,,"0","0",NULL,,,,,,,,"7","134","0","0","0","0",NULL,"2023-07-25",NULL,"2023-07-25"
+"1125","SUP01115","Habarana Cultural Centre",,,,"0","0",NULL,,,,,,,,"7","45","0","0","0","0",NULL,"2023-07-26",NULL,NULL
+"1126","SUP01116","Aloy Restaurant",,,,"0","0",NULL,,,,,,,,"7","66","0","0","0","0",NULL,"2023-07-26",NULL,NULL
+"1128","SUP01118","Negombo Dutch Canal Boat Ride",,,,"0","0",NULL,,,,,,,,"7","113","0","0","0","0",NULL,"2023-07-26",NULL,NULL
+"1129","SUP01119","CLUB. Ceylon",,,,"0","0",NULL,,,,,,,,"12","113","0","0","0","0",NULL,"2023-07-26",NULL,NULL
+"1130","SUP01120","Dutch Bank Cafe",,,,"0","0",NULL,,,,,,,,"12","158","0","0","0","0",NULL,"2023-07-26",NULL,NULL
+"1131","SUP01121","Pigeon Island Snorkeling Tour",,,,"0","0",NULL,,,,,,,,"7","114","0","0","0","0",NULL,"2023-07-26",NULL,NULL
+"1132","SUP01122","Sevenagama Village Tour",,,,"0","0",NULL,,,,,,,,"7","134","0","0","0","0",NULL,"2023-07-26",NULL,NULL
+"1133","SUP01123","Royal Garden Cafeteria",,,,"0","0",NULL,,,,,,,,"12","120","0","0","0","0",NULL,"2023-08-14",NULL,NULL
+"1134","SUP01124","The Aluthgama House","YUSUF SALEEM",,"85B Warapitiya, Dharga Town,
+Aluthgama, Sri Lanka
+","0","0",NULL,,"thealuthgamahouse@gmail.com","+94773444330","+94773444330",,,,"3","4","0","0","0","0",NULL,"2023-09-28",NULL,"2023-10-15"
+"1135","SUP01125","Kandy Food Tour",,,,"0","0",NULL,,,,,,,,"7","66","0","0","0","0",NULL,"2023-10-03",NULL,NULL
+"1136","SUP01126","W15 Lake Gregory",,,,"0","1","1",,,,,,,,"8","116","0","0","0","0",NULL,"2023-10-11",NULL,NULL
+"1137","SUP01127","Thaulle Ayurveda Resort",,,,"0","1","1",,,,,,,,"9","155","0","0","0","0",NULL,"2023-10-11",NULL,"2025-09-09"
+"1138","SUP01128","Thaulle Pure Ayurveda Resort",,,,"0","0",NULL,,,,,,,,"9","155","0","0","0","0",NULL,"2023-10-11",NULL,NULL
+"1139","SUP01129","Fox Resort Kandy",,,"125 Richmond Hill Ln, Kandy","0","1","1",,"info@foxresorts.com","0817 800 800","+94 76 308 4518","www.foxresorts.com",,,"3","66","0","0","0","0",NULL,"2023-10-12",NULL,"2024-07-19"
+"1140","SUP01130","HIDE Ella Hotel & Resort",,,,"0","0",NULL,,,,,,,,"9","39","0","0","0","0",NULL,"2023-10-13",NULL,NULL
+"1141","SUP01131","HIDE Ella Hotel & Resort",,,,"0","0",NULL,,,,,,,,"9","39","0","0","0","0",NULL,"2023-10-13",NULL,NULL
+"1142","SUP01132","Royal Spice Garden",,,,"0","0",NULL,,,,,,,,"7","97","0","0","0","0",NULL,"2023-10-24",NULL,NULL
+"1144","SUP01134","Karpaha Sands",,,,"0","0",NULL,,,,,,,,"2","223","0","0","0","0",NULL,"2023-10-24",NULL,NULL
+"1145","SUP01135","DoubleTree by Hilton Weerawila Rajawarna Reso",,,,"0","1","1",,,,,,,,"1","155","0","0","0","0",NULL,"2023-11-01",NULL,NULL
+"1146","SUP01136","Lario Resort",,,,"0","0",NULL,,,,,,,,"3","134","0","0","0","0",NULL,"2023-11-01",NULL,NULL
+"1147","SUP01137","Galway Heights Hotel",,,,"0","1","1",,,,,,,,"2","116","0","0","0","0",NULL,"2023-11-01",NULL,"2024-04-09"
+"1149","SUP01139","Villa Hundira",,,,"0","1","1",,,,,,,,"14","113","0","0","0","0",NULL,"2024-01-06",NULL,NULL
+"1150","SUP01140","Liyya Water Villas",,,,"0","1","1",,,,,,,,"9","134","0","0","0","0",NULL,"2024-01-06",NULL,NULL
+"1151","SUP01141","EKHO Surf",,,,"0","1","1",,,,,,,,"2","21","0","0","0","0",NULL,"2024-01-06",NULL,NULL
+"1152","SUP01142","The Lake Forest Hotel",,,,"0","0",NULL,,,,,,,,"3","10","0","0","0","0",NULL,"2024-02-21",NULL,NULL
+"1153","SUP01143","South Lake Resort",,,,"0","0",NULL,,,,,,,,"2","2","0","0","0","0",NULL,"2024-02-21",NULL,NULL
+"1154","SUP01144","Halpe Tea Factory Tour",,,,"0","0",NULL,,,,,,,,"7","39","0","0","0","0",NULL,"2024-02-21",NULL,NULL
+"1155","SUP01145","Ella Tuk Tuk Tour",,,,"0","0",NULL,,,,,,,,"7","39","0","0","0","0",NULL,"2024-03-19",NULL,NULL
+"1156","SUP01146","The Thinnai",,,,"0","1","1",,,,,,,,"3","58","0","0","0","0",NULL,"2024-03-21",NULL,NULL
+"1157","SUP01147","Jaffna Fort Visit",,,,"0","0",NULL,,,,,,,,"7","58","0","0","0","0",NULL,"2024-03-21",NULL,NULL
+"1158","SUP01148","Nallur Kandaswamy Kovil",,,,"0","0",NULL,,,,,,,,"7","58","0","0","0","0",NULL,"2024-03-21",NULL,NULL
+"1159","SUP01149","Jaffna Site Guide",,,,"0","0",NULL,,,,,,,,"7","58","0","0","0","0",NULL,"2024-03-21",NULL,NULL
+"1160","SUP01150","Kadurugoda Temple, Keerimalai, Point Pedro, K",,,,"0","0",NULL,,,,,,,,"7","58","0","0","0","0",NULL,"2024-03-21",NULL,NULL
+"1161","SUP01151","Whale Watching in Trincomalee",,,,"0","0",NULL,,,,,,,,"7","158","0","0","0","0",NULL,"2024-03-21",NULL,NULL
+"1162","SUP01152","Diving in Pigeon Island",,,,"0","0",NULL,,,,,,,,"7","158","0","0","0","0",NULL,"2024-03-21",NULL,NULL
+"1163","SUP01153","Deep Sea Fishing + Lagoon Boat Ride",,,,"0","0",NULL,,,,,,,,"7","158","0","0","0","0",NULL,"2024-03-21",NULL,NULL
+"1164","SUP01154","Deep Sea Fishing + Lagoon Boat Ride",,,,"0","0",NULL,,,,,,,,"7","103","0","0","0","0",NULL,"2024-03-21",NULL,NULL
+"1165","SUP01155","Ravana Pool Club",,,,"0","1","1",,,,,,,,"12","39","0","0","0","0",NULL,"2024-03-25",NULL,"2024-04-09"
+"1166","SUP01156","Regenta Arie Lagoon",,,,"0","1","1",,,,,,,,"2","113","0","0","0","0",NULL,"2024-04-06",NULL,NULL
+"1167","SUP01157","The Golden Ridge Hotel",,,,"0","1","1",,,,,,"508898916.jpg","508898916.jpg","1","116","0","0","0","0",NULL,"2024-04-21",NULL,"2026-02-13"
+"1168","SUP01158","Refresh Restaurant | Hikkaduwa",,,,"0","0",NULL,,,,,,,,"12","52","0","0","0","0",NULL,"2024-06-03",NULL,NULL
+"1169","SUP01159","Cafe Chill",,,,"0","0",NULL,,,,,,,,"12","39","0","0","0","0",NULL,"2024-06-03",NULL,"2025-12-09"
+"1170","SUP01160","Taru Villas Maia Habarana",,,,"0","1","1",,,,,,,,"9","45","0","0","0","0",NULL,"2024-06-06",NULL,NULL
+"1171","SUP01161","Flameback Eco Lodge",,,,"0","0","1",,,,,,,,"9","155","0","0","0","0",NULL,"2024-06-26",NULL,NULL
+"1172","SUP01162","Green Casa Galle",,,,"0","0","1",,,,,,,,"9","41","0","0","0","0",NULL,"2024-06-28",NULL,NULL
+"1173","SUP01163","Koragaha Lodge",,,,"0","0",NULL,,,,,,,,"9","155","0","0","0","0",NULL,"2024-06-28",NULL,"2025-01-31"
+"1174","SUP01164","Namara Green Ella",,,,"0","0","1",,,,,,,,"9","39","0","0","0","0",NULL,"2024-06-28",NULL,NULL
+"1175","SUP01165","Moi Galle Fort by DBI",,,,"0","0","1",,,,,,,,"6","41","0","0","0","0",NULL,"2024-06-29",NULL,NULL
+"1176","SUP01166","The Radh Hotel",,,,"0","1","1",,,,,,,,"9","66","0","0","0","0",NULL,"2024-07-09",NULL,NULL
+"1177","SUP01167","Araliya Beach resort and Spa",,,,"0","1","1",,,,,,,,"1","143","0","0","0","0",NULL,"2024-07-19",NULL,NULL
+"1178","SUP01168","Bilin Tree",,,,"0","0",NULL,,,,,,,,"2","41","0","0","0","0",NULL,"2024-07-19",NULL,"2024-10-19"
+"1179","SUP01169","Ceylon wild Safaris",,,,"0","1","1",,,,,,,,"6","155","0","0","0","0",NULL,"2024-07-19",NULL,NULL
+"1180","SUP01170","Fox Resort Jaffna",,,,"0","1","1",,,,,,,,"2","58","0","0","0","0",NULL,"2024-07-19",NULL,"2024-10-21"
+"1181","SUP01171","Granbell",,,,"0","1","1",,,,,,,,"2","29","0","0","0","0",NULL,"2024-07-19",NULL,NULL
+"1182","SUP01172","Grand Serendib",,,,"0","1","1",,,,,,,,"2","66","0","0","0","0",NULL,"2024-07-19",NULL,NULL
+"1183","SUP01173","Hilton Yala",,,,"0","1","1",,,,,,,,"13","155","0","0","0","0",NULL,"2024-07-19",NULL,NULL
+"1184","SUP01174","Kotiyagala Luxury Villas",,,,"0","1","1",,,,,,,,"8","155","0","0","0","0",NULL,"2024-07-19",NULL,NULL
+"1185","SUP01175","Le Jardin Du Fort ",,,,"0","1","1",,,,,,,,"3","41","0","0","0","0",NULL,"2024-07-19",NULL,NULL
+"1186","SUP01176","Rivora Hights",,,,"0","1","1",,,,,,,,"9","66","0","0","0","0",NULL,"2024-07-24",NULL,NULL
+"1187","SUP01177","Rice of Life",,,,"0","1","1",,,,,,,,"3","141","0","0","0","0",NULL,"2024-07-24",NULL,NULL
+"1188","SUP01178","Parangi Weligama",,,,"0","1","1",,,,,,,,"2","151","0","0","0","0",NULL,"2024-07-24",NULL,NULL
+"1189","SUP01179","Jetwing Colombo",,,,"0","1","1",,,,,,,,"2","29","0","0","0","0",NULL,"2024-07-31",NULL,NULL
+"1190","SUP01180","Wild Culture Yala",,,,"0","1","1",,,,,,,,"9","155","0","0","0","0",NULL,"2024-08-04",NULL,"2025-01-20"
+"1191","SUP01181","Villa Lé Maas Tota",,,,"0","1","1",,,,,,,,"9","22","0","0","0","0",NULL,"2024-08-04",NULL,NULL
+"1192","SUP01182","NH Collection Colombo",,,,"0","1","1",,,,,,,,"2","29","0","0","0","0",NULL,"2024-08-04",NULL,NULL
+"1193","SUP01183","Aryana Boutique Hotel",,,,"0","0","1",,,,,,,,"9","10","0","0","0","0",NULL,"2024-08-05",NULL,NULL
+"1194","SUP01184","Tropical Life Resort & Spa Dambulla",,,,"0","1","1",,,,,,,,"2","30","0","0","0","0",NULL,"2024-08-05",NULL,"2025-05-13"
+"1195","SUP01185","British Pub at One Galle Face",,,,"0","1","1",,,,,,,,"12","29","0","0","0","0",NULL,"2024-08-05",NULL,NULL
+"1196","SUP01186","The Merchant Galle Fort",,,,"0","0","1",,,,,,,,"2","41","0","0","0","0",NULL,"2024-08-06",NULL,NULL
+"1197","SUP01187","Occidental Paradise Dambulla",,,,"0","1","1",,,,,,,,"2","30","0","0","0","0",NULL,"2024-08-17",NULL,NULL
+"1198","SUP01188","Limeshine - Airport Transit Hotel",,,,"0","0","1",,,,,,,,"10","113","0","0","0","0",NULL,"2024-08-31",NULL,NULL
+"1199","SUP01189","Nitro Cave Experience",,,,"0","0",NULL,,,,,,,,"7","78","0","0","0","0",NULL,"2024-09-25",NULL,NULL
+"1200","SUP01190","Galle Fort Entrance",,,,"0","0",NULL,,,,,,,,"7","41","0","0","0","0",NULL,"2024-10-08",NULL,NULL
+"1201","SUP01191","Galle Fort walk with expert",,,,"0","0",NULL,,,,,,,,"7","41","0","0","0","0",NULL,"2024-10-08",NULL,NULL
+"1202","SUP01192","Radisson Blu","Radisson Blu","Radisson Blu is an international hotel brand managed and operated by Radisson Hotels, and owned by Choice Hotels, Jinjiang International and the Radisson Hotel Group.","523C Colombo Main Rd, Galle 80280","0","1",NULL,,,"0912 030 500",,"https://www.radissonhotels.com/en-us/hotels/r",,,"2","41","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1203","SUP01193"," The Notary's House"," The Notary's House","The Notary’s House is a unique luxury six bedroom boutique hotel set amidst large gardens and a coconut grove, conveniently located just 45 minutes’ drive from the Colombo international airport and 30 minutes from the coastal city of Negombo.","Mawathahena Watta, Gonawila, Makandura 60170","0","1","1",,"info@thenotaryshousesrilanka.com","0375 645 681",,"https://www.thenotaryshousesrilanka.com/",,,"9","113","0","0","0","0",NULL,"2024-10-19",NULL,"2024-10-19"
+"1204","SUP01194","Sevanagama Village Tour","Amzil",,,"0","0",NULL,,,,,,,,"7","45","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1205","SUP01195","The Six ",,,"151 Galle Road, Weligama 81700","0","0",NULL,,,,"077 550 6000",,,,"8","151","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1206","SUP01196"," MIRAGE KINGS COTTAGE",,,"No 111 Havelock Rd, Nuwara Eliya 22200","0","1","1",,,,,,,,"3","116","0","0","0","0",NULL,"2024-10-19",NULL,"2024-10-19"
+"1207","SUP01197","Elephant Freedom Project",,,,"0","0",NULL,,,,,,,,"7","71","0","0","0","0",NULL,"2024-10-19",NULL,"2025-12-15"
+"1208","SUP01198","Broomfield by Jetwing ",,,,"0","1","1",,,,,,,,"9","116","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1210","SUP01200"," Malabar Hill Sri Lanka",,,,"0","1","1",,,,,,,,"8","151","0","0","0","0",NULL,"2024-10-19",NULL,"2024-10-19"
+"1211","SUP01201"," The Lynden Grove",,,,"0","1","1",,,,,,,,"2","116","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1212","SUP01202"," Nine Skies",,,,"0","1","1",,,,,,,,"8","39","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1213","SUP01203","Taru Villas Kandy",,,,"0","1","1",,,,,,,,"8","66","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1214","SUP01204","Terrace Green Hotel & Spa",,,,"0","1","1",,,,,,,,"3","113","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1215","SUP01205"," The Villas Wadduwa by Amaya",,,,"0","1","1",,,,,,,,"2","161","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1216","SUP01206","Sol House Mirissa ",,,,"0","0",NULL,,,,,,,,"8","103","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1217","SUP01207"," Chimneys Nuwara Eliya",,,,"0","1","1",,,,,,,,"9","116","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1218","SUP01208"," C Beyond Nilaveli",,,,"0","0",NULL,,,,,,,,"9","114","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1219","SUP01209"," Morning Dew Hotel",,,,"0","0",NULL,,,,,,,,"3","39","0","0","0","0",NULL,"2024-10-19",NULL,"2025-09-29"
+"1220","SUP01210"," Argyle Luxury Boutique",,,,"0","1","1",,,,,,,,"9","50","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1221","SUP01211","Le Grand Galle",,,,"0","1","1",,,,,,,,"1","41","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1222","SUP01212","Candella House",,,,"0","0",NULL,,,,,,,,"8","140","0","0","0","0",NULL,"2024-10-19",NULL,NULL
+"1223","SUP01213"," Mirissa Beach Villa",,,,"0","0",NULL,,,,,,,,"9","103","0","0","0","0",NULL,"2024-10-21",NULL,"2025-02-03"
+"1224","SUP01214","Sigiriya Kings Resort",,,,"0","1","1",,,,,,,,"9","134","0","0","0","0",NULL,"2024-10-22",NULL,"2025-09-29"
+"1225","SUP01215"," W15 Hanthana Estate",,,,"0","1","1",,,,,,,,"13","220","0","0","0","0",NULL,"2024-10-22",NULL,NULL
+"1226","SUP01216","Colombo Lotus Tower",,,,"0","0",NULL,,,,,,,,"7","29","0","0","0","0",NULL,"2024-10-23",NULL,NULL
+"1227","SUP01217","Hot Air Balloon Ride",,,,"0","0",NULL,,,,,,,,"7","64","0","0","0","0",NULL,"2024-10-23",NULL,NULL
+"1228","SUP01218","Blessing at kathaluwa Temple",,,,"0","0",NULL,,,,,,,,"7","2","0","0","0","0",NULL,"2024-10-23",NULL,NULL
+"1229","SUP01219","The Cinnamon Experience",,,,"0","0",NULL,,,,,,,,"7","2","0","0","0","0",NULL,"2024-10-23",NULL,NULL
+"1230","SUP01220","Kumu Beach by Tear Drop hotels ",,,,"0","1","1",,,,,,,,"8","16","0","0","0","0",NULL,"2024-11-04",NULL,NULL
+"1231","SUP01221","Ayugiri Ayurveda Wellness Resort",,,,"0","1","1",,,,,,,,"9","134","0","0","0","0",NULL,"2024-11-08",NULL,"2025-05-27"
+"1232","SUP01222","Ahu Bay",,,,"0","1","1",,,,,,,,"1","3","0","0","0","0",NULL,"2024-11-08",NULL,NULL
+"1233","SUP01223","Araliya Red Hotel",,,,"0","1","1",,,,,,,,"2","116","0","0","0","0",NULL,"2024-11-08",NULL,NULL
+"1234","SUP01224","Sundara by Mosvold",,,,"0","1","1",,,,,,,,"8","16","0","0","0","0",NULL,"2024-11-21",NULL,"2024-11-21"
+"1235","SUP01225","Moksha Kitulgala",,,,"0","0",NULL,,,,,,,,"9","76","0","0","0","0",NULL,"2024-11-21",NULL,NULL
+"1236","SUP01226","Mahesa Bhawan – Jetwing ",,,,"0","1","1",,,,,,,,"9","58","0","0","0","0",NULL,"2024-11-21",NULL,NULL
+"1237","SUP01227","Aranya Trails Wilpattu ",,,,"0","0",NULL,,,,,,,,"9","154","0","0","0","0",NULL,"2024-11-22",NULL,NULL
+"1238","SUP01228","Why House ",,,,"0","1",NULL,,,,,,,,"9","41","0","0","0","0",NULL,"2024-11-22",NULL,NULL
+"1239","SUP01229","Simpson's Forest - Luxury Boutique Resort & S",,,,"0","1","1",,,,,,,,"9","66","0","0","0","0",NULL,"2024-11-22",NULL,NULL
+"1240","SUP01230","Cubes Ella",,,,"0","0",NULL,,,,,,,,"3","39","0","0","0","0",NULL,"2024-11-25",NULL,NULL
+"1241","SUP01231","Kumbukgaha Villa",,,,"0","1","1",,,,,,,,"9","134","0","0","0","0",NULL,"2024-12-06",NULL,NULL
+"1242","SUP01232","Marriott  Courtyard Colombo",,,,"0","1","1",,,,,,,,"2","29","0","0","0","0",NULL,"2024-12-07",NULL,NULL
+"1243","SUP01233","Oga Reach ",,,,"0","1","1",,,,,,,,"3","141","0","0","0","0",NULL,"2024-12-07",NULL,NULL
+"1244","SUP01234","Grand Beragala Boutique Resort",,,,"0","1","1",,,,,,,,"1","49","0","0","0","0",NULL,"2024-12-11",NULL,NULL
+"1245","SUP01235"," ITC Ratnadipa",,,,"0","1","1",,,,,,,,"1","29","0","0","0","0",NULL,"2024-12-16",NULL,NULL
+"1246","SUP01236","MOI Ella",,,,"0","1","1",,,,,,,,"3","39","0","0","0","0",NULL,"2024-12-20",NULL,NULL
+"1247","SUP01237","Mazarine Surf Suites ",,,,"0","1","1",,,,,,,,"3","34","0","0","0","0",NULL,"2024-12-20",NULL,NULL
+"1248","SUP01238","Dowa Elegance Resort ",,,,"0","0",NULL,,,,,,,,"3","39","0","0","0","0",NULL,"2024-12-24",NULL,NULL
+"1249","SUP01239","Angel Beach Unawatuna",,,,"0","0",NULL,,,,,,,,"2","143","0","0","0","0",NULL,"2024-12-24",NULL,NULL
+"1250","SUP01240","Camellia Hills Dickoya ",,,,"0","1","1",,,,,,,,"8","33","0","0","0","0",NULL,"2024-12-27",NULL,NULL
+"1251","SUP01241","Taru Villas Villu ",,,,"0","1","1",,,,,,,,"8","154","0","0","0","0",NULL,"2024-12-27",NULL,"2025-03-28"
+"1252","SUP01242"," Céu Ceylon",,,,"0","1","1",,,,,,,,"2","139","0","0","0","0",NULL,"2024-12-28",NULL,NULL
+"1253","SUP01243","Diyadahara Lake Hotel",,,,"0","1","1",,,,,,,,"3","141","0","0","0","0",NULL,"2024-12-28",NULL,NULL
+"1254","SUP01244","Wild Trails Yala ",,,,"0","0",NULL,,,,,,,,"2","155","0","0","0","0",NULL,"2024-12-28",NULL,NULL
+"1255","SUP01245","Oliphant Bungalow ",,,,"0","1","1",,,,,,,,"9","116","0","0","0","0",NULL,"2024-12-28",NULL,NULL
+"1256","SUP01246"," Ishq Colombo",,,,"0","0",NULL,,,,,,,,"8","29","0","0","0","0",NULL,"2024-12-28",NULL,"2025-07-15"
+"1257","SUP01247","Vivanta Colombo, Airport Garden",,,,"0","1","1",,,,,,,,"2","133","0","0","0","0",NULL,"2024-12-28",NULL,NULL
+"1258","SUP01248","Uga Riva ",,,,"0","1","1",,,,,,,,"8","113","0","0","0","0",NULL,"2024-12-31",NULL,NULL
+"1259","SUP01249"," Sielen Diva",,,,"0","1","1",,,,,,,,"9","140","0","0","0","0",NULL,"2024-12-31",NULL,NULL
+"1260","SUP01250","Kayama House ",,,,"0","1","1",,,,,,,,"8","139","0","0","0","0",NULL,"2024-12-31",NULL,NULL
+"1261","SUP01251","Thotalagala Plantation House ",,,,"0","1","1",,,,,,,,"8","49","0","0","0","0",NULL,"2024-12-31",NULL,NULL
+"1262","SUP01252","Governor’s Mansion ",,,,"0","0",NULL,,,,,,,,"8","50","0","0","0","0",NULL,"2025-01-03",NULL,NULL
+"1263","SUP01253","Haritha Villa",,,,"0","1","1",,,,,,,,"8","52","0","0","0","0",NULL,"2025-01-16",NULL,NULL
+"1264","SUP01254","Jetwing Kandy Gallery ",,,,"0","1","1",,,,,,,,"8","66","0","0","0","0",NULL,"2025-01-20",NULL,NULL
+"1265","SUP01255"," Uga Halloowella",,,,"0","1","1",,,,,,,,"8","50","0","0","0","0",NULL,"2025-01-20",NULL,NULL
+"1266","SUP01256","Warden House ",,,,"0","1","1",,,,,,,,"8","155","0","0","0","0",NULL,"2025-01-20",NULL,NULL
+"1267","SUP01257","Rukgala retreat",,,,"0","0",NULL,,,,,,,,"9","66","0","0","0","0",NULL,"2025-01-20",NULL,NULL
+"1268","SUP01258","Hotel Ashford",,,,"0","0",NULL,,,,,,,,"3","116","0","0","0","0",NULL,"2025-01-27",NULL,NULL
+"1269","SUP01259","The Trees Kandy ",,,,"0","1","1",,,,,,,,"2","66","0","0","0","0",NULL,"2025-01-31",NULL,NULL
+"1270","SUP01260","Yala Chalets by Lalan Leisure",,,,"0","0",NULL,,,,,,,,"3","155","0","0","0","0",NULL,"2025-01-31",NULL,NULL
+"1271","SUP01261","Villa Mankani",,,,"0","0",NULL,,,,,,,,"3","30","0","0","0","0",NULL,"2025-01-31",NULL,NULL
+"1272","SUP01262","Edgar Mansion ",,,,"0","0",NULL,,,,,,,,"3","66","0","0","0","0",NULL,"2025-01-31",NULL,NULL
+"1273","SUP01263","Sevanagama Villa",,,,"0","0",NULL,,,,,,,,"3","45","0","0","0","0",NULL,"2025-01-31",NULL,NULL
+"1274","SUP01264","Lihinya Beach Villa",,,,"0","0",NULL,,,,,,,,"2","2","0","0","0","0",NULL,"2025-01-31",NULL,NULL
+"1275","SUP01265","Ayana Sea ",,,,"0","0",NULL,,,,,,,,"2","161","0","0","0","0",NULL,"2025-01-31",NULL,NULL
+"1276","SUP01266","Jungle Paradise Hotel",,,,"0","0",NULL,,,,,,,,"3","142","0","0","0","0",NULL,"2025-02-22",NULL,NULL
+"1277","SUP01267","Ceu Ceylon",,,,"0","0",NULL,,,,,,,,"2","139","0","0","0","0",NULL,"2025-03-03",NULL,NULL
+"1279","SUP01269","No 77 Leyn Baan Galle Fort by The One Group o",,,,"0","0",NULL,,,,,,,,"8","41","0","0","0","0",NULL,"2025-03-07",NULL,NULL
+"1280","SUP01270","Glenross living ",,,,"0","1","1",,,,,,,,"8","63","0","0","0","0",NULL,"2025-03-11",NULL,"2025-03-24"
+"1281","SUP01271","Lunugaga - Bentota ",,,,"0","1","1",,,,,,,,"8","21","0","0","0","0",NULL,"2025-03-19",NULL,NULL
+"1282","SUP01272","Mountbatten Bungalow | Kandy",,,,"0","1","1",,,,,,,,"9","66","0","0","0","0",NULL,"2025-04-04",NULL,NULL
+"1283","SUP01273","Thimbiriwewa Resort Wilpattu",,,,"0","0",NULL,,,,,,,,"2","154","0","0","0","0",NULL,"2025-04-21",NULL,NULL
+"1284","SUP01274","TreeHouse Chalets",,,,"0","0",NULL,,,,,,,,"2","20","0","0","0","0",NULL,"2025-04-21",NULL,NULL
+"1285","SUP01275","Yara Galle Fort ",,,,"0","1","1",,,,,,,,"2","41","0","0","0","0",NULL,"2025-04-21",NULL,"2025-09-29"
+"1286","SUP01276","Kandy Myst by Cinnamon",,,,"0","1","1",,,,,,,,"2","66","0","0","0","0",NULL,"2025-04-29",NULL,NULL
+"1287","SUP01277","Riff Hikkaduwa Hotel",,,,"0","1","1",,,,,,,,"9","52","0","0","0","0",NULL,"2025-04-29",NULL,NULL
+"1288","SUP01278","Oak Ray La Ella Breeze",,,,"0","0",NULL,,,,,,,,"3","39","0","0","0","0",NULL,"2025-04-29",NULL,"2025-04-29"
+"1289","SUP01279","Pedlar's Corner Cafe",,,,"0","0",NULL,,,,,,,,"12","41","0","0","0","0",NULL,"2025-04-29",NULL,NULL
+"1291","SUP01281","Wild Glamping Gal Oya by Thema  ",,,,"0","1","1",,,,,,,,"9","42","0","0","0","0",NULL,"2025-05-11",NULL,NULL
+"1292","SUP01282","Club Mango - Eco Chic Resort",,,,"0","1","1",,,,,,,,"2","62","0","0","0","0",NULL,"2025-05-13",NULL,NULL
+"1293","SUP01283","stone Water Villa ",,,,"0","0",NULL,,,,,,,,"9","113","0","0","0","0",NULL,"2025-05-16",NULL,NULL
+"1294","SUP01284","Morven Colombo ",,,,"0","1","1",,,,,,,,"3","29","0","0","0","0",NULL,"2025-05-27",NULL,NULL
+"1295","SUP01285","Ayurvie Weligama by Thema Collection ",,,,"0","1","1",,,,,,,,"2","151","0","0","0","0",NULL,"2025-05-27",NULL,NULL
+"1296","SUP01286","Dream Cliff Mountain Resort",,,,"0","1",NULL,,,,,,,,"9","49","0","0","0","0",NULL,"2025-06-17",NULL,NULL
+"1297","SUP01287","The Alfred",,,,"0","0",NULL,,,,,,,,"8","171","0","0","0","0",NULL,"2025-06-19",NULL,NULL
+"1298","SUP01288","SKYLOFT KANDY ",,,,"0","1","1",,,,,,,,"3","66","0","0","0","0",NULL,"2025-07-09",NULL,"2025-07-09"
+"1299","SUP01289","Oceanfront Nilaveli by ICC ",,,,"0","0","1",,,,,,,,"2","114","0","0","0","0",NULL,"2025-07-10",NULL,NULL
+"1300","SUP01290","Highland Stonehouse Luxury Boutique Hotel",,,,"0","0",NULL,,,,,,,,"2","116","0","0","0","0",NULL,"2025-07-24",NULL,NULL
+"1301","SUP01291","Sooriya Resort and Spa",,,,"0","1","1",,,,,,,,"2","139","0","0","0","0",NULL,"2025-07-24",NULL,NULL
+"1302","SUP01292","Rose wood Manor ",,,,"0","1","1",,,,,,,,"9","135","0","0","0","0",NULL,"2025-07-24",NULL,NULL
+"1303","SUP01293","Amagi Aria",,,,"0","1","1",,,,,,,,"2","113","0","0","0","0",NULL,"2025-07-31",NULL,NULL
+"1304","SUP01294","EKHO Sigiriya ",,,,"0","1",NULL,,,,,,,,"2","134","0","0","0","0",NULL,"2025-08-01",NULL,"2025-08-01"
+"1305","SUP01295","Sofia Colombo ",,,,"0","1",NULL,,,,,,,,"2","29","0","0","0","0",NULL,"2025-08-06",NULL,NULL
+"1306","SUP01296","Ayugiri Wellness Resort",,,,"0","1",NULL,,,,,,,,"9","134","0","0","0","0",NULL,"2025-08-06",NULL,NULL
+"1307","SUP01297","Uga Prāva",,,,"0","1","1",,,,,,,,"8","139","0","0","0","0",NULL,"2025-08-07",NULL,NULL
+"1308","SUP01298","Akway Resort",,," Lower Blackwood, Beragala 90160","0","1",NULL,,,,,,,,"3","22","0","0","0","0",NULL,"2025-08-09",NULL,"2025-08-09"
+"1309","SUP01299","Cloud Nine Wilpattu",,,,"0","0",NULL,,,,,,,,"2","154","0","0","0","0",NULL,"2025-08-12",NULL,NULL
+"1310","SUP01300","O2 Villas Ella",,,,"0","1","1",,,,,,"O2-Villa-Ella-1200x630-1.jpg","O2-Villa-Ella-1200x630-1.jpg","2","39","0","0","0","0",NULL,"2025-08-12",NULL,"2026-02-13"
+"1311","SUP01301","Wilpattu Jeep by Aranya Trails",,,,"0","0",NULL,,,,,,,,"8","154","0","0","0","0",NULL,"2025-08-20",NULL,NULL
+"1312","SUP01302","Mount Randholee ",,,,"0","0",NULL,,,,,,,,"3","66","0","0","0","0",NULL,"2025-09-01",NULL,NULL
+"1313","SUP01303","Garton's Cape ",,,,"0","0",NULL,,,,,,,,"3","2","0","0","0","0",NULL,"2025-09-01",NULL,NULL
+"1314","SUP01304","Amari Colombo ",,,,"0","1",NULL,,,,,,,,"1","29","0","0","0","0",NULL,"2025-09-02",NULL,NULL
+"1315","SUP01305","Kalkudha Beach House - Tear Drop",,,,"0","1","1",,,,,,,,"13","118","0","0","0","0",NULL,"2025-09-14",NULL,NULL
+"1316","SUP01306"," Arosh",,,,"0","1","1",,,," 773634011",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,"2025-09-16"
+"1317","SUP01307","Imran",,,,"0","1","1",,,," 779492427",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1318","SUP01308","Tharanga",,,,"0","1","1",,,," 763229430",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1319","SUP01309","Sheltan",,,,"0","1","1",,,,"777953280",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1320","SUP01310"," Suresh",,,,"0","1","1",,,," 763533932",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1321","SUP01311","Mahesh",,,,"0","1","1",,,,"773927759",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,"2025-09-16"
+"1322","SUP01312","Ananda",,,,"0","1","1",,,," 701951451",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1323","SUP01313"," Mohan",,,,"0","1","1",,,," 712312372",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,"2025-09-16"
+"1324","SUP01314","Haring",,,,"0","1","1",,,," 776417694",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1325","SUP01315","Caldera",,,,"0","1","1",,,,"777430414",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1326","SUP01316","Sumedha",,,,"0","1","1",,,," 712475475",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1327","SUP01317","Manoj",,,,"0","1","1",,,,"775607905",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1328","SUP01318","Janaka car",,,,"0","1","1",,,,"741294701",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,"2025-09-16"
+"1329","SUP01319","Cathura",,,,"0","1","1",,,," 716956277",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1330","SUP01320","Jayantha",,,,"0","1","1",,,," 771622335",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1331","SUP01321","Udara",,,,"0","1","1",,,,"772441524",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1332","SUP01322","Athula",,,,"0","1","1",,,," 773048392",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1333","SUP01323","Roshan Rishab",,,,"0","1","1",,,," 779492949",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,"2026-01-20"
+"1334","SUP01324","Nilantha",,,,"0","1","1",,,," 775996451",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1335","SUP01325"," Rashmika",,,,"0","1","1",,,,"766624554",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1336","SUP01326","Rasika",,,,"0","1","1",,,," 766382170",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1337","SUP01327","Parakranma",,,,"0","1","1",,,," 715617075",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1338","SUP01328","Kosala",,,,"0","1","1",,,,"779007127",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1339","SUP01329","Dilan",,,,"0","1","1",,,," 777118787",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1340","SUP01330","Charith",,,,"0","1","1",,,,"771314692",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1341","SUP01331"," Lalith",,,,"0","1","1",,,,"769281095",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1342","SUP01332","Waruna",,,,"0","1","1",,,," 779268419",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1343","SUP01333","Nimesh",,,,"0","1","1",,,,"771343760",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1344","SUP01334","Harsha",,,,"0","1","1",,,,"771135572",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1345","SUP01335","Rohitha",,,,"0","1","1",,,," 773295526",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1346","SUP01336","Buddika Pussegoda",,,,"0","1","1",,,,"771774774",,,,"1","41","0","0","0","0",NULL,"2025-09-16",NULL,"2026-01-23"
+"1347","SUP01337","Lahiru",,,,"0","1","1",,,,"766759469",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1348","SUP01338","Chandika",,,,"0","1","1",,,,"770040073",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1349","SUP01339","Ashoka",,,,"0","1","1",,,," 777411370",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1350","SUP01340"," Anoj Wikramasingha",,,,"0","1","1",,,,"772826746",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,"2026-01-23"
+"1351","SUP01341","Eranda",,,,"0","1","1",,,,"764891755",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1352","SUP01342","Anura",,,,"0","1","1",,,," 771612603",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1353","SUP01343","Tatsara",,,,"0","1","1",,,," 743806564",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1354","SUP01344","Sagara",,,,"0","1","1",,,," 777226209",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1355","SUP01345","Kawshika",,,,"0","1","1",,,," 776525206",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1356","SUP01346"," Kapila",,,,"0","1","1",,,," 779887215",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1357","SUP01347","Kumara Mini Couch",,,,"0","1","1",,,,"774807004",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1358","SUP01348","Saliya",,,,"0","1","1",,,,"768490226",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1359","SUP01349","Samantha",,,,"0","1","1",,,,"776207468",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1360","SUP01350","Kosala SL",,,,"0","1","1",,,," 722705535",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1361","SUP01351","Rohana",,,,"0","1","1",,,,"773327879",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1362","SUP01352","Nalin Sarathchandra",,,,"0","1","1",,,," 770300650",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,"2026-01-27"
+"1363","SUP01353","Janaka 37 Seater",,,,"0","1","1",,,," 777916883",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1364","SUP01354","Ruwan",,,,"0","1","1",,,,"775757677",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1365","SUP01355","Sachintha",,,,"0","1","1",,,," 714005252",,,,"1","29","0","0","0","0",NULL,"2025-09-16",NULL,NULL
+"1366","SUP01356","Eraeliya Villas and Gardens",,,,"0","1","1",,,,,,,,"9","151","0","0","0","0",NULL,"2025-09-30",NULL,NULL
+"1367","SUP01357","Angara Cooking Class",,,,"0","0","1",,,,,,,,"9","140","0","0","0","0",NULL,"2025-09-30",NULL,NULL
+"1368","SUP01358","Taru Villas - Levita ",,,,"0","1","1",,,,,,,,"8","66","0","0","0","0",NULL,"2025-10-10",NULL,NULL
+"1369","SUP01359","Secrets of ceylon collection",,,,"0","0",NULL,,,,,,,,"8","29","0","0","0","0",NULL,"2025-10-10",NULL,NULL
+"1370","SUP01360","Triple O six ",,,,"0","1","1",,,,,,,,"2","103","0","0","0","0",NULL,"2025-10-14",NULL,NULL
+"1371","SUP01361","Celestial Hills - Villas & Suites by The Clar",,,,"0","0",NULL,,,,,,,,"9","66","0","0","0","0",NULL,"2025-10-17",NULL,NULL
+"1372","SUP01362","Farm Resort",,,,"0","1","1",,,,,,,,"9","50","0","0","0","0",NULL,"2025-10-17",NULL,NULL
+"1373","SUP01363","Sun Rise Ballooning (Pvt) Ltd",,,,"0","1","1",,,,,,,,"2","64","0","0","0","0",NULL,"2025-10-22",NULL,NULL
+"1374","SUP01364","Villa Mankani",,,,"0","0",NULL,,,,,,,,"3","30","0","0","0","0",NULL,"2025-11-03",NULL,NULL
+"1375","SUP01365","Agnus Unawatuna ",,,,"0","0",NULL,,,,,,,,"2","143","0","0","0","0",NULL,"2025-11-18",NULL,NULL
+"1376","SUP01366","Driver Guide - English Speaking ",,,,"0","0",NULL,,,,,,,,"2","29","0","0","0","0",NULL,"2025-11-27",NULL,NULL
+"1377","SUP01367","Trip Fusion Office ",,,,"0","0",NULL,,,,,,,,"1","29","0","0","0","0",NULL,"2025-11-29",NULL,NULL
+"1378","SUP01368","CHAARYA LAKE ",,,,"0","1","1",,,,,,,,"2","141","0","0","0","0",NULL,"2025-11-29",NULL,NULL
+"1379","SUP01369","SAii Lagoon Maldives, Curio Collection by Hil",,,,"0","0",NULL,,,,,,,,"2","29","0","0","0","0",NULL,"2025-11-29",NULL,NULL
+"1380","SUP01370","Tribe Yala ",,,,"0","1","1",,,,,,,,"9","155","0","0","0","0",NULL,"2025-11-29",NULL,NULL
+"1381","SUP01371","Jetwing Jungle Lodge",,,,"0","1","1",,,,,,,,"1","155","0","0","0","0",NULL,"2025-12-03",NULL,NULL
+"1382","SUP01372","Tea & Experience Factory - Mandaram Nuwara",,,,"0","1","1",,,,,,,,"2","66","0","0","0","0",NULL,"2025-12-18",NULL,"2025-12-18"
+"1383","SUP01373","waraka ",,,,"0","1","1",,,,,,,,"2","142","0","0","0","0",NULL,"2025-12-18",NULL,NULL
+"1384","SUP01374","Sensory Indulgences Pvt Ltd","Udaya","Sri Lankan Authentic Experience ","Colombo","0","1","1","102841646 - 7000","dayalan@sensoryindulgences.com",,,,,,"1","29","0","0","0","0",NULL,"2025-12-19",NULL,NULL
+"1385","SUP01375","Pepper Life ",,,,"0","1","1",,,,,,,,"2","29","0","0","0","0",NULL,"2025-12-22",NULL,"2026-01-08"
+"1386","SUP01376","Vis Ta Vie Mirissa ",,,,"0","1","1",,,,,,,,"8","103","0","0","0","0",NULL,"2025-12-23",NULL,NULL
+"1387","SUP01377","Bernard Tours Pvt. Ltd",,"Luxury Vehicles ",,"0","1",NULL,,,,,,,,"13","29","0","0","0","0",NULL,"2025-12-30",NULL,NULL
+"1388","SUP01378","Centauria Wild",,,,"0","1","1",,,,,,,,"2","142","0","0","0","0",NULL,"2026-01-06",NULL,"2026-01-06"
+"1389","SUP01379","Uppuveli Beach by DSK",,,,"0","0",NULL,,,,,,,,"2","114","0","0","0","0",NULL,"2026-01-06",NULL,NULL
+"1390","SUP01380","On The Rocks ","Subi",,"Unawatuna","0","0",NULL,,,,,,,,"9","143","0","0","0","0",NULL,"2026-01-06",NULL,NULL
+"1391","SUP01381","German Speaking Chauffeur Guide ",,,,"0","0",NULL,,,,,,,,"2","29","0","0","0","0",NULL,"2026-01-06",NULL,NULL
+"1392","SUP01382","Roshan Rathnayaka",,,,"0","0",NULL,,,,"0774895077",,,,"7","66","0","0","0","0",NULL,"2026-01-06",NULL,NULL
+"1394","SUP01384","W15 Hanthana Estate",,"luxury boutique hotel","No. 947 Uduwela Road, Udugama West, Kandy 20000","0","1",NULL,,,,,,,,"8","66","0","0","0","0",NULL,"2026-01-08",NULL,NULL
+"1395","SUP01385","Wijerathna Jeep Safari - Minneriya",,,,"0","0",NULL,,,,,,"wildlife-12days-1.jpg","DSC_1146.webp","2","102","0","0","0","0",NULL,"2026-01-08",NULL,"2026-02-13"
+"1396","SUP01386","Ceylon Tea Trails - Excursions",,,,"0","1",NULL,,,,,,,,"8","50","0","0","0","0",NULL,"2026-01-08",NULL,NULL
+"1397","SUP01387","Wattura Resort & Spa           ",,,,"0","1","1",,,,,,,,"8","113","0","0","0","0",NULL,"2026-01-08",NULL,NULL
+"1398","SUP01388","Chathura Liyanage",,,,"0","0","1",,,,"0716956277",,,,"7","66","0","0","0","0",NULL,"2026-01-08",NULL,NULL
+"1399","SUP01389","Indrajith",,,,"0","0","1",,,,"07696339320",,,,"7","69","0","0","0","0",NULL,"2026-01-08",NULL,NULL
+"1400","SUP01390","Sisira Mitraratne",,,,"0","0","1",,,,"0771436423",,,,"7","29","0","0","0","0",NULL,"2026-01-08",NULL,NULL
+"1401","SUP01391","Upul Ananda (German)",,,,"0","0","1",,,,"0770773496",,,,"7","21","0","0","0","0",NULL,"2026-01-08",NULL,NULL
+"1402","SUP01392","Habarana Cocktail Session - Wijerathna","Wijerathna",,,"0","0",NULL,,,,"+94 77 170 5190",,,,"6","45","0","0","0","0",NULL,"2026-01-09",NULL,NULL
+"1403","SUP01393","Wild Glamping - Knuckles",,,"Thangappuwa Rd, Rangala 20922","0","0",NULL,,,,,,,,"9","78","0","0","0","0",NULL,"2026-01-12",NULL,NULL
+"1404","SUP01394","Serenite Ella",,,"Medapathana, Kitelella Rd, Ella 90090","0","0",NULL,,,,,,,,"3","39","0","0","0","0",NULL,"2026-01-12",NULL,NULL
+"1405","SUP01395","Ederagala Wana Senasuna",,,"Dambulla","0","0",NULL,,,,,,,,"7","30","0","0","0","0",NULL,"2026-01-12",NULL,NULL
+"1406","SUP01396","Cinnamon Life ",,,,"0","1","1",,,,,,,,"1","29","0","0","0","0",NULL,"2026-01-12",NULL,NULL
+"1407","SUP01397","Mohomad Munazzil",,,,"0","0","1",,,,"0771916151",,,,"7","66","0","0","0","0",NULL,"2026-01-13",NULL,"2026-01-13"
+"1408","SUP01398","Aarunya Nature Resort",,,,"0","1","1",,,,,,,,"8","66","0","0","0","0",NULL,"2026-01-13",NULL,NULL
+"1409","SUP01399","Ashok Kumara",,,,"0","0","1",,,,"0775162609",,,,"7","29","0","0","0","0",NULL,"2026-01-14",NULL,NULL
+"1410","SUP01400","Ru Boutique Hotel",,,,"0","0",NULL,,,,,,,,"2","66","0","0","0","0",NULL,"2026-01-15",NULL,NULL
+"1411","SUP01401","The Flame Tree Estate and Hotel",,,,"0","1","1",,,,,,,,"9","66","0","0","0","0",NULL,"2026-01-15",NULL,NULL
+"1412","SUP01402","Nisala Arana - Mount Lodge ",,,,"0","0",NULL,,,,,,,,"9","29","0","0","0","0",NULL,"2026-01-15",NULL,NULL
+"1413","SUP01403","Helga’s Folly",,,,"0","0",NULL,,,,,,,,"9","66","0","0","0","0",NULL,"2026-01-15",NULL,NULL
+"1414","SUP01404","Peacock Villa",,,,"0","0",NULL,,,,,,,,"3","103","0","0","0","0",NULL,"2026-01-15",NULL,NULL
+"1415","SUP01405","La Muraille",,,,"0","0",NULL,,,,,,,,"8","41","0","0","0","0",NULL,"2026-01-15",NULL,NULL
+"1416","SUP01406","Jetwing Wahawa Walauwa ",,,,"0","1","1",,,,,,,,"9","71","0","0","0","0",NULL,"2026-01-16",NULL,NULL
+"1417","SUP01407","NiiRA Hotel",,,,"0","1","1",,,,,,,,"9","103","0","0","0","0",NULL,"2026-01-20",NULL,NULL
+"1418","SUP01408","Jerome Gunawardhana",,,,"0","0",NULL,,,,"0775323445",,,,"7","29","0","0","0","0",NULL,"2026-01-23",NULL,NULL
+"1419","SUP01409","Dillip Raj",,,,"0","0",NULL,,,,"0767391032",,,,"1","29","0","0","0","0",NULL,"2026-01-26",NULL,NULL
+"1420","SUP01410","Buweneka Dissanayake",,,,"0","0","1",,,,"0715323445",,,,"1","29","0","0","0","0",NULL,"2026-01-27",NULL,NULL
+"1421","SUP01411","pasi01","0112233445",,,"0","1",NULL,,"pasi@gmail.com",,,,,,"1","118","0","0","0","0",NULL,"2026-02-09",NULL,NULL
+"1422","SUP01412","pasi02","0112233445",,,"0","1","1",,"pasi0@gmail.com",,,,,,"1","118","0","0","0","0",NULL,"2026-02-09",NULL,NULL
+"1423","SUP01413","pasi03","0112233445",,,"0","0",NULL,,"pasi00@gmail.com",,,,,,"1","118","0","0","0","0",NULL,"2026-02-09",NULL,NULL
+"1424","SUP01414","pasi04","0112233441",,,"0","0","1",,"pasi000@gmail.com",,,,,,"1","118","0","0","0","0",NULL,"2026-02-09",NULL,NULL
+"1425","SUP01415","CHRISTINA JEWELLERY",,,"No -730
+Galle Road
+Colombo 3","0","1","1",,,,"0711271822",,,,"7","29","0","0","0","0",NULL,"2026-02-17",NULL,NULL
+"1426","SUP01416","SIFANI JEWELLERS",,,"86, Galle Road,
+Colombo 03","0","1","1",,,,"0777 559 779",,,,"7","29","0","0","0","0",NULL,"2026-02-17",NULL,NULL
+"1427","SUP01417"," SIFANI JEWELLERS KANDY",,,"845, Peradeniya
+Road,Kandy","0","1","1",,,,"0812 234 195",,,,"7","29","0","0","0","0",NULL,"2026-02-17",NULL,NULL
+"1428","SUP01418","RANFER TEA SHOP",,,"No 16 ,
+Flower Road
+Colombo 07","0","1","1",,,,"011 4 605600",,,,"7","29","0","0","0","0",NULL,"2026-02-17",NULL,NULL
+"1429","SUP01419"," ODEL Clothing Store",,,"No 5,
+Alexandra Place,
+Colombo 7","0","1","1",,,,"0114-625800",,,,"7","29","0","0","0","0",NULL,"2026-02-17",NULL,NULL
+"1430","SUP01420","Cotton Collection",,,"143,
+Dharmapala
+Mawatha,
+Colombo 7.
+Majestic City,
+Colombo 4","0","1","1",,,"011 2588373","011 2307005",,,,"7","29","0","0","0","0",NULL,"2026-02-17",NULL,NULL
+"1431","SUP01421"," LAKSALA",,,"215
+Bauddhaloka
+Mawatha,
+Colombo
+00700
+Galle,
+Kandy","0","1","1",,,,"011 2 580579",,,,"7","29","0","0","0","0",NULL,"2026-02-17",NULL,NULL
