@@ -3,353 +3,583 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ceylon Journey Weaver — AI Itinerary Generator</title>
+  <title>Ceylon Journey Weaver — AI Itinerary Builder</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    * { font-family: 'Plus Jakarta Sans', sans-serif; }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+    *{font-family:"Plus Jakarta Sans",sans-serif}
+    h1,h2,h3,h4{font-family:"Playfair Display",serif}
 
-    .hero-bg {
-      background-image:
-        linear-gradient(135deg, rgba(13,148,136,.82) 0%, rgba(6,95,70,.88) 50%, rgba(8,145,178,.75) 100%),
-        url('https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?q=80&w=2128&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
+    /* ── ARIAX LOGO ── */
+    .ariax-logo{display:flex;align-items:center;gap:0;line-height:1}
+    .ariax-logo .aria{font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:22px;color:#1e3a5f;letter-spacing:-.5px}
+    .ariax-logo .x{font-family:"Plus Jakarta Sans",sans-serif;font-weight:900;font-size:24px;color:#e85d04;letter-spacing:-.5px}
+    .ariax-logo .tagline{font-size:9px;color:#6b7280;letter-spacing:.02em;margin-top:1px;display:block;font-weight:400}
+
+    /* ── TOP UTILITY BAR ── */
+    .top-utility{background:#fff;border-bottom:1px solid #e5e7eb;padding:0 20px;height:46px;display:flex;align-items:center;justify-content:space-between}
+    .top-utility-left{display:flex;align-items:center}
+    .top-utility-right{display:flex;align-items:center;gap:6px;font-size:13px;color:#374151}
+
+    /* Alert badge */
+    .alert-badge{display:inline-flex;align-items:center;gap:6px;color:#374151;font-size:13px;font-weight:500}
+    .alert-dot{background:#22c55e;color:#fff;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .util-sep{color:#d1d5db;margin:0 4px;font-size:13px}
+    .util-link{color:#1d4ed8;font-size:13px;font-weight:500;cursor:pointer;text-decoration:none;transition:color .15s}
+    .util-link:hover{color:#1e40af;text-decoration:underline}
+    .util-plain{color:#374151;font-size:13px}
+
+    /* ── PRIMARY NAV BAR ── */
+    .primary-nav{background:#f9fafb;border-bottom:1px solid #e5e7eb;padding:0 20px;height:40px;display:flex;align-items:center}
+    .primary-nav-inner{display:flex;align-items:center;gap:0;height:100%}
+    .pnav-item{display:flex;align-items:center;gap:4px;padding:0 13px;height:100%;font-size:13px;color:#374151;font-weight:500;cursor:pointer;border:none;background:transparent;transition:color .15s;white-space:nowrap;position:relative}
+    .pnav-item:hover{color:#1d4ed8}
+    .pnav-item i.fa-caret-down{font-size:10px;color:#9ca3af;margin-left:1px}
+    .pnav-item:hover i.fa-caret-down{color:#1d4ed8}
+
+    /* ── SECONDARY NAV BAR (tab style like AriaX) ── */
+    .secondary-nav{background:#fff;border-bottom:2px solid #e5e7eb;padding:0 20px;display:flex;align-items:flex-end;gap:0;overflow-x:auto}
+    .secondary-nav::-webkit-scrollbar{height:3px}
+    .secondary-nav::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:2px}
+    .snav-item{padding:11px 16px;font-size:13px;font-weight:500;color:#1d4ed8;cursor:pointer;white-space:nowrap;border:none;background:transparent;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .15s;text-decoration:none;display:block}
+    .snav-item:hover{color:#1e3a5f;border-bottom-color:#93c5fd}
+    .snav-item.active{color:#fff;background:#1d4ed8;border-bottom-color:#1d4ed8;border-radius:4px 4px 0 0;font-weight:600}
+
+    /* ── REST OF PAGE STYLES ── */
+    .hero-bg{
+      background-image:linear-gradient(135deg,rgba(13,148,136,.88) 0%,rgba(6,95,70,.92) 55%,rgba(8,145,178,.82) 100%),
+        url("https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?q=80&w=2128&auto=format&fit=crop");
+      background-size:cover;background-position:center
     }
+    .grd{background:linear-gradient(135deg,#0d9488,#059669)}
+    .grd-btn{background:linear-gradient(135deg,#0d9488,#059669);transition:all .3s ease}
+    .grd-btn:hover{background:linear-gradient(135deg,#0f766e,#047857);transform:translateY(-1px);box-shadow:0 12px 24px rgba(13,148,136,.35)}
 
-    .gradient-btn {
-      background: linear-gradient(135deg, #0d9488 0%, #059669 100%);
-      transition: all 0.3s ease;
-    }
-    .gradient-btn:hover {
-      background: linear-gradient(135deg, #0f766e 0%, #047857 100%);
-      transform: translateY(-1px);
-      box-shadow: 0 12px 24px rgba(13,148,136,.35);
-    }
+    .tab-btn{transition:all .25s ease;border-bottom:2px solid transparent}
+    .tab-btn.active{color:#0d9488;border-bottom-color:#0d9488;font-weight:600}
 
-    .card-float {
-      transition: all 0.35s cubic-bezier(.4,0,.2,1);
-    }
-    .card-float:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 48px rgba(0,0,0,.12);
-    }
+    .fi{width:100%;background:#f8fafc;border:2px solid #e2e8f0;border-radius:12px;padding:10px 14px;font-size:14px;color:#1e293b;outline:none;transition:all .2s}
+    .fi:focus{border-color:#0d9488;background:#fff;box-shadow:0 0 0 3px rgba(13,148,136,.08)}
+    .fi::placeholder{color:#94a3b8}
+    select.fi{cursor:pointer}
 
-    .template-card { transition: all 0.4s cubic-bezier(.4,0,.2,1); }
-    .template-card:hover { transform: translateY(-8px); box-shadow: 0 32px 64px rgba(0,0,0,.15); }
-    .template-card:hover .card-img { transform: scale(1.07); }
-    .card-img { transition: transform 0.7s cubic-bezier(.19,1,.22,1); }
+    .day-table{width:100%;border-collapse:collapse;font-size:13px}
+    .day-table th{background:linear-gradient(135deg,#0d9488,#059669);color:#fff;padding:10px 12px;text-align:left;font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+    .day-table th:first-child{border-radius:8px 0 0 0}
+    .day-table th:last-child{border-radius:0 8px 0 0}
+    .day-table td{padding:8px;border-bottom:1px solid #f1f5f9;vertical-align:middle;background:#fff}
+    .day-table tr:hover td{background:#f8fafc}
 
-    .tab-btn { transition: all 0.25s ease; border-bottom: 2px solid transparent; }
-    .tab-btn.active { color: #0d9488; border-bottom-color: #0d9488; }
+    .day-badge{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;background:linear-gradient(135deg,#0d9488,#059669);color:#fff;flex-shrink:0}
 
-    .textarea-field:focus { box-shadow: 0 0 0 4px rgba(13,148,136,.12); }
+    .img-cell{width:52px;height:52px;border:2px dashed #e2e8f0;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;transition:all .2s;background:#f8fafc;position:relative}
+    .img-cell:hover{border-color:#0d9488;background:#f0fdfc}
+    .img-cell img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+    .img-cell input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
 
-    /* Floating label animation */
-    .upload-zone { transition: all 0.25s ease; }
-    .upload-zone:hover { border-color: #0d9488; background: #f0fdfc; }
+    .sup-table{width:100%;border-collapse:collapse;font-size:13px}
+    .sup-table th{background:#f1f5f9;color:#64748b;padding:10px 12px;text-align:left;font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid #e2e8f0}
+    .sup-table td{padding:8px;border-bottom:1px solid #f1f5f9;vertical-align:middle}
+    .sup-table tr:hover td{background:#f8fafc}
 
-    /* Feature icon circles */
-    .feat-icon {
-      background: linear-gradient(135deg, #ccfbf1 0%, #d1fae5 100%);
-    }
+    @keyframes shimmer{from{background-position:-200% center}to{background-position:200% center}}
+    .progress-sh{background:linear-gradient(90deg,#0d9488 0%,#34d399 50%,#0d9488 100%);background-size:200% auto;animation:shimmer 1.5s linear infinite}
 
-    /* Destination pills */
-    .dest-pill {
-      transition: all 0.2s ease;
-      background: rgba(255,255,255,.12);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,.25);
-    }
-    .dest-pill:hover {
-      background: rgba(255,255,255,.25);
-      border-color: rgba(255,255,255,.5);
-      transform: translateY(-1px);
-    }
+    .fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+    .fade-in.visible{opacity:1;transform:none}
 
-    /* Pulse ring on CTA */
-    @keyframes pulseRing {
-      0% { box-shadow: 0 0 0 0 rgba(13,148,136,.4); }
-      70% { box-shadow: 0 0 0 18px rgba(13,148,136,0); }
-      100% { box-shadow: 0 0 0 0 rgba(13,148,136,0); }
-    }
-    .pulse-cta { animation: pulseRing 2.5s ease-out infinite; }
+    .mode-chip{transition:all .2s;cursor:pointer;border:2px solid #e2e8f0;border-radius:12px;padding:10px 16px;display:flex;align-items:center;gap:8px;background:#fff}
+    .mode-chip.active{border-color:#0d9488;background:#f0fdfc;color:#0d9488}
+    .mode-chip:hover{border-color:#0d9488}
 
-    /* Scroll fade-in */
-    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
-    .fade-in.visible { opacity: 1; transform: none; }
+    .card{background:#fff;border-radius:24px;box-shadow:0 4px 24px rgba(0,0,0,.07);overflow:hidden}
+    .sec-hdr{background:linear-gradient(135deg,#0d9488,#059669);padding:16px 24px;display:flex;align-items:center;gap:12px}
 
-    /* Stat counter animation */
-    @keyframes countUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
-    .stat-val { animation: countUp .6s ease forwards; }
+    .cb-row{display:flex;align-items:center;gap:8px;cursor:pointer}
+    .cb-row input[type=checkbox]{width:16px;height:16px;accent-color:#0d9488;cursor:pointer}
 
-    /* Progress bar shimmer */
-    @keyframes shimmer {
-      from { background-position: -200% center; }
-      to   { background-position: 200% center; }
-    }
-    .progress-shimmer {
-      background: linear-gradient(90deg, #0d9488 0%, #34d399 50%, #0d9488 100%);
-      background-size: 200% auto;
-      animation: shimmer 1.5s linear infinite;
-    }
+    .action-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:10px;font-weight:600;font-size:13px;cursor:pointer;transition:all .2s;border:none}
+    .btn-green{background:linear-gradient(135deg,#16a34a,#15803d);color:#fff;box-shadow:0 4px 12px rgba(22,163,74,.3)}
+    .btn-green:hover{box-shadow:0 6px 16px rgba(22,163,74,.4);transform:translateY(-1px)}
+    .btn-teal{background:linear-gradient(135deg,#0d9488,#059669);color:#fff;box-shadow:0 4px 12px rgba(13,148,136,.3)}
+    .btn-teal:hover{box-shadow:0 6px 16px rgba(13,148,136,.4);transform:translateY(-1px)}
+    .btn-cyan{background:linear-gradient(135deg,#0891b2,#0e7490);color:#fff;box-shadow:0 4px 12px rgba(8,145,178,.3)}
+    .btn-cyan:hover{box-shadow:0 6px 16px rgba(8,145,178,.4);transform:translateY(-1px)}
+    .btn-slate{background:#f1f5f9;color:#475569;border:1px solid #e2e8f0}
+    .btn-slate:hover{background:#e2e8f0}
 
-    /* Nav scroll effect */
-    .nav-scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.08); }
+    .dest-pill{background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);transition:all .2s}
+    .dest-pill:hover{background:rgba(255,255,255,.22);transform:translateY(-1px)}
+
+    @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(13,148,136,.4)}70%{box-shadow:0 0 0 16px rgba(13,148,136,0)}100%{box-shadow:0 0 0 0 rgba(13,148,136,0)}}
+    .pulse-cta{animation:pulseRing 2.5s ease-out infinite}
+
+    /* Dropdown menus */
+    .pnav-item{position:relative}
+    .pnav-dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e5e7eb;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.12);min-width:160px;z-index:200;padding:4px 0}
+    .pnav-item:hover .pnav-dropdown{display:block}
+    .pnav-dropdown a{display:block;padding:8px 16px;font-size:13px;color:#374151;text-decoration:none;transition:background .1s}
+    .pnav-dropdown a:hover{background:#f3f4f6;color:#1d4ed8}
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
 
 <!-- ══════════════════════════════════════════════
-     NAVBAR
+     TOP UTILITY BAR  (AriaX style)
 ══════════════════════════════════════════════ -->
-<nav id="navbar" class="bg-white/95 backdrop-blur-md sticky top-0 z-40 transition-shadow duration-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="flex justify-between items-center h-16">
-      <!-- Brand -->
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl gradient-btn flex items-center justify-center shadow-md">
-          <i class="fas fa-compass text-white text-lg"></i>
-        </div>
-        <div>
-          <div class="font-bold text-gray-900 text-sm leading-tight" style="font-family:'Playfair Display',serif">Ceylon Journey Weaver</div>
-          <div class="text-xs text-teal-600 font-medium">AI-Powered Itinerary Generator</div>
-        </div>
+<div class="top-utility">
+  <!-- LEFT: AriaX Logo -->
+  <div class="ariax-logo">
+    <div>
+      <div>
+        <span class="aria">aria</span><span class="x">X</span>
       </div>
-      <!-- Nav links -->
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#features" class="text-slate-500 hover:text-teal-600 text-sm font-medium transition-colors">Features</a>
-        <a href="#templates" class="text-slate-500 hover:text-teal-600 text-sm font-medium transition-colors">Templates</a>
-        <a href="#formSection" class="text-slate-500 hover:text-teal-600 text-sm font-medium transition-colors">How It Works</a>
-      </div>
-      <!-- CTA -->
-      <button onclick="scrollToForm()" class="gradient-btn text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm">
-        <i class="fas fa-paper-plane mr-2"></i>Start Planning
-      </button>
+      <span class="tagline">Travel Management System</span>
     </div>
   </div>
-</nav>
+
+  <!-- RIGHT: Alerts, user info, logout -->
+  <div class="top-utility-right">
+    <div class="alert-badge">
+      <span>Alerts</span>
+      <span class="alert-dot">2</span>
+    </div>
+    <span class="util-sep">|</span>
+    <span class="util-plain">Travel Executive</span>
+    <span class="util-sep">|</span>
+    <span class="util-plain font-semibold">Kethushan</span>
+    <span class="util-sep">|</span>
+    <a href="#" class="util-link" style="color:#1d4ed8">Logout</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     PRIMARY NAV BAR  (Estimate, Profiles, Tours…)
+══════════════════════════════════════════════ -->
+<div class="primary-nav">
+  <div class="primary-nav-inner">
+
+    <div class="pnav-item">
+      Estimate <i class="fas fa-caret-down"></i>
+      <div class="pnav-dropdown">
+        <a href="#">New Estimate</a>
+        <a href="#">Estimate List</a>
+        <a href="#">Estimate Reports</a>
+      </div>
+    </div>
+
+    <div class="pnav-item">
+      Profiles <i class="fas fa-caret-down"></i>
+      <div class="pnav-dropdown">
+        <a href="#">Client Profiles</a>
+        <a href="#">Agent Profiles</a>
+        <a href="#">Supplier Profiles</a>
+      </div>
+    </div>
+
+    <div class="pnav-item">
+      Tours <i class="fas fa-caret-down"></i>
+      <div class="pnav-dropdown">
+        <a href="#">All Tours</a>
+        <a href="#">Active Tours</a>
+        <a href="#">Tour Templates</a>
+      </div>
+    </div>
+
+    <div class="pnav-item">
+      Reservation <i class="fas fa-caret-down"></i>
+      <div class="pnav-dropdown">
+        <a href="#">New Reservation</a>
+        <a href="#">Reservation List</a>
+        <a href="#">Group Bookings</a>
+      </div>
+    </div>
+
+    <div class="pnav-item">
+      Transport <i class="fas fa-caret-down"></i>
+      <div class="pnav-dropdown">
+        <a href="#">Vehicles</a>
+        <a href="#">Drivers</a>
+        <a href="#">Transport Schedule</a>
+      </div>
+    </div>
+
+    <div class="pnav-item">
+      Managers <i class="fas fa-caret-down"></i>
+      <div class="pnav-dropdown">
+        <a href="#">Staff List</a>
+        <a href="#">Assign Manager</a>
+        <a href="#">Performance</a>
+      </div>
+    </div>
+
+    <div class="pnav-item">
+      Accounts <i class="fas fa-caret-down"></i>
+      <div class="pnav-dropdown">
+        <a href="#">Ledger</a>
+        <a href="#">Receipts</a>
+        <a href="#">Payments</a>
+      </div>
+    </div>
+
+    <div class="pnav-item">
+      Sales <i class="fas fa-caret-down"></i>
+      <div class="pnav-dropdown">
+        <a href="#">Sales Dashboard</a>
+        <a href="#">Targets</a>
+        <a href="#">Commissions</a>
+      </div>
+    </div>
+
+    <div class="pnav-item">
+      Reports <i class="fas fa-caret-down"></i>
+      <div class="pnav-dropdown">
+        <a href="#">Revenue Reports</a>
+        <a href="#">Tour Reports</a>
+        <a href="#">Agent Reports</a>
+      </div>
+    </div>
+
+    <div class="pnav-item">
+      Master Details <i class="fas fa-caret-down"></i>
+      <div class="pnav-dropdown">
+        <a href="#">Destinations</a>
+        <a href="#">Hotels</a>
+        <a href="#">Services</a>
+        <a href="#">Activities</a>
+      </div>
+    </div>
+
+    <div class="pnav-item">
+      Admin <i class="fas fa-caret-down"></i>
+      <div class="pnav-dropdown">
+        <a href="#">Users</a>
+        <a href="#">Roles &amp; Permissions</a>
+        <a href="#">System Settings</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECONDARY NAV BAR  (Estimate, Modify Date…)
+══════════════════════════════════════════════ -->
+<div class="secondary-nav">
+  <a href="#" class="snav-item">Estimate</a>
+  <a href="#" class="snav-item">Modify Date</a>
+  <a href="#" class="snav-item">Services</a>
+  <a href="#" class="snav-item">Quotation</a>
+  <a href="#" class="snav-item active">Itinerary Builder</a>
+  <a href="#" class="snav-item">Day-Cost Breakdown</a>
+  <a href="#" class="snav-item">Invoice</a>
+  <a href="#" class="snav-item">Payment</a>
+  <a href="#" class="snav-item">Supplement Invoices</a>
+  <a href="#" class="snav-item">Complete/Cancel</a>
+</div>
 
 <!-- ══════════════════════════════════════════════
      HERO
 ══════════════════════════════════════════════ -->
 <section class="hero-bg text-white relative overflow-hidden">
-  <!-- Decorative elements -->
   <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
   <div class="absolute bottom-0 left-0 right-0">
     <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
       <path d="M0,80 L1440,80 L1440,0 Q1080,80 720,60 Q360,40 0,80 Z" fill="#f8fafc"/>
     </svg>
   </div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24 pb-28">
-    <!-- Badge -->
-    <div class="flex justify-center mb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 pb-24">
+    <div class="flex justify-center mb-6">
       <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 px-5 py-2 rounded-full text-sm font-medium">
         <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-        AI-Powered Travel Planning · Sri Lanka
+        AI-Powered · Sri Lanka Travel Builder
       </span>
     </div>
-
-    <!-- Headline -->
     <div class="text-center max-w-4xl mx-auto mb-10">
-      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-        Plan Your Perfect<br>
-        <em class="text-emerald-300">Sri Lanka</em> Adventure
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-5 leading-tight">
+        Build Your Perfect<br><em class="text-emerald-300">Sri Lanka</em> Journey
       </h1>
-      <p class="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-        Paste your travel email and get a fully crafted, day-by-day itinerary with real hotels, routes, and activities — matched to your exact budget.
+      <p class="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+        Fill in your tour details — our AI generates a fully crafted day-by-day itinerary with real hotels, routes, and activities matched to your budget.
       </p>
     </div>
-
-    <!-- Stats row -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-12">
-      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-center">
-        <div class="text-3xl font-bold mb-1 stat-val">205</div>
-        <div class="text-sm text-white/70">Cities Covered</div>
-      </div>
-      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-center">
-        <div class="text-3xl font-bold mb-1 stat-val">800+</div>
-        <div class="text-sm text-white/70">Hotels & Resorts</div>
-      </div>
-      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-center">
-        <div class="text-3xl font-bold mb-1 stat-val">AI</div>
-        <div class="text-sm text-white/70">Smart Analysis</div>
-      </div>
-      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-center">
-        <div class="text-3xl font-bold mb-1 stat-val">3</div>
-        <div class="text-sm text-white/70">Budget Tiers</div>
-      </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-10">
+      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center"><div class="text-2xl font-bold mb-1">205</div><div class="text-sm text-white/70">Cities</div></div>
+      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center"><div class="text-2xl font-bold mb-1">800+</div><div class="text-sm text-white/70">Hotels</div></div>
+      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center"><div class="text-2xl font-bold mb-1">AI</div><div class="text-sm text-white/70">Powered</div></div>
+      <div class="bg-white/12 backdrop-blur-sm border border-white/20 rounded-2xl p-4 text-center"><div class="text-2xl font-bold mb-1">3</div><div class="text-sm text-white/70">Templates</div></div>
     </div>
-
-    <!-- CTA -->
-    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <button onclick="scrollToForm()" class="pulse-cta bg-white text-teal-700 font-bold py-4 px-10 rounded-2xl text-lg shadow-2xl hover:bg-gray-50 transition-all">
-        <i class="fas fa-wand-magic-sparkles mr-3 text-teal-500"></i>Create Your Itinerary
-      </button>
-      <button onclick="scrollToTemplates()" class="bg-white/15 border border-white/30 text-white font-semibold py-4 px-8 rounded-2xl hover:bg-white/25 transition-all backdrop-blur-sm">
-        <i class="fas fa-eye mr-2"></i>See Templates
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button onclick="document.getElementById('builder').scrollIntoView({behavior:'smooth'})" class="pulse-cta bg-white text-teal-700 font-bold py-4 px-10 rounded-2xl text-lg shadow-2xl hover:bg-gray-50 transition-all">
+        <i class="fas fa-wand-magic-sparkles mr-3 text-teal-500"></i>Build Itinerary
       </button>
     </div>
-
-    <!-- Destination pills -->
-    <div class="flex flex-wrap justify-center gap-2 mt-12">
+    <div class="flex flex-wrap justify-center gap-2 mt-10">
       <span class="text-white/50 text-sm mr-2 self-center">Popular:</span>
-      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Sigiriya</span>
-      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Kandy</span>
-      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Ella</span>
-      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Yala Safari</span>
-      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Galle Fort</span>
-      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Nuwara Eliya</span>
-      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80 cursor-default">Mirissa Beach</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80">Sigiriya</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80">Kandy</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80">Ella</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80">Yala Safari</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80">Galle Fort</span>
+      <span class="dest-pill px-4 py-1.5 rounded-full text-sm text-white/80">Nuwara Eliya</span>
     </div>
   </div>
 </section>
 
 <!-- ══════════════════════════════════════════════
-     FORM SECTION (overlaps hero bottom)
+     BUILDER SECTION
 ══════════════════════════════════════════════ -->
-<section id="formSection" class="max-w-5xl mx-auto px-4 sm:px-6 -mt-4 pb-16 relative z-10">
-  <div class="bg-white rounded-3xl shadow-2xl overflow-hidden card-float">
+<section id="builder" class="max-w-6xl mx-auto px-4 sm:px-6 -mt-4 pb-16 relative z-10">
+  <div class="card shadow-2xl">
 
     <!-- Card header -->
-    <div class="bg-gradient-to-r from-teal-600 to-emerald-500 px-8 py-6">
-      <div class="flex items-center justify-between">
-        <div>
-          <h2 class="text-white text-2xl font-bold" style="font-family:'Playfair Display',serif">Create Your Itinerary</h2>
-          <p class="text-teal-100 text-sm mt-1">Paste your travel email — our AI handles everything</p>
-        </div>
-        <div class="hidden md:flex items-center gap-3">
-          <div class="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-full text-white text-xs border border-white/25">
-            <i class="fas fa-bolt text-yellow-300"></i> Instant Generation
-          </div>
-        </div>
+    <div class="sec-hdr">
+      <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-route text-white text-lg"></i>
+      </div>
+      <div class="flex-1">
+        <h2 class="text-white text-2xl font-bold">Itinerary Builder</h2>
+        <p class="text-teal-100 text-sm mt-0.5">Fill in the details below — our AI generates your personalised journey</p>
+      </div>
+      <div class="hidden md:flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-full text-white text-xs border border-white/25">
+        <i class="fas fa-bolt text-yellow-300"></i> AI Generation
       </div>
     </div>
 
-    <div class="p-8">
-      <!-- Tabs -->
-      <div class="flex gap-1 mb-8 border-b border-slate-100">
-        <button id="emailTabBtn" class="tab-btn active px-6 py-3 text-sm font-semibold rounded-t-lg" onclick="switchTab('email')">
-          <i class="fas fa-envelope mr-2 text-teal-500"></i>Paste Email
+    <!-- TABS -->
+    <div class="flex gap-1 px-6 pt-5 border-b border-slate-100">
+      <button id="tab-form-btn" class="tab-btn active px-5 py-3 text-sm rounded-t-lg" onclick="switchMainTab('form')">
+        <i class="fas fa-sliders mr-2 text-teal-500"></i>Structured Form
+      </button>
+      <button id="tab-email-btn" class="tab-btn px-5 py-3 text-sm text-slate-400 rounded-t-lg" onclick="switchMainTab('email')">
+        <i class="fas fa-envelope mr-2"></i>Paste Email
+      </button>
+    </div>
+
+    <!-- ══ STRUCTURED FORM TAB ══ -->
+    <div id="tab-form" class="p-6">
+
+      <!-- TOUR META -->
+      <div class="mb-6">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-7 h-7 grd rounded-lg flex items-center justify-center"><i class="fas fa-info-circle text-white text-xs"></i></div>
+          <h3 class="font-bold text-slate-800 text-base">Tour Information</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Tour Name</label>
+            <input type="text" id="tourName" placeholder="e.g. Sri Lanka Explorer Tour" class="fi"/>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Duration</label>
+            <input type="text" id="tourDuration" placeholder="e.g. 7 Days 6 Nights" class="fi"/>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Type of Tour</label>
+            <select id="typeOfTour" class="fi">
+              <option value="">Select type…</option>
+              <option>Cultural</option>
+              <option>Adventure</option>
+              <option>Beach &amp; Relaxation</option>
+              <option>Wildlife Safari</option>
+              <option>Honeymoon / Romantic</option>
+              <option>Family</option>
+              <option>General Sightseeing</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Meal Plan</label>
+            <select id="mealPlan" class="fi">
+              <option value="">Select meal plan…</option>
+              <option>Room Only</option>
+              <option>Bed &amp; Breakfast</option>
+              <option>Half Board</option>
+              <option>Full Board</option>
+              <option>All Inclusive</option>
+              <option selected>Breakfast and Dinner</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Budget (USD Total)</label>
+            <input type="number" id="budgetAmount" placeholder="e.g. 2500" class="fi" min="0"/>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Language</label>
+            <select id="language" class="fi">
+              <option selected>English</option>
+              <option>Sinhala</option>
+              <option>Tamil</option>
+              <option>German</option>
+              <option>French</option>
+              <option>Japanese</option>
+              <option>Chinese</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Adults</label>
+            <input type="number" id="numAdults" placeholder="2" class="fi" min="1" value="2"/>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Children</label>
+            <input type="number" id="numChildren" placeholder="0" class="fi" min="0" value="0"/>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Number of Days</label>
+            <input type="number" id="numDays" placeholder="7" class="fi" min="1" max="30" value="7" oninput="rebuildDayTable()"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY TABLE -->
+      <div class="mb-6">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 grd rounded-lg flex items-center justify-center"><i class="fas fa-calendar-days text-white text-xs"></i></div>
+            <h3 class="font-bold text-slate-800 text-base">Day-by-Day Itinerary</h3>
+          </div>
+          <button onclick="addDayRow()" class="action-btn btn-slate text-xs py-1.5 px-3">
+            <i class="fas fa-plus text-teal-600"></i> Add Day
+          </button>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-slate-200">
+          <div class="overflow-x-auto">
+            <table class="day-table" id="dayTable">
+              <thead>
+                <tr>
+                  <th style="width:50px">Day</th>
+                  <th style="min-width:130px">City / Destination</th>
+                  <th style="min-width:130px">Route</th>
+                  <th style="min-width:200px">Description / Activities</th>
+                  <th style="min-width:100px">Pick Time</th>
+                  <th style="min-width:100px">Drop Time</th>
+                  <th style="width:60px">Pic 1</th>
+                  <th style="width:60px">Pic 2</th>
+                  <th style="width:60px">Pic 3</th>
+                  <th style="width:40px"></th>
+                </tr>
+              </thead>
+              <tbody id="dayTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUPPLIER TABLE -->
+      <div class="mb-6">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 grd rounded-lg flex items-center justify-center"><i class="fas fa-hotel text-white text-xs"></i></div>
+            <h3 class="font-bold text-slate-800 text-base">Preferred Suppliers / Hotels</h3>
+            <span class="text-xs text-slate-400">(optional)</span>
+          </div>
+          <button onclick="addSupplierRow()" class="action-btn btn-slate text-xs py-1.5 px-3">
+            <i class="fas fa-plus text-teal-600"></i> Add Supplier
+          </button>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-slate-200">
+          <div class="overflow-x-auto">
+            <table class="sup-table" id="supTable">
+              <thead>
+                <tr>
+                  <th style="width:50px">Day</th>
+                  <th style="min-width:180px">Supplier / Hotel Name</th>
+                  <th style="min-width:200px">Description / Notes</th>
+                  <th style="width:60px">Pic 1</th>
+                  <th style="width:60px">Pic 2</th>
+                  <th style="width:40px"></th>
+                </tr>
+              </thead>
+              <tbody id="supTableBody">
+                <tr id="sup-empty-row">
+                  <td colspan="6" class="text-center py-8 text-slate-400">
+                    <i class="fas fa-hotel text-3xl mb-2 block text-slate-200"></i>
+                    No preferred suppliers added. Click "Add Supplier" or leave blank for AI to select.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUTPUT OPTIONS -->
+      <div class="mb-6 bg-slate-50 rounded-2xl p-5 border border-slate-200">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-7 h-7 grd rounded-lg flex items-center justify-center"><i class="fas fa-sliders text-white text-xs"></i></div>
+          <h3 class="font-bold text-slate-800 text-base">Output Options</h3>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <label class="cb-row text-sm text-slate-600"><input type="checkbox" id="optTourMap" checked class="rounded"/> Tour Map</label>
+          <label class="cb-row text-sm text-slate-600"><input type="checkbox" id="optIncludeExclude" class="rounded"/> Include &amp; Exclude</label>
+          <label class="cb-row text-sm text-slate-600"><input type="checkbox" id="optWordFormat" class="rounded"/> Word Format</label>
+          <label class="cb-row text-sm text-slate-600"><input type="checkbox" id="optPerPerson" class="rounded"/> Per Person Amount</label>
+          <label class="cb-row text-sm text-slate-600"><input type="checkbox" id="optShoppingLeaf" class="rounded"/> Shopping Leaf</label>
+          <label class="cb-row text-sm text-slate-600"><input type="checkbox" id="optThreeTemplates" checked class="rounded"/> 3 View Templates</label>
+        </div>
+      </div>
+
+      <!-- TIP -->
+      <div class="mb-5 flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4">
+        <i class="fas fa-lightbulb text-amber-500 mt-0.5 flex-shrink-0"></i>
+        <p class="text-sm text-amber-800 leading-relaxed">
+          <strong>Tip:</strong> Fill in City/Destination for each day — our AI fills in activities, hotels, and schedules automatically.
+          The more detail you add, the more personalised your itinerary will be.
+        </p>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="flex flex-col sm:flex-row gap-3 pt-5 border-t border-slate-100">
+        <button onclick="resetForm()" class="action-btn btn-slate text-sm flex-1 justify-center">
+          <i class="fas fa-rotate-left"></i> Reset
         </button>
-        <button id="manualTabBtn" class="tab-btn px-6 py-3 text-sm font-semibold text-slate-400 rounded-t-lg" onclick="switchTab('manual')">
-          <i class="fas fa-sliders mr-2"></i>Manual Input
+        <button onclick="useSampleData()" class="action-btn btn-slate text-sm flex-1 justify-center">
+          <i class="fas fa-file-lines text-teal-600"></i> Load Sample
+        </button>
+        <button onclick="saveItinerary()" class="action-btn btn-green text-sm flex-1 justify-center">
+          <i class="fas fa-floppy-disk"></i> Save Itinerary
+        </button>
+        <button onclick="generateFromForm()" class="action-btn btn-cyan text-sm flex-2 justify-center py-3" style="flex:2">
+          <i class="fas fa-wand-magic-sparkles"></i> Generate Itinerary
+          <i class="fas fa-arrow-right ml-1"></i>
         </button>
       </div>
+    </div>
 
-      <!-- Email Tab -->
-      <div id="emailTab">
-        <!-- Quick fill examples -->
-        <div class="mb-5">
-          <div class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Try an example</div>
-          <div class="flex flex-wrap gap-2">
-            <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="luxury">
-              <i class="fas fa-crown mr-1.5 text-yellow-500"></i>Luxury Couple
-            </button>
-            <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="family">
-              <i class="fas fa-users mr-1.5 text-blue-500"></i>Family Trip
-            </button>
-            <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="budget">
-              <i class="fas fa-backpack mr-1.5 text-green-500"></i>Budget Explorer
-            </button>
-            <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="wildlife">
-              <i class="fas fa-paw mr-1.5 text-orange-500"></i>Wildlife Safari
-            </button>
-          </div>
-        </div>
-
-        <!-- Textarea -->
-        <div class="relative">
-          <textarea
-            id="emailContent"
-            name="email"
-            rows="11"
-            class="textarea-field w-full bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 text-slate-700 text-sm leading-relaxed focus:border-teal-400 focus:bg-white outline-none transition-all resize-none"
-            placeholder="Paste your travel enquiry email here...
-
-Example:
-Hi, we're a couple planning a 7-day honeymoon in Sri Lanka.
-Budget: USD 3,000 total. 
-We'd love to visit Kandy, Ella, and the south coast beaches.
-Prefer boutique hotels with breakfast included.
-
-Kind regards, Sarah & James"
-          ></textarea>
-          <div class="absolute bottom-4 right-4 flex items-center gap-3">
-            <span id="charCount" class="text-xs text-slate-400">0 chars</span>
-            <button onclick="clearContent()" class="w-7 h-7 flex items-center justify-center rounded-full hover:bg-slate-200 text-slate-400 hover:text-slate-600 transition-colors">
-              <i class="fas fa-times text-xs"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- File upload -->
-        <div class="mt-4">
-          <div id="dropZone" class="upload-zone border-2 border-dashed border-slate-200 rounded-2xl p-6 text-center cursor-pointer" onclick="document.getElementById('emailFile').click()">
-            <input type="file" id="emailFile" class="hidden" accept=".txt,.eml,.html,.pdf"/>
-            <div class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mx-auto mb-3">
-              <i class="fas fa-cloud-arrow-up text-xl text-slate-400"></i>
-            </div>
-            <p class="text-slate-600 font-medium text-sm">Drop email file here or <span class="text-teal-600">browse</span></p>
-            <p class="text-slate-400 text-xs mt-1">PDF, TXT, EML supported</p>
-          </div>
-          <div id="fileInfo" class="hidden mt-3 p-3 bg-teal-50 border border-teal-200 rounded-xl flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center">
-                <i class="fas fa-file-lines text-teal-600 text-sm"></i>
-              </div>
-              <div>
-                <p id="fileName" class="text-sm font-medium text-teal-800"></p>
-                <p id="fileSize" class="text-xs text-teal-500"></p>
-              </div>
-            </div>
-            <button onclick="removeFile()" class="text-red-400 hover:text-red-600 transition-colors"><i class="fas fa-times"></i></button>
-          </div>
+    <!-- ══ EMAIL TAB ══ -->
+    <div id="tab-email" class="hidden p-6">
+      <div class="mb-5">
+        <div class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Try an example</div>
+        <div class="flex flex-wrap gap-2">
+          <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="luxury">
+            <i class="fas fa-crown mr-1.5 text-yellow-500"></i>Luxury Couple
+          </button>
+          <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="family">
+            <i class="fas fa-users mr-1.5 text-blue-500"></i>Family Trip
+          </button>
+          <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="budget">
+            <i class="fas fa-backpack mr-1.5 text-green-500"></i>Budget Explorer
+          </button>
+          <button class="qf-chip px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700 transition-all font-medium" data-fill="wildlife">
+            <i class="fas fa-paw mr-1.5 text-orange-500"></i>Wildlife Safari
+          </button>
         </div>
       </div>
 
-      <!-- Manual Tab -->
-      <div id="manualTab" class="hidden">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-2">Trip Duration</label>
-            <select id="manualDuration" class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 text-sm focus:border-teal-400 outline-none transition-colors">
-              <option>3–5 Days</option>
-              <option selected>7 Days</option>
-              <option>10–14 Days</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-2">Travellers</label>
-            <select id="manualTravelers" class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 text-sm focus:border-teal-400 outline-none transition-colors">
-              <option>Solo</option>
-              <option selected>2 People</option>
-              <option>Family with Kids</option>
-              <option>Group</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-2">Budget Level</label>
-            <select id="manualBudget" class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 text-sm focus:border-teal-400 outline-none transition-colors">
-              <option>Budget</option>
-              <option selected>Mid-range</option>
-              <option>Luxury</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-2">Interests</label>
-            <input type="text" id="manualInterests" placeholder="Beaches, Wildlife, Culture…"
-              class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 text-sm focus:border-teal-400 outline-none transition-colors"/>
-          </div>
+      <div class="relative mb-4">
+        <textarea id="emailContent" name="email" rows="12"
+          class="w-full bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 text-slate-700 text-sm leading-relaxed focus:border-teal-400 focus:bg-white outline-none transition-all resize-none"
+          placeholder="Paste your travel enquiry email here…"></textarea>
+        <div class="absolute bottom-4 right-4 flex items-center gap-3">
+          <span id="charCount" class="text-xs text-slate-400">0 chars</span>
+          <button onclick="clearEmail()" class="w-7 h-7 flex items-center justify-center rounded-full hover:bg-slate-200 text-slate-400 hover:text-slate-600 transition-colors">
+            <i class="fas fa-times text-xs"></i>
+          </button>
         </div>
       </div>
 
-      <!-- Info tip -->
-      <div class="mt-5 flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4">
+      <div class="mb-5 flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4">
         <i class="fas fa-lightbulb text-amber-500 mt-0.5 flex-shrink-0"></i>
         <p class="text-sm text-amber-800 leading-relaxed">
           <strong>Tip:</strong> Include budget, group size, destinations and travel style for the most accurate itinerary.
@@ -357,374 +587,357 @@ Kind regards, Sarah & James"
         </p>
       </div>
 
-      <!-- Buttons -->
-      <div class="flex flex-col sm:flex-row gap-3 mt-6 pt-6 border-t border-slate-100">
+      <div class="flex flex-col sm:flex-row gap-3 pt-5 border-t border-slate-100">
         <button id="useSampleBtn" class="flex-1 px-6 py-3.5 border-2 border-slate-200 text-slate-600 font-semibold rounded-xl hover:border-teal-400 hover:text-teal-600 hover:bg-teal-50 transition-all text-sm flex items-center justify-center gap-2">
           <i class="fas fa-file-lines"></i>Use Sample Email
         </button>
-        <button id="generateBtn" class="flex-2 px-8 py-3.5 gradient-btn text-white font-bold rounded-xl shadow-lg text-sm flex items-center justify-center gap-2" style="flex:2">
+        <button id="generateEmailBtn" class="flex-2 px-8 py-3.5 grd-btn text-white font-bold rounded-xl shadow-lg text-sm flex items-center justify-center gap-2" style="flex:2">
           <i class="fas fa-wand-magic-sparkles"></i>Generate Itinerary
           <i class="fas fa-arrow-right ml-1"></i>
         </button>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     FEATURES
-══════════════════════════════════════════════ -->
-<section id="features" class="py-20 bg-white">
+<!-- ══ FEATURES ══ -->
+<section id="features" class="py-16 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="text-center mb-14 fade-in">
-      <span class="text-teal-600 font-semibold text-sm uppercase tracking-widest">Why Choose Us</span>
-      <h2 class="text-4xl font-bold text-slate-900 mt-3 mb-4">Everything You Need,<br><em class="text-teal-600">Automatically Handled</em></h2>
-      <p class="text-slate-500 max-w-xl mx-auto">From budget-matched hotels to optimised routes — our AI creates a complete Sri Lanka journey in seconds.</p>
+    <div class="text-center mb-12 fade-in">
+      <span class="text-teal-600 font-semibold text-sm uppercase tracking-widest">Why Ceylon Journey Weaver</span>
+      <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-3">Everything Handled <em class="text-teal-600">Automatically</em></h2>
+      <p class="text-slate-500 max-w-xl mx-auto text-sm">From budget-matched hotels to optimised routes — our AI builds a complete Sri Lanka journey in seconds.</p>
     </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="card-float bg-slate-50 rounded-2xl p-6 fade-in">
-        <div class="feat-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
-          <i class="fas fa-hotel text-teal-600 text-xl"></i>
-        </div>
-        <h3 class="font-bold text-slate-900 mb-2">800+ Hotels</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Budget-matched accommodation from our live supplier database across all tiers.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-slate-50 rounded-2xl p-5 fade-in hover:shadow-lg transition-shadow">
+        <div class="w-11 h-11 rounded-2xl flex items-center justify-center mb-3" style="background:linear-gradient(135deg,#ccfbf1,#d1fae5)"><i class="fas fa-hotel text-teal-600 text-lg"></i></div>
+        <h3 class="font-bold text-slate-900 mb-1.5 text-sm">800+ Hotels</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Budget-matched accommodation from live supplier data across all tiers.</p>
       </div>
-      <div class="card-float bg-slate-50 rounded-2xl p-6 fade-in">
-        <div class="feat-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
-          <i class="fas fa-route text-teal-600 text-xl"></i>
-        </div>
-        <h3 class="font-bold text-slate-900 mb-2">Smart Routing</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Nearest-neighbour optimisation from Colombo airport across 205 cities.</p>
+      <div class="bg-slate-50 rounded-2xl p-5 fade-in hover:shadow-lg transition-shadow">
+        <div class="w-11 h-11 rounded-2xl flex items-center justify-center mb-3" style="background:linear-gradient(135deg,#ccfbf1,#d1fae5)"><i class="fas fa-route text-teal-600 text-lg"></i></div>
+        <h3 class="font-bold text-slate-900 mb-1.5 text-sm">Smart Routing</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Nearest-neighbour optimisation from Colombo airport across 205 cities.</p>
       </div>
-      <div class="card-float bg-slate-50 rounded-2xl p-6 fade-in">
-        <div class="feat-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
-          <i class="fas fa-utensils text-teal-600 text-xl"></i>
-        </div>
-        <h3 class="font-bold text-slate-900 mb-2">Meals & Transfers</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Real restaurant options, transport providers and activity suppliers per city.</p>
+      <div class="bg-slate-50 rounded-2xl p-5 fade-in hover:shadow-lg transition-shadow">
+        <div class="w-11 h-11 rounded-2xl flex items-center justify-center mb-3" style="background:linear-gradient(135deg,#ccfbf1,#d1fae5)"><i class="fas fa-calendar-check text-teal-600 text-lg"></i></div>
+        <h3 class="font-bold text-slate-900 mb-1.5 text-sm">Day-by-Day Plans</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Timed activities, meals, transfers and local guides per city.</p>
       </div>
-      <div class="card-float bg-slate-50 rounded-2xl p-6 fade-in">
-        <div class="feat-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
-          <i class="fas fa-brain text-teal-600 text-xl"></i>
-        </div>
-        <h3 class="font-bold text-slate-900 mb-2">AI-Powered</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Groq AI extracts every detail from your email and crafts a perfect daily programme.</p>
+      <div class="bg-slate-50 rounded-2xl p-5 fade-in hover:shadow-lg transition-shadow">
+        <div class="w-11 h-11 rounded-2xl flex items-center justify-center mb-3" style="background:linear-gradient(135deg,#ccfbf1,#d1fae5)"><i class="fas fa-brain text-teal-600 text-lg"></i></div>
+        <h3 class="font-bold text-slate-900 mb-1.5 text-sm">AI-Powered</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Groq AI crafts a perfect daily programme from your inputs.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     TEMPLATES SECTION
-══════════════════════════════════════════════ -->
-<section id="templates" class="py-20 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="text-center mb-14 fade-in">
-      <span class="text-teal-600 font-semibold text-sm uppercase tracking-widest">Your Itinerary</span>
-      <h2 class="text-4xl font-bold text-slate-900 mt-3 mb-4">What You'll Receive</h2>
-      <p class="text-slate-500 max-w-xl mx-auto">A fully personalised, beautifully formatted day-by-day Sri Lanka itinerary with real images and supplier data.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <!-- Card 1 -->
-      <div class="template-card bg-white rounded-3xl overflow-hidden shadow-lg fade-in">
-        <div class="h-56 relative overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1580635849262-3161a7c99dac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTM5NzR8MHwxfHNlYXJjaHwxfHxFbGVwaGFudCUyMENvcnJpZG9yJTIwU2lnaXJpeWElMjBTcmklMjBMYW5rYXxlbnwxfDB8fHwxNzczMzc1OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Sigiriya" class="card-img w-full h-full object-cover"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent"></div>
-          <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-semibold border border-white/30">
-            Day Cards
-          </div>
-          <div class="absolute bottom-4 left-4">
-            <p class="text-white font-bold text-lg" style="font-family:'Playfair Display',serif">Hotel Showcase</p>
-            <p class="text-white/70 text-xs">Real photos, tier-matched</p>
-          </div>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-family:'Playfair Display',serif">Where to Stay</h3>
-          <p class="text-slate-500 text-sm mb-4 leading-relaxed">Budget-tier matched hotels with real photos, star ratings and direct website links.</p>
-          <ul class="space-y-2">
-            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Real hotel photography</li>
-            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>3 options per city</li>
-            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Star ratings &amp; websites</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="template-card bg-white rounded-3xl overflow-hidden shadow-lg fade-in">
-        <div class="h-56 relative overflow-hidden">
-          <img src="https://images.pexels.com/photos/32547976/pexels-photo-32547976.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Sri Lanka landscape" class="card-img w-full h-full object-cover"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent"></div>
-          <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-semibold border border-white/30">
-            Daily Plan
-          </div>
-          <div class="absolute bottom-4 left-4">
-            <p class="text-white font-bold text-lg" style="font-family:'Playfair Display',serif">Day Programme</p>
-            <p class="text-white/70 text-xs">AI-crafted, timed activities</p>
-          </div>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-family:'Playfair Display',serif">Day by Day</h3>
-          <p class="text-slate-500 text-sm mb-4 leading-relaxed">AI-generated daily schedules with timed activities, meals, transfers and local guides.</p>
-          <ul class="space-y-2">
-            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Timed activity schedule</li>
-            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Restaurant suggestions</li>
-            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Transfer &amp; guide options</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="template-card bg-white rounded-3xl overflow-hidden shadow-lg fade-in">
-        <div class="h-56 relative overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1692874310398-03cc79955dca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTM5NzR8MHwxfHNlYXJjaHwxfHxHYWdhJTIwQmVlcyUyMFlhbGElMjBZYWxhJTIwU3JpJTIwTGFua2F8ZW58MXwwfHx8MTc3MzI1MjUzOHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Sri Lanka beach" class="card-img w-full h-full object-cover"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent"></div>
-          <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-semibold border border-white/30">
-            Summary
-          </div>
-          <div class="absolute bottom-4 left-4">
-            <p class="text-white font-bold text-lg" style="font-family:'Playfair Display',serif">City Photo Strip</p>
-            <p class="text-white/70 text-xs">Landmark images, per city</p>
-          </div>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-family:'Playfair Display',serif">City Highlights</h3>
-          <p class="text-slate-500 text-sm mb-4 leading-relaxed">Real landmark photography for each destination, plus a complete trip summary at a glance.</p>
-          <ul class="space-y-2">
-            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Landmark photography</li>
-            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Route overview</li>
-            <li class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-check-circle text-teal-500 flex-shrink-0"></i>Print-ready format</li>
-          </ul>
-        </div>
+<!-- ══ FOOTER ══ -->
+<footer class="bg-slate-900 text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+    <div class="flex items-center justify-center gap-3 mb-4">
+      <div class="w-12 h-12 grd rounded-xl flex items-center justify-center shadow-lg"><i class="fas fa-compass text-white text-xl"></i></div>
+      <div class="ariax-logo" style="filter:invert(1) brightness(2)">
+        <div><span class="aria" style="color:#fff">aria</span><span class="x" style="color:#fdba74">X</span></div>
       </div>
     </div>
-
-    <!-- CTA below templates -->
-    <div class="text-center mt-12 fade-in">
-      <button onclick="scrollToForm()" class="gradient-btn text-white font-bold py-4 px-10 rounded-2xl text-base shadow-lg inline-flex items-center gap-3">
-        <i class="fas fa-magic"></i>Generate Your Itinerary Now
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════════ -->
-<footer class="bg-slate-900 text-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 text-center">
-    <div class="w-16 h-16 gradient-btn rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-xl">
-      <i class="fas fa-compass text-white text-2xl"></i>
-    </div>
-    <h3 class="text-2xl font-bold mb-3" style="font-family:'Playfair Display',serif">Ready to Explore Sri Lanka?</h3>
-    <p class="text-slate-400 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-      Generate your personalised itinerary with real hotels, beautiful landmark photos, and a perfectly optimised route.
-    </p>
-    <button onclick="scrollToForm()" class="gradient-btn text-white font-bold py-3.5 px-8 rounded-xl shadow-lg inline-flex items-center gap-2">
-      <i class="fas fa-plane-departure"></i>Start Planning Now
-    </button>
-    <div class="mt-12 pt-8 border-t border-slate-800 text-slate-500 text-sm">
-      <p>© 2025 Ceylon Journey Weaver &nbsp;·&nbsp; AI-Powered &nbsp;·&nbsp; Real Supplier Data &nbsp;·&nbsp; 205 Cities</p>
-    </div>
+    <p class="text-slate-400 text-sm">© 2025 Ceylon Journey Weaver · AriaX Travel Management · AI-Powered · 205 Cities</p>
   </div>
 </footer>
 
-<!-- ══════════════════════════════════════════════
-     LOADING MODAL
-══════════════════════════════════════════════ -->
+<!-- ══ LOADING MODAL ══ -->
 <div id="loadingModal" class="hidden fixed inset-0 bg-black/75 backdrop-blur-sm flex items-center justify-center z-50">
   <div class="bg-white rounded-3xl p-10 max-w-sm mx-4 text-center shadow-2xl">
-    <!-- Animated icon -->
     <div class="relative w-20 h-20 mx-auto mb-6">
       <div class="absolute inset-0 rounded-full border-4 border-teal-100"></div>
       <div class="absolute inset-0 rounded-full border-4 border-teal-500 border-t-transparent animate-spin"></div>
-      <div class="absolute inset-0 flex items-center justify-center">
-        <i class="fas fa-compass text-teal-500 text-2xl"></i>
-      </div>
+      <div class="absolute inset-0 flex items-center justify-center"><i class="fas fa-compass text-teal-500 text-2xl"></i></div>
     </div>
-    <h3 class="text-2xl font-bold text-slate-800 mb-2" style="font-family:'Playfair Display',serif">Crafting Your Journey</h3>
-    <p class="text-slate-500 text-sm mb-6" id="loadingStatus">Analysing your email…</p>
-    <!-- Progress bar -->
+    <h3 class="text-2xl font-bold text-slate-800 mb-2">Crafting Your Journey</h3>
+    <p class="text-slate-500 text-sm mb-6" id="loadingStatus">Building your itinerary…</p>
     <div class="h-2 bg-slate-100 rounded-full overflow-hidden mb-2">
-      <div id="progressBar" class="h-full progress-shimmer rounded-full transition-all duration-500" style="width:0%"></div>
+      <div id="progressBar" class="h-full progress-sh rounded-full transition-all duration-500" style="width:0%"></div>
     </div>
     <p class="text-xs text-slate-400">This usually takes 15–30 seconds</p>
   </div>
 </div>
 
 <script>
-// ── Sample emails ─────────────────────────────────────────
+// ══ SAMPLE DATA ══
 const SAMPLES = {
-  luxury: `Dear Travel Team,\n\nMy partner and I are planning a luxury honeymoon in Sri Lanka for 10 nights.\nTotal budget: USD 6,000.\nWe would love Colombo, Sigiriya, Kandy, and finish by the beach in Galle or Bentota.\nWe prefer 5-star resorts or boutique luxury villas, with breakfast and dinner included.\nPrivate transfers and a dedicated guide would be ideal.\nTravel style: Romantic, cultural, leisurely.\n\nWarmly,\nJames & Amelia`,
-
-  family: `Hello,\n\nWe are a family of 2 adults and 2 children (ages 8 and 11) planning an 8-day trip to Sri Lanka.\nBudget: USD 2,500 total.\nWe are interested in wildlife (Yala safari), the hill country (Nuwara Eliya, Ella), and the cultural triangle (Sigiriya, Dambulla).\nWe need family-friendly hotels with breakfast included.\nThe kids love animals and outdoor activities.\n\nBest regards,\nThe Martins`,
-
-  budget: `Hi,\n\nI'm a solo backpacker — 5-day budget trip around Sri Lanka.\nTotal budget: USD 500.\nI want to see Colombo, Kandy, and Ella.\nBudget guesthouses are fine. Happy to use trains and local buses.\nInterested in hiking, local food, and cultural experiences.\n\nThanks,\nTom`,
-
-  wildlife: `Dear Sir,\n\nWe are 4 adults passionate about wildlife and nature photography.\nPlanning a 6-day Sri Lanka safari trip.\nBudget: USD 3,200 total.\nWe want to focus on Yala National Park, Udawalawe, and Minneriya.\nWe prefer eco-lodges or tented camps close to the parks.\nMeals included preferred. Early morning safari drives are a must.\n\nKind regards,\nThe Safari Group`
+  luxury:`Dear Travel Team,\n\nMy partner and I are planning a luxury honeymoon in Sri Lanka for 10 nights.\nTotal budget: USD 6,000.\nWe would love Colombo, Sigiriya, Kandy, and finish by the beach in Galle or Bentota.\nWe prefer 5-star resorts or boutique luxury villas, with breakfast and dinner included.\nPrivate transfers and a dedicated guide would be ideal.\nTravel style: Romantic, cultural, leisurely.\n\nWarmly,\nJames & Amelia`,
+  family:`Hello,\n\nWe are a family of 2 adults and 2 children (ages 8 and 11) planning an 8-day trip to Sri Lanka.\nBudget: USD 2,500 total.\nWe are interested in wildlife (Yala safari), the hill country (Nuwara Eliya, Ella), and the cultural triangle (Sigiriya, Dambulla).\nWe need family-friendly hotels with breakfast included.\nThe kids love animals and outdoor activities.\n\nBest regards,\nThe Martins`,
+  budget:`Hi,\n\nI'm a solo backpacker — 5-day budget trip around Sri Lanka.\nTotal budget: USD 500.\nI want to see Colombo, Kandy, and Ella.\nBudget guesthouses are fine. Happy to use trains and local buses.\n\nThanks,\nTom`,
+  wildlife:`Dear Sir,\n\nWe are 4 adults passionate about wildlife and nature photography.\nPlanning a 6-day Sri Lanka safari trip.\nBudget: USD 3,200 total.\nWe want to focus on Yala National Park, Udawalawe, and Minneriya.\nWe prefer eco-lodges or tented camps close to the parks.\n\nKind regards,\nThe Safari Group`
 };
 
-const SAMPLE_EMAIL = `Subject: Planning Our Dream Sri Lanka Trip - Family Vacation\n\nDear Travel Team,\n\nWe're excited to plan our family vacation to beautiful Sri Lanka!\n\nTravel Dates: December 20-27, 2024 (7 nights, 8 days)\nTravelers: 4 people - 2 adults and 2 children (ages 10 and 13)\nBudget: Mid-range - around USD 150-200 per night for hotels\n\nWhat We're Interested In:\n1. Historical Sites - ancient history and ruins\n2. Wildlife - the kids want to see elephants!\n3. Beautiful Beaches - some relaxing beach time\n4. Cultural Experiences - local culture and food\n5. Scenic Train Rides\n\nPlaces We'd Love to Visit:\n- Sigiriya Rock Fortress (a must!)\n- Temple of the Sacred Tooth in Kandy\n- Yala National Park for a safari\n- Galle Fort\n- Mirissa Beach\n- Tea plantations in Nuwara Eliya\n- Ella for hiking\n\nLooking forward to your itinerary!\n\nThe Johnson Family`;
+const SAMPLE_FORM = {
+  tourName:"Sri Lanka Cultural Explorer",
+  duration:"7 Days 6 Nights",
+  type:"Cultural",
+  meal:"Half Board",
+  budget:2500,
+  adults:2,
+  children:0,
+  days:[
+    {city:"Colombo",     route:"Airport → Colombo",          desc:"City tour, Gangaramaya Temple, Galle Face",       pick:"08:00 AM",drop:"08:00 PM"},
+    {city:"Dambulla",    route:"Colombo → Dambulla",         desc:"Cave Temple, Sigiriya Rock Fortress",              pick:"07:00 AM",drop:"07:00 PM"},
+    {city:"Sigiriya",    route:"Dambulla → Sigiriya",        desc:"Climb Sigiriya, Minneriya elephant gathering",    pick:"05:30 AM",drop:"06:00 PM"},
+    {city:"Kandy",       route:"Sigiriya → Kandy",           desc:"Temple of Tooth, Peradeniya Garden, Spice Garden",pick:"08:00 AM",drop:"09:00 PM"},
+    {city:"Nuwara Eliya",route:"Kandy → Nuwara Eliya",       desc:"Tea plantation tour, Gregory Lake",                pick:"08:00 AM",drop:"07:00 PM"},
+    {city:"Ella",        route:"Nuwara Eliya → Ella",        desc:"Nine Arch Bridge, Little Adam's Peak hike",       pick:"07:00 AM",drop:"06:00 PM"},
+    {city:"Colombo",     route:"Ella → Colombo (departure)", desc:"Leisure morning, airport drop",                   pick:"06:00 AM",drop:"04:00 PM"},
+  ],
+  suppliers:[
+    {day:1,name:"Galle Face Hotel",    desc:"Iconic ocean-facing hotel in Colombo"},
+    {day:2,name:"Heritance Kandalama", desc:"Architect Bawa eco-resort by Dambulla"},
+    {day:4,name:"Hotel Suisse Kandy",  desc:"Heritage hotel overlooking Kandy Lake"},
+  ]
+};
 
-// ── DOM refs ──────────────────────────────────────────────
-const emailField = document.getElementById('emailContent');
-const charCountEl = document.getElementById('charCount');
+// ══ DAY TABLE ══
+let dayRows = [];
+let supRows = [];
 
-function updateCharCount() {
-  const n = emailField.value.length;
-  charCountEl.textContent = n ? `${n.toLocaleString()} chars` : '0 chars';
-  charCountEl.style.color = n > 30 ? '#0d9488' : '#9ca3af';
+function buildDayRow(n, data={}) {
+  return { n, city:data.city||"", route:data.route||"", desc:data.desc||"", pick:data.pick||"", drop:data.drop||"", pic1:data.pic1||null, pic2:data.pic2||null, pic3:data.pic3||null };
 }
-emailField.addEventListener('input', updateCharCount);
 
-// ── Quick fills ───────────────────────────────────────────
-document.querySelectorAll('.qf-chip').forEach(btn => {
-  btn.addEventListener('click', () => {
-    emailField.value = SAMPLES[btn.dataset.fill] || '';
-    updateCharCount();
-    emailField.focus();
+function rebuildDayTable() {
+  const n = parseInt(document.getElementById("numDays").value) || 7;
+  while (dayRows.length < n) dayRows.push(buildDayRow(dayRows.length + 1));
+  dayRows = dayRows.slice(0, n);
+  dayRows.forEach((r,i)=>{ r.n = i+1; });
+  renderDayTable();
+}
+
+function renderDayTable() {
+  const tbody = document.getElementById("dayTableBody");
+  tbody.innerHTML = "";
+  dayRows.forEach((row, idx) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="text-center"><div class="day-badge mx-auto">${row.n}</div></td>
+      <td><input type="text" value="${esc(row.city)}" placeholder="e.g. Kandy" class="fi text-xs py-2" oninput="dayRows[${idx}].city=this.value"/></td>
+      <td><input type="text" value="${esc(row.route)}" placeholder="e.g. Colombo → Kandy" class="fi text-xs py-2" oninput="dayRows[${idx}].route=this.value"/></td>
+      <td><textarea rows="2" placeholder="Activities, highlights…" class="fi text-xs py-2 resize-none" style="min-height:56px" oninput="dayRows[${idx}].desc=this.value">${esc(row.desc)}</textarea></td>
+      <td><input type="text" value="${esc(row.pick)}" placeholder="08:00 AM" class="fi text-xs py-2" oninput="dayRows[${idx}].pick=this.value"/></td>
+      <td><input type="text" value="${esc(row.drop)}" placeholder="07:00 PM" class="fi text-xs py-2" oninput="dayRows[${idx}].drop=this.value"/></td>
+      <td>${imgCell(idx,1,row.pic1)}</td>
+      <td>${imgCell(idx,2,row.pic2)}</td>
+      <td>${imgCell(idx,3,row.pic3)}</td>
+      <td><button onclick="removeDayRow(${idx})" class="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-red-50 text-slate-300 hover:text-red-400 transition-all mx-auto"><i class="fas fa-times text-xs"></i></button></td>
+    `;
+    tbody.appendChild(tr);
   });
-});
-
-// ── Clear ─────────────────────────────────────────────────
-function clearContent() {
-  emailField.value = '';
-  updateCharCount();
-  emailField.focus();
 }
 
-// ── File upload ───────────────────────────────────────────
-const emailFile = document.getElementById('emailFile');
-emailFile.addEventListener('change', function() {
-  if (!this.files.length) return;
-  const file = this.files[0];
-  document.getElementById('fileName').textContent = file.name;
-  document.getElementById('fileSize').textContent = formatSize(file.size);
-  document.getElementById('fileInfo').classList.remove('hidden');
+function imgCell(rowIdx, picNum, val) {
+  const hasImg = val && typeof val === "string" && val.startsWith("data:");
+  return `<div class="img-cell mx-auto" onclick="triggerImgUpload(${rowIdx},${picNum},this)">
+    ${hasImg ? `<img src="${val}" alt="pic"/>` : `<i class="fas fa-camera text-slate-300 text-sm pointer-events-none"></i>`}
+    <input type="file" accept="image/*" style="display:none" onchange="handleImgUpload(event,${rowIdx},${picNum},this.parentElement)"/>
+  </div>`;
+}
+
+function triggerImgUpload(rowIdx, picNum, cell) { cell.querySelector("input[type=file]").click(); }
+
+function handleImgUpload(event, rowIdx, picNum, cell) {
+  const file = event.target.files[0]; if(!file) return;
   const reader = new FileReader();
-  reader.onload = e => { emailField.value = e.target.result; updateCharCount(); };
-  reader.readAsText(file);
+  reader.onload = e => {
+    dayRows[rowIdx]["pic"+picNum] = e.target.result;
+    cell.innerHTML = `<img src="${e.target.result}" style="width:100%;height:100%;object-fit:cover;border-radius:6px"/><input type="file" accept="image/*" style="display:none" onchange="handleImgUpload(event,${rowIdx},${picNum},this.parentElement)"/>`;
+  };
+  reader.readAsDataURL(file);
+}
+
+function addDayRow() {
+  const n = dayRows.length + 1;
+  dayRows.push(buildDayRow(n));
+  document.getElementById("numDays").value = n;
+  renderDayTable();
+}
+
+function removeDayRow(idx) {
+  dayRows.splice(idx,1);
+  dayRows.forEach((r,i)=>{ r.n = i+1; });
+  document.getElementById("numDays").value = dayRows.length || 1;
+  renderDayTable();
+}
+
+// ══ SUPPLIER TABLE ══
+function addSupplierRow(data={}) {
+  const idx = supRows.length;
+  supRows.push({day:data.day||"", name:data.name||"", desc:data.desc||"", pic1:null, pic2:null});
+  const emptyRow = document.getElementById("sup-empty-row");
+  if(emptyRow) emptyRow.remove();
+  const tbody = document.getElementById("supTableBody");
+  const tr = document.createElement("tr");
+  tr.id = `sup-row-${idx}`;
+  tr.innerHTML = `
+    <td><input type="text" value="${data.day||""}" placeholder="1" class="fi text-xs py-2" style="width:50px" oninput="supRows[${idx}].day=this.value"/></td>
+    <td><input type="text" value="${esc(data.name||"")}" placeholder="Hotel / Supplier name" class="fi text-xs py-2" oninput="supRows[${idx}].name=this.value"/></td>
+    <td><textarea rows="2" placeholder="Description, notes…" class="fi text-xs py-2 resize-none" style="min-height:52px" oninput="supRows[${idx}].desc=this.value">${esc(data.desc||"")}</textarea></td>
+    <td><div class="img-cell mx-auto" onclick="this.querySelector('input').click()"><i class="fas fa-camera text-slate-300 text-sm pointer-events-none"></i><input type="file" accept="image/*" style="display:none"/></div></td>
+    <td><div class="img-cell mx-auto" onclick="this.querySelector('input').click()"><i class="fas fa-camera text-slate-300 text-sm pointer-events-none"></i><input type="file" accept="image/*" style="display:none"/></div></td>
+    <td><button onclick="removeSupRow(${idx})" class="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-red-50 text-slate-300 hover:text-red-400 transition-all mx-auto"><i class="fas fa-times text-xs"></i></button></td>
+  `;
+  tbody.appendChild(tr);
+}
+
+function removeSupRow(idx) {
+  const el = document.getElementById(`sup-row-${idx}`);
+  if(el) el.remove();
+  supRows.splice(idx,1);
+}
+
+// ══ BUILD EMAIL FROM FORM ══
+function buildEmailFromForm() {
+  const tourName = document.getElementById("tourName").value.trim();
+  const duration = document.getElementById("tourDuration").value.trim();
+  const typeT    = document.getElementById("typeOfTour").value;
+  const mealP    = document.getElementById("mealPlan").value;
+  const budget   = document.getElementById("budgetAmount").value;
+  const adults   = document.getElementById("numAdults").value;
+  const children = document.getElementById("numChildren").value;
+  const lang     = document.getElementById("language").value;
+  const cities   = [...new Set(dayRows.map(r=>r.city.trim()).filter(Boolean))];
+  const dayLines = dayRows.map(r=>{
+    let line=`Day ${r.n}:`;
+    if(r.city)  line+=` ${r.city}`;
+    if(r.route) line+=` (${r.route})`;
+    if(r.desc)  line+=` — ${r.desc}`;
+    if(r.pick)  line+=` [Pick: ${r.pick}]`;
+    if(r.drop)  line+=` [Drop: ${r.drop}]`;
+    return line;
+  }).join("\n");
+  const supLines = supRows.map(r=>`Day ${r.day}: ${r.name}${r.desc?" — "+r.desc:""}`).join("\n");
+  let email=`Tour Enquiry:\n`;
+  if(tourName)  email+=`Tour Name: ${tourName}\n`;
+  if(duration)  email+=`Duration: ${duration}\n`;
+  if(typeT)     email+=`Travel Style: ${typeT}\n`;
+  if(mealP)     email+=`Meal Plan: ${mealP}\n`;
+  if(budget)    email+=`Budget: USD ${budget} total\n`;
+  email+=`Adults: ${adults}\nChildren: ${children}\n`;
+  if(lang&&lang!=="English") email+=`Language: ${lang}\n`;
+  if(cities.length) email+=`\nPreferred Destinations:\n${cities.join(", ")}\n`;
+  if(dayLines) email+=`\nDay-by-Day Plan:\n${dayLines}\n`;
+  if(supLines) email+=`\nPreferred Hotels/Suppliers:\n${supLines}\n`;
+  return email;
+}
+
+async function generateFromForm() {
+  const email = buildEmailFromForm();
+  if(!email||email.length<30){ alert("Please fill in at least the destinations or day details."); return; }
+  await submitGenerate(email);
+}
+
+document.getElementById("generateEmailBtn").addEventListener("click", async () => {
+  const email = document.getElementById("emailContent").value.trim();
+  if(!email||email.length<30){ alert("Please paste your travel email or click 'Use Sample Email'."); return; }
+  await submitGenerate(email);
 });
 
-function removeFile() {
-  emailFile.value = '';
-  document.getElementById('fileInfo').classList.add('hidden');
-  emailField.value = '';
-  updateCharCount();
-}
-
-function formatSize(b) {
-  if (b === 0) return '0 B';
-  const s = ['B','KB','MB'];
-  const i = Math.floor(Math.log(b) / Math.log(1024));
-  return `${(b / Math.pow(1024, i)).toFixed(1)} ${s[i]}`;
-}
-
-// ── Tabs ──────────────────────────────────────────────────
-function switchTab(tab) {
-  const isEmail = tab === 'email';
-  document.getElementById('emailTab').classList.toggle('hidden', !isEmail);
-  document.getElementById('manualTab').classList.toggle('hidden', isEmail);
-  document.getElementById('emailTabBtn').classList.toggle('active', isEmail);
-  document.getElementById('manualTabBtn').classList.toggle('active', !isEmail);
-  document.getElementById('manualTabBtn').classList.toggle('text-slate-400', isEmail);
-  document.getElementById('emailTabBtn').classList.toggle('text-slate-400', !isEmail);
-}
-
-// ── Sample button ──────────────────────────────────────────
-document.getElementById('useSampleBtn').addEventListener('click', () => {
-  emailField.value = SAMPLE_EMAIL;
-  updateCharCount();
-  emailField.focus();
-});
-
-// ── Generate ──────────────────────────────────────────────
-document.getElementById('generateBtn').addEventListener('click', async function() {
-  let email = emailField.value.trim();
-
-  if (!document.getElementById('manualTab').classList.contains('hidden')) {
-    email = `Manual Input:\nDuration: ${document.getElementById('manualDuration').value}\nTravelers: ${document.getElementById('manualTravelers').value}\nBudget: ${document.getElementById('manualBudget').value}\nInterests: ${document.getElementById('manualInterests').value}`;
-  }
-
-  if (!email || email.length < 30) {
-    alert('Please paste your travel email or click "Use Sample Email" to try an example.');
-    return;
-  }
-
-  // Show loading modal
-  const modal = document.getElementById('loadingModal');
-  const bar = document.getElementById('progressBar');
-  const status = document.getElementById('loadingStatus');
-  modal.classList.remove('hidden');
-
-  const steps = [
-    'Analysing your email…',
-    'Extracting travel details…',
-    'Selecting hotels for your budget…',
-    'Fetching city images…',
-    'Building your daily programme…',
-    'Finalising your itinerary…'
-  ];
-
-  let progress = 0;
-  const interval = setInterval(() => {
-    progress = Math.min(progress + (100 / steps.length), 95);
-    bar.style.width = progress + '%';
-    const idx = Math.min(Math.floor(progress / (100 / steps.length)), steps.length - 1);
-    status.textContent = steps[idx];
-    if (progress >= 95) clearInterval(interval);
-  }, 900);
-
-  try {
-    const formData = new FormData();
-    formData.append('email', email);
-    if (emailFile.files.length) formData.append('email_file', emailFile.files[0]);
-
-    const res = await fetch('/', { method: 'POST', body: formData });
+async function submitGenerate(email) {
+  const modal  = document.getElementById("loadingModal");
+  const bar    = document.getElementById("progressBar");
+  const status = document.getElementById("loadingStatus");
+  modal.classList.remove("hidden");
+  const steps=["Analysing your request…","Extracting travel details…","Selecting hotels for your budget…","Fetching city images…","Building your daily programme…","Finalising your itinerary…"];
+  let progress=0;
+  const interval=setInterval(()=>{
+    progress=Math.min(progress+100/steps.length,95);
+    bar.style.width=progress+"%";
+    status.textContent=steps[Math.min(Math.floor(progress/(100/steps.length)),steps.length-1)];
+    if(progress>=95)clearInterval(interval);
+  },900);
+  try{
+    const fd=new FormData(); fd.append("email",email);
+    const res=await fetch("/",{method:"POST",body:fd});
     clearInterval(interval);
-
-    if (res.ok) {
-      bar.style.width = '100%';
-      status.textContent = 'Redirecting to your itinerary…';
-      // Page replaces with the returned HTML (Flask renders itinerary.html)
-      const html = await res.text();
-      document.open(); document.write(html); document.close();
-    } else {
-      throw new Error(`Status ${res.status}`);
-    }
-  } catch (err) {
-    clearInterval(interval);
-    modal.classList.add('hidden');
-    console.error(err);
-    alert('Unable to generate itinerary. Please check the console for details.');
-  }
-});
-
-// ── Scroll helpers ─────────────────────────────────────────
-function scrollToForm() {
-  document.getElementById('formSection').scrollIntoView({ behavior: 'smooth' });
+    if(res.ok){ bar.style.width="100%"; status.textContent="Redirecting to your itinerary…"; window.location.href=res.url; }
+    else throw new Error("Status "+res.status);
+  }catch(err){ clearInterval(interval); modal.classList.add("hidden"); alert("Unable to generate itinerary. Please try again."); }
 }
-function scrollToTemplates() {
-  document.getElementById('templates').scrollIntoView({ behavior: 'smooth' });
-}
-window.scrollToForm = scrollToForm;
-window.switchTab = switchTab;
-window.clearContent = clearContent;
-window.removeFile = removeFile;
 
-// ── Scroll fade-in ─────────────────────────────────────────
-const fadeObserver = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); fadeObserver.unobserve(e.target); }
+function useSampleData() {
+  document.getElementById("tourName").value     = SAMPLE_FORM.tourName;
+  document.getElementById("tourDuration").value = SAMPLE_FORM.duration;
+  document.getElementById("typeOfTour").value   = SAMPLE_FORM.type;
+  document.getElementById("mealPlan").value     = SAMPLE_FORM.meal;
+  document.getElementById("budgetAmount").value = SAMPLE_FORM.budget;
+  document.getElementById("numAdults").value    = SAMPLE_FORM.adults;
+  document.getElementById("numChildren").value  = SAMPLE_FORM.children;
+  document.getElementById("numDays").value      = SAMPLE_FORM.days.length;
+  dayRows = SAMPLE_FORM.days.map((d,i)=>buildDayRow(i+1,d));
+  renderDayTable();
+  supRows=[];
+  document.getElementById("supTableBody").innerHTML=`<tr id="sup-empty-row"><td colspan="6" class="text-center py-8 text-slate-400"><i class="fas fa-hotel text-3xl mb-2 block text-slate-200"></i>No preferred suppliers added.</td></tr>`;
+  SAMPLE_FORM.suppliers.forEach(s=>addSupplierRow(s));
+}
+
+function resetForm() {
+  ["tourName","tourDuration","budgetAmount"].forEach(id=>document.getElementById(id).value="");
+  ["typeOfTour","mealPlan"].forEach(id=>document.getElementById(id).selectedIndex=0);
+  document.getElementById("numAdults").value=2;
+  document.getElementById("numChildren").value=0;
+  document.getElementById("numDays").value=7;
+  dayRows=[]; rebuildDayTable(); supRows=[];
+  document.getElementById("supTableBody").innerHTML=`<tr id="sup-empty-row"><td colspan="6" class="text-center py-8 text-slate-400"><i class="fas fa-hotel text-3xl mb-2 block text-slate-200"></i>No preferred suppliers added. Click "Add Supplier" or leave blank for AI to select.</td></tr>`;
+}
+
+function saveItinerary() {
+  const data={tourName:document.getElementById("tourName").value,duration:document.getElementById("tourDuration").value,type:document.getElementById("typeOfTour").value,meal:document.getElementById("mealPlan").value,budget:document.getElementById("budgetAmount").value,adults:document.getElementById("numAdults").value,children:document.getElementById("numChildren").value,days:dayRows,suppliers:supRows};
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="itinerary-draft.json"; a.click();
+}
+
+function switchMainTab(tab) {
+  const isForm = tab==="form";
+  document.getElementById("tab-form").classList.toggle("hidden",!isForm);
+  document.getElementById("tab-email").classList.toggle("hidden",isForm);
+  document.getElementById("tab-form-btn").classList.toggle("active",isForm);
+  document.getElementById("tab-email-btn").classList.toggle("active",!isForm);
+  document.getElementById("tab-email-btn").classList.toggle("text-slate-400",isForm);
+  document.getElementById("tab-form-btn").classList.toggle("text-slate-400",!isForm);
+}
+
+document.querySelectorAll(".qf-chip").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.getElementById("emailContent").value=SAMPLES[btn.dataset.fill]||"";
+    updateCharCount();
   });
-}, { threshold: 0.12 });
-document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
-
-// ── Navbar shadow on scroll ────────────────────────────────
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('nav-scrolled', window.scrollY > 10);
 });
+document.getElementById("useSampleBtn").addEventListener("click",()=>{
+  document.getElementById("emailContent").value=SAMPLES.family; updateCharCount();
+});
+function clearEmail(){ document.getElementById("emailContent").value=""; updateCharCount(); }
+function updateCharCount(){
+  const n=document.getElementById("emailContent").value.length;
+  const el=document.getElementById("charCount");
+  el.textContent=n?n.toLocaleString()+" chars":"0 chars";
+  el.style.color=n>30?"#0d9488":"#9ca3af";
+}
+document.getElementById("emailContent").addEventListener("input",updateCharCount);
+
+function esc(s){ return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+// Secondary nav active state
+document.querySelectorAll(".snav-item").forEach(item=>{
+  item.addEventListener("click",function(e){
+    e.preventDefault();
+    document.querySelectorAll(".snav-item").forEach(i=>i.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+
+const fadeObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");fadeObs.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll(".fade-in").forEach(el=>fadeObs.observe(el));
+
+rebuildDayTable();
 </script>
 </body>
 </html>

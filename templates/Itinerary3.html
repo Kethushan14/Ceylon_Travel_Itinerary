@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ header_data.title }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg:#F7F4EF; --bg2:#EEE9E1; --bg3:#E4DDD3;
+      --ink:#1C1917; --ink2:#44403C; --ink3:#78716C;
+      --teal:#0D7377; --teal2:#14A9AD; --teal3:#D4F1F2;
+      --amber:#92400E; --amber2:#B45309;
+      --border:#D6CFC6; --line:#C5BDB3;
+      --success:#2D7A4F; --error:#8B2020;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--ink);font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+
+    /* ── TEMPLATE SWITCHER ── */
+    .tpl-switcher{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+    .tpl-btn{display:flex;align-items:center;gap:8px;background:var(--teal);color:#fff;padding:9px 16px;border-radius:1px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;cursor:pointer;border:none;text-decoration:none;transition:all .2s;white-space:nowrap;box-shadow:0 2px 16px rgba(13,115,119,.25)}
+    .tpl-btn:hover{background:var(--teal2);transform:translateX(-3px)}
+    .tpl-btn.current{background:var(--bg3);color:var(--ink3);cursor:default;pointer-events:none;box-shadow:none;border:1px solid var(--border)}
+    .tpl-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);text-align:right;padding-right:4px}
+
+    /* ── HEADER ── */
+    .site-header{padding:0;background:var(--ink);position:relative;overflow:hidden}
+    .header-photos{position:absolute;inset:0;display:flex}
+    .header-photo{flex:1;overflow:hidden}
+    .header-photo img{width:100%;height:100%;object-fit:cover;opacity:.2;filter:grayscale(100%)}
+    .header-inner{position:relative;z-index:2;padding:64px 80px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+    .header-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal2);margin-bottom:12px}
+    .header-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7vw,90px);font-weight:300;font-style:italic;color:#fff;line-height:1.05}
+    .header-route{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.4);margin-top:16px}
+    .header-route span{color:var(--teal2)}
+    .header-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);min-width:240px}
+    .header-stat{background:rgba(0,0,0,.3);padding:20px 24px;text-align:center}
+    .header-stat-val{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:#fff;line-height:1;display:block}
+    .header-stat-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px}
+
+    /* ── META BAR ── */
+    .meta-bar{background:var(--bg2);border-bottom:1px solid var(--border);padding:14px 80px;display:flex;gap:32px;align-items:center;flex-wrap:wrap}
+    .meta-item{display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+    .meta-item i{color:var(--teal);font-size:9px}
+
+    /* ── TOOLBAR ── */
+    .toolbar{position:sticky;top:0;z-index:100;background:rgba(247,244,239,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 80px;display:flex;align-items:center;gap:14px}
+    .toolbar-hint{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);flex:1}
+    .toolbar-count{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--teal);display:none;font-style:italic}
+    .toolbar-count.visible{display:block}
+    .btn{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:8px 18px;border-radius:1px;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+    .btn-teal{background:var(--teal);color:#fff}
+    .btn-teal:hover{background:var(--teal2)}
+    .btn-ghost{background:transparent;color:var(--ink3);border:1px solid var(--border)}
+    .btn-ghost:hover{background:var(--bg3)}
+    .btn-outline-teal{background:transparent;color:var(--teal);border:1px solid var(--teal)}
+    .btn-outline-teal:hover{background:var(--teal);color:#fff}
+    .btn-sm{padding:6px 13px;font-size:9px}
+    .btn:disabled{opacity:.3;pointer-events:none}
+    #btn-modify{display:none}
+    #btn-modify.visible{display:inline-flex}
+    #btn-clear{display:none}
+    #btn-clear.visible{display:inline-flex}
+
+    /* ── MODIFY PANEL ── */
+    .page{max-width:1040px;margin:0 auto;padding:0 80px}
+    .modify-panel{background:var(--bg2);border:1px solid var(--border);overflow:hidden;max-height:0;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+    .modify-panel.open{max-height:600px}
+    .modify-panel-inner{padding:32px}
+    .modify-panel-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:4px}
+    .modify-panel-sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--ink3);margin-bottom:16px}
+    .modify-panel-sub strong{color:var(--teal)}
+    .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+    .chip{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;background:var(--teal);color:#fff;border-radius:1px}
+    .suggestions{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+    .suggestion{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);background:var(--bg);border:1px solid var(--border);padding:4px 10px;cursor:pointer;transition:all .15s;border-radius:1px}
+    .suggestion:hover{border-color:var(--teal);color:var(--teal)}
+    .prompt-area{width:100%;min-height:80px;padding:12px 14px;background:#fff;border:1px solid var(--border);font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink);resize:vertical;outline:none;margin-bottom:14px;transition:border-color .2s;line-height:1.6}
+    .prompt-area:focus{border-color:var(--teal)}
+    .prompt-area::placeholder{color:var(--ink3);font-style:italic}
+    .modify-actions{display:flex;gap:10px;align-items:center}
+    .modify-status{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink3);flex:1;letter-spacing:.06em}
+    .modify-status.success{color:var(--teal)}
+    .modify-status.error{color:var(--error)}
+
+    /* ── TIMELINE ── */
+    .timeline{padding:60px 0 40px;position:relative}
+    .timeline::before{content:'';position:absolute;left:30px;top:60px;bottom:40px;width:1px;background:var(--line)}
+
+    .day-entry{position:relative;padding:0 0 48px 80px;cursor:pointer}
+    .day-entry.selected .day-dot{background:var(--teal);border-color:var(--teal);transform:scale(1.3)}
+    .day-entry.selected .day-card-inner{border-color:var(--teal);box-shadow:0 0 0 1px var(--teal)}
+    .day-entry.regenerating{pointer-events:none}
+    .day-entry.regenerating .day-card-inner{opacity:.4}
+    .day-entry.regenerating .regen-overlay{display:flex}
+
+    @keyframes flashCard{0%{background:var(--teal3)}100%{background:#fff}}
+    .day-entry.just-updated .day-card-inner{animation:flashCard 1.8s ease forwards}
+
+    .day-dot{position:absolute;left:22px;top:24px;width:17px;height:17px;border-radius:50%;background:#fff;border:2px solid var(--line);transition:all .25s;z-index:2}
+    .day-connector{position:absolute;left:30px;top:41px;width:49px;height:1px;background:var(--line)}
+
+    .regen-overlay{display:none;position:absolute;inset:0 0 48px 80px;align-items:center;justify-content:center;background:rgba(247,244,239,.85);backdrop-filter:blur(4px);z-index:10;gap:12px}
+    .regen-spinner{width:22px;height:22px;border:2px solid var(--border);border-top-color:var(--teal);border-radius:50%;animation:spin .7s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .regen-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+
+    .day-checkbox{position:absolute;top:20px;right:16px;width:18px;height:18px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .2s;background:#fff;z-index:3}
+    .day-entry.selected .day-checkbox{border-color:var(--teal);background:var(--teal)}
+    .day-entry.selected .day-checkbox i{opacity:1}
+    .day-checkbox i{font-size:9px;color:#fff;opacity:0}
+
+    .day-card-inner{background:#fff;border:1px solid var(--border);overflow:hidden;transition:border-color .2s,box-shadow .2s}
+    .day-card-header{padding:20px 24px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;background:var(--bg2)}
+    .day-number{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
+    .day-city{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4vw,42px);font-weight:300;font-style:italic;color:var(--ink);line-height:1.1}
+    .multi-tag{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);border:1px solid var(--amber);padding:2px 8px;margin-top:6px;display:inline-block}
+    .day-thumb{width:80px;height:80px;overflow:hidden;flex-shrink:0;border:1px solid var(--border)}
+    .day-thumb img{width:100%;height:100%;object-fit:cover;filter:grayscale(30%)}
+    .day-thumb-ph{width:100%;height:100%;background:var(--bg3);display:flex;align-items:center;justify-content:center;color:var(--ink3);font-size:20px}
+    .day-notice{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);display:flex;align-items:center;gap:8px;margin-top:6px}
+    .day-notice i{color:var(--teal);font-size:8px}
+
+    .day-card-body{padding:24px}
+    .body-section{margin-bottom:20px}
+    .body-section:last-child{margin-bottom:0}
+    .section-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+    .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+    /* ── HOTEL ── */
+    .hotel-row{display:flex;gap:14px;align-items:flex-start;padding:14px;background:var(--bg2);border:1px solid var(--border)}
+    .hotel-thumb{width:52px;height:52px;overflow:hidden;flex-shrink:0}
+    .hotel-thumb img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%)}
+    .hotel-thumb-ph{width:100%;height:100%;background:var(--bg3);display:flex;align-items:center;justify-content:center;color:var(--ink3);font-size:16px}
+    .hotel-name{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--ink);margin-bottom:2px}
+    .hotel-meta{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+    .hotel-tags{display:flex;flex-wrap:wrap;gap:4px}
+    .htag{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.06em;padding:2px 7px;border:1px solid var(--border);color:var(--ink3)}
+    .htag-m{border-color:rgba(13,115,119,.3);color:var(--teal)}
+    .hotel-link{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);text-decoration:none;margin-top:4px;display:block;transition:opacity .2s}
+    .hotel-link:hover{opacity:.7}
+    .hotel-desc-text{font-size:12px;color:var(--ink3);line-height:1.7;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+
+    /* ── SVC ── */
+    .svc-strip{display:flex;flex-wrap:wrap;gap:5px}
+    .svc-chip{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;color:var(--ink3);background:var(--bg2);border:1px solid var(--border);padding:3px 8px;display:flex;align-items:center;gap:4px}
+    .svc-chip i{font-size:8px;color:var(--teal)}
+
+    /* ── ABOUT ── */
+    .day-about{font-size:15px;line-height:1.85;color:var(--ink2);font-style:italic;border-left:2px solid var(--teal);padding-left:14px}
+
+    /* ── SCHEDULE ── */
+    .schedule-list{display:flex;flex-direction:column;gap:0}
+    .sched-row{display:grid;grid-template-columns:72px 1px 1fr;gap:0 18px;padding:10px 0;border-bottom:1px solid var(--bg3)}
+    .sched-row:last-child{border-bottom:none}
+    .sched-time{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--teal);letter-spacing:.06em;padding-top:2px}
+    .sched-line{background:var(--border);position:relative}
+    .sched-line::before{content:'';position:absolute;top:6px;left:-3px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+    .sched-activity{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink);font-style:italic;display:block;margin-bottom:1px}
+    .sched-desc{font-size:13px;color:var(--ink3);line-height:1.6}
+
+    /* ── SUMMARY ── */
+    .summary-section{padding:48px 0}
+    .summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:40px}
+    .summary-cell{background:var(--bg2);padding:28px 24px;text-align:center}
+    .summary-val{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;font-style:italic;color:var(--teal);line-height:1;display:block}
+    .summary-lbl{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:4px}
+
+    .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding-bottom:48px}
+    footer{border-top:1px solid var(--border);padding:24px 0 36px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
+    footer .teal{color:var(--teal);margin:0 10px}
+
+    /* ── TOAST ── */
+    .toast{position:fixed;bottom:28px;left:28px;z-index:9999;background:var(--ink);color:#fff;padding:12px 18px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;display:flex;align-items:center;gap:10px;transform:translateY(80px);opacity:0;transition:all .3s;max-width:300px}
+    .toast.show{transform:translateY(0);opacity:1}
+    .toast.toast-success{background:var(--teal)}
+    .toast.toast-error{background:var(--error)}
+
+    @media(max-width:720px){
+      .header-inner{grid-template-columns:1fr;padding:40px 24px}
+      .page,.toolbar,.meta-bar{padding-left:24px;padding-right:24px}
+      .timeline::before{left:18px}
+      .day-entry{padding-left:52px}
+      .day-dot{left:10px}
+      .day-connector{display:none}
+    }
+  </style>
+</head>
+<body data-itinerary-id="{{ session.get('itinerary_id', '') }}">
+
+{% set SK = ['nan','none','null',''] %}
+
+<!-- HEADER -->
+<div class="site-header">
+  {% if images %}
+  <div class="header-photos">
+    {% for img in images[:4] %}
+    <div class="header-photo"><img src="{{ img.url or 'https://via.placeholder.com/400x300' }}" alt="{{ img.place }}"></div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="header-inner">
+    <div>
+      <div class="header-label">Sri Lanka · {{ header_data.days }}-Day Itinerary</div>
+      <div class="header-title">{{ header_data.title }}</div>
+      <div class="header-route">
+        {% for c in header_data.route_cities %}<span>{{ c }}</span>{% if not loop.last %} <span style="color:rgba(255,255,255,.2)">→</span> {% endif %}{% endfor %}
+      </div>
+    </div>
+    <div class="header-stats-grid">
+      <div class="header-stat"><span class="header-stat-val">{{ header_data.days }}</span><div class="header-stat-lbl">Days</div></div>
+      <div class="header-stat"><span class="header-stat-val">{{ header_data.total_cities }}</span><div class="header-stat-lbl">Cities</div></div>
+      <div class="header-stat"><span class="header-stat-val">{{ header_data.total_travelers }}</span><div class="header-stat-lbl">Pax</div></div>
+      {% if header_data.budget %}<div class="header-stat"><span class="header-stat-val">${{ "{:,}".format(header_data.budget) }}</span><div class="header-stat-lbl">Budget</div></div>{% else %}<div class="header-stat"><span class="header-stat-val" style="font-size:28px">—</span><div class="header-stat-lbl">Budget</div></div>{% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- META BAR -->
+<div class="meta-bar">
+  <div class="meta-item"><i class="fas fa-compass"></i>{{ header_data.travel_style }}</div>
+  <div class="meta-item"><i class="fas fa-layer-group"></i>{{ header_data.budget_tier.tier | title }} Tier</div>
+  <div class="meta-item"><i class="fas fa-utensils"></i>{{ header_data.meal_plan }}</div>
+</div>
+
+<!-- TOOLBAR -->
+<div class="toolbar" id="selection-toolbar">
+  <div class="toolbar-hint"><i class="fas fa-hand-pointer" style="color:var(--teal);margin-right:6px"></i>Click a day card to select</div>
+  <div class="toolbar-count" id="toolbar-count"><em><span id="selected-count">0</span> selected</em></div>
+  <button class="btn btn-ghost btn-sm" id="btn-clear"><i class="fas fa-xmark"></i> Clear</button>
+  <button class="btn btn-teal btn-sm" id="btn-modify"><i class="fas fa-wand-magic-sparkles"></i> Modify</button>
+</div>
+
+<!-- MODIFY PANEL -->
+<div class="page">
+  <div class="modify-panel" id="modify-panel">
+    <div class="modify-panel-inner">
+      <div class="modify-panel-title">Modify Selected Days</div>
+      <div class="modify-panel-sub">Regenerating: <strong id="panel-days-label">—</strong></div>
+      <div class="chips" id="selected-chips"></div>
+      <div class="suggestions">
+        <span class="suggestion" onclick="insertSuggestion(this)">More adventurous</span>
+        <span class="suggestion" onclick="insertSuggestion(this)">Budget-friendly</span>
+        <span class="suggestion" onclick="insertSuggestion(this)">Local cuisine</span>
+        <span class="suggestion" onclick="insertSuggestion(this)">Nature & wildlife</span>
+        <span class="suggestion" onclick="insertSuggestion(this)">Cultural & temples</span>
+        <span class="suggestion" onclick="insertSuggestion(this)">More relaxing</span>
+        <span class="suggestion" onclick="insertSuggestion(this)">Water sports</span>
+        <span class="suggestion" onclick="insertSuggestion(this)">Luxury upgrade</span>
+      </div>
+      <textarea id="modify-prompt" class="prompt-area" placeholder="Describe what you'd like to change…" rows="3"></textarea>
+      <div class="modify-actions">
+        <div class="modify-status" id="modify-status"></div>
+        <button class="btn btn-ghost btn-sm" id="btn-cancel-modify"><i class="fas fa-xmark"></i> Cancel</button>
+        <button class="btn btn-teal" id="btn-submit-modify"><i class="fas fa-wand-magic-sparkles"></i> Regenerate</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div class="page">
+  <div class="timeline">
+    {% for day in itinerary_days %}
+    {% set circle_img = namespace(url=none) %}
+    {% for img in images %}
+      {% for city in day.cities %}
+        {% if img.place == city and circle_img.url is none %}{% set circle_img.url = img.url %}{% endif %}
+      {% endfor %}
+    {% endfor %}
+
+    <div class="day-entry" data-day="{{ day.day_num }}" id="day-entry-{{ day.day_num }}">
+      <div class="regen-overlay"><div class="regen-spinner"></div><div class="regen-label">Regenerating…</div></div>
+      <div class="day-dot"></div>
+      <div class="day-connector"></div>
+      <div class="day-checkbox"><i class="fas fa-check"></i></div>
+
+      <div class="day-card-inner">
+        <div class="day-card-header">
+          <div>
+            <div class="day-number">Day {{ "%02d"|format(day.day_num) }}</div>
+            <div class="day-city">
+              {% for city in day.cities %}{{ city }}{% if not loop.last %} <span style="color:var(--teal);font-style:normal;font-size:0.7em">→</span> {% endif %}{% endfor %}
+            </div>
+            {% if day.is_multi_city %}<span class="multi-tag">Multi-City</span>{% endif %}
+            {% if day.arrival_note %}<div class="day-notice"><i class="fas fa-plane-arrival"></i>{{ day.arrival_note }}</div>{% endif %}
+            {% if day.transfer_note %}<div class="day-notice"><i class="fas fa-bus"></i>{{ day.transfer_note }}</div>{% endif %}
+          </div>
+          <div class="day-thumb">
+            {% if circle_img.url %}<img src="{{ circle_img.url }}" alt="{{ day.cities[0] }}">
+            {% else %}<div class="day-thumb-ph"><i class="fas fa-map-marker-alt"></i></div>{% endif %}
+          </div>
+        </div>
+
+        <div class="day-card-body">
+
+          {% for city in day.cities %}
+          {% set hotels = day.hotel_images.get(city, []) %}
+          {% if hotels %}
+            {% set h = hotels[0] %}
+            {% set svcs = h.services if h.services is defined else [] %}
+            {%- set tier = day.budget_tier.tier if day.budget_tier is defined else 'medium' -%}
+            {%- if tier == 'luxury' -%}{%- set mp = ['Full Board','Half Board','Bed & Breakfast','All Inclusive'] -%}
+            {%- elif tier == 'budget' -%}{%- set mp = ['Bed & Breakfast','Room Only','Half Board'] -%}
+            {%- else -%}{%- set mp = ['Half Board','Bed & Breakfast','Full Board','All Inclusive'] -%}{%- endif -%}
+            {%- set best = namespace(s=none,sc=999) -%}
+            {%- for svc in svcs -%}{%- set m = svc.meal_plan if svc.meal_plan and svc.meal_plan|lower not in SK else '' -%}{%- for i in range(mp|length) -%}{%- if m == mp[i] and i < best.sc -%}{%- set best.sc=i -%}{%- set best.s=svc -%}{%- endif -%}{%- endfor -%}{%- endfor -%}
+            {%- if best.s is none and svcs -%}{%- set best.s = svcs[0] -%}{%- endif -%}
+            {%- set room_v = best.s.room_category if best.s and best.s.room_category and best.s.room_category|lower not in SK else '' -%}
+            {%- set meal_v = best.s.meal_plan if best.s and best.s.meal_plan and best.s.meal_plan|lower not in SK else '' -%}
+            {%- set curr_v = best.s.currency if best.s and best.s.currency and best.s.currency|lower not in SK else '' -%}
+            {%- set rate_v = best.s.rate_type if best.s and best.s.rate_type and best.s.rate_type|lower not in SK else '' -%}
+            <div class="body-section">
+              <div class="section-label"><i class="fas fa-hotel" style="color:var(--teal)"></i> Accommodation</div>
+              <div class="hotel-row">
+                <div class="hotel-thumb">
+                  {% if h.image_url %}<img src="{{ h.image_url }}" alt="{{ h.name }}">
+                  {% else %}<div class="hotel-thumb-ph"><i class="fas fa-hotel"></i></div>{% endif %}
+                </div>
+                <div style="flex:1">
+                  <div class="hotel-name">{{ h.name }}{% if h.rating_label %} <span style="font-size:12px;color:var(--teal);font-style:normal">{{ h.rating_label }}</span>{% endif %}</div>
+                  <div class="hotel-meta">{{ city }} · Accommodation</div>
+                  <div class="hotel-tags">
+                    {% if room_v %}<span class="htag">🛏 {{ room_v }}</span>{% endif %}
+                    {% if meal_v %}<span class="htag htag-m">🍽 {{ meal_v }}</span>{% endif %}
+                    {% if curr_v %}<span class="htag">💵 {{ curr_v }}</span>{% endif %}
+                    {% if rate_v %}<span class="htag">🏷 {{ rate_v }}</span>{% endif %}
+                  </div>
+                  {% if h.website and h.website not in ('nan','None','NULL','') %}
+                  <a href="{{ h.website }}" target="_blank" class="hotel-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt" style="font-size:8px"></i> Book</a>
+                  {% endif %}
+                  <div class="hotel-desc-text">{{ h.name }} offers{% if room_v %} {{ room_v }} rooms{% endif %}{% if meal_v %} with {{ meal_v }} meal plan{% endif %}. Priced in {{ curr_v if curr_v else 'local' }} currency{% if rate_v %} on a {{ rate_v | lower }} basis{% endif %}.</div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+          {% endfor %}
+
+          {% for city in day.cities %}
+          {% set svc = day.full_services_by_city.get(city, {}) %}
+          {% if svc.rides or svc.transfers or svc.flight_train or svc.driver_guides %}
+          <div class="body-section">
+            <div class="section-label"><i class="fas fa-route"></i> Services</div>
+            <div class="svc-strip">
+              {% for group in svc.rides %}{% for s in group.services %}<div class="svc-chip"><i class="fas fa-car-side"></i>{{ s.service.supplier_service_name }}</div>{% endfor %}{% endfor %}
+              {% for group in svc.transfers %}{% for s in group.services %}<div class="svc-chip"><i class="fas fa-arrows-left-right"></i>{{ s.service.supplier_service_name }}</div>{% endfor %}{% endfor %}
+              {% for group in svc.flight_train %}{% for s in group.services %}<div class="svc-chip"><i class="fas fa-train"></i>{{ s.service.supplier_service_name }}</div>{% endfor %}{% endfor %}
+              {% for group in svc.driver_guides %}{% for s in group.services %}<div class="svc-chip"><i class="fas fa-user-tie"></i>{{ s.service.supplier_service_name }}</div>{% endfor %}{% endfor %}
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+
+          <div class="day-about-container">
+            {% set plan_lines = day.ai_plan.split('\n') %}
+            {% for line in plan_lines %}
+              {% if line.strip().startswith('📍') %}
+              <div class="body-section">
+                <div class="section-label"><i class="fas fa-map-pin"></i> About</div>
+                <div class="day-about">{{ line.replace('📍 ABOUT:','').replace('📍','').strip() }}</div>
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <div class="day-schedule-container">
+            <div class="section-label"><i class="fas fa-clock"></i> Schedule</div>
+            <div class="schedule-list">
+              {% set plan_lines = day.ai_plan.split('\n') %}
+              {% for line in plan_lines %}
+                {% if line.strip() and not line.startswith('📍') and not line.startswith('🍽 MEALS') and not line.startswith('🏨') %}
+                  {% set parts = line.split(' — ', 1) %}
+                  {% if parts|length > 1 %}
+                  {% set time_str = parts[0]|replace('🌅','')|replace('🕙','')|replace('🌞','')|replace('🌆','')|replace('🍽','')|replace('🌇','')|replace('🌃','')|trim %}
+                  {% set desc = parts[1] %}
+                  {% set act_p = desc.split(':', 1) %}
+                  <div class="sched-row">
+                    <div class="sched-time">{{ time_str }}</div>
+                    <div class="sched-line"></div>
+                    <div>
+                      {% if act_p|length > 1 %}<span class="sched-activity">{{ act_p[0].strip() }}</span><span class="sched-desc">{{ act_p[1].strip() }}</span>
+                      {% else %}<span class="sched-desc">{{ desc }}</span>{% endif %}
+                    </div>
+                  </div>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary-section">
+    <div class="summary-grid">
+      <div class="summary-cell"><span class="summary-val">{{ days }}</span><div class="summary-lbl">Days</div></div>
+      <div class="summary-cell"><span class="summary-val">{{ header_data.total_cities }}</span><div class="summary-lbl">Cities</div></div>
+      <div class="summary-cell"><span class="summary-val">{{ adults + children }}</span><div class="summary-lbl">Travellers</div></div>
+      {% if budget %}<div class="summary-cell"><span class="summary-val">${{ "{:,}".format(budget) }}</span><div class="summary-lbl">Budget</div></div>{% endif %}
+    </div>
+    <div class="actions">
+      <a href="{{ url_for('download_json') }}" class="btn btn-ghost"><i class="fas fa-download"></i> Download JSON</a>
+      <a href="{{ url_for('index') }}" class="btn btn-outline-teal"><i class="fas fa-plus"></i> New Itinerary</a>
+      <button onclick="window.print()" class="btn btn-ghost"><i class="fas fa-print"></i> Print</button>
+    </div>
+    <footer><span>Sri Lanka Travel</span><span class="teal">◆</span><span>{{ header_data.travel_style }}</span><span class="teal">◆</span><span>Timeline View</span></footer>
+  </div>
+</div>
+
+<!-- TEMPLATE SWITCHER -->
+<div class="tpl-switcher">
+  <div class="tpl-label">Switch Template</div>
+  <a href="{{ url_for('itinerary_template1') }}" class="tpl-btn"><i class="fas fa-scroll"></i> Classic</a>
+  <a href="{{ url_for('itinerary_template2') }}" class="tpl-btn"><i class="fas fa-newspaper"></i> Magazine</a>
+  <a href="{{ url_for('itinerary_template3') }}" class="tpl-btn current"><i class="fas fa-map"></i> Timeline</a>
+</div>
+
+<div class="toast" id="toast"><i class="fas fa-circle-check"></i><span id="toast-msg"></span></div>
+
+<script>
+const ITINERARY_ID   = document.body.dataset.itineraryId || '';
+const REGEN_ENDPOINT = '/api/regenerate_days';
+const selectedDays   = new Set();
+const toolbar        = document.getElementById('selection-toolbar');
+const toolbarCount   = document.getElementById('toolbar-count');
+const selectedCountEl= document.getElementById('selected-count');
+const btnModify      = document.getElementById('btn-modify');
+const btnClear       = document.getElementById('btn-clear');
+const modifyPanel    = document.getElementById('modify-panel');
+const panelDaysLabel = document.getElementById('panel-days-label');
+const selectedChips  = document.getElementById('selected-chips');
+const promptArea     = document.getElementById('modify-prompt');
+const btnCancel      = document.getElementById('btn-cancel-modify');
+const btnSubmit      = document.getElementById('btn-submit-modify');
+const modifyStatus   = document.getElementById('modify-status');
+const toastEl        = document.getElementById('toast');
+const toastMsg       = document.getElementById('toast-msg');
+
+document.querySelectorAll('.day-entry').forEach(entry => {
+  entry.addEventListener('click', function(e) {
+    if (e.target.closest('a') || e.target.closest('button')) return;
+    const d = parseInt(this.dataset.day);
+    selectedDays.has(d) ? (selectedDays.delete(d), this.classList.remove('selected'))
+                        : (selectedDays.add(d),    this.classList.add('selected'));
+    updateToolbar();
+  });
+});
+
+function updateToolbar() {
+  const n = selectedDays.size;
+  toolbar.classList.toggle('has-selection', n > 0);
+  toolbarCount.classList.toggle('visible', n > 0);
+  btnModify.classList.toggle('visible', n > 0);
+  btnClear.classList.toggle('visible', n > 0);
+  if (n > 0) selectedCountEl.textContent = n;
+  if (n === 0) modifyPanel.classList.remove('open');
+}
+
+btnClear.addEventListener('click', () => {
+  selectedDays.forEach(d => document.getElementById(`day-entry-${d}`)?.classList.remove('selected'));
+  selectedDays.clear(); modifyPanel.classList.remove('open'); updateToolbar();
+});
+
+btnModify.addEventListener('click', () => {
+  const sorted = Array.from(selectedDays).sort((a,b)=>a-b);
+  selectedChips.innerHTML = sorted.map(d => {
+    const city = document.getElementById(`day-entry-${d}`)?.querySelector('.day-city')?.textContent?.trim() || '';
+    return `<span class="chip">Day ${d}${city?' · '+city:''}</span>`;
+  }).join('');
+  panelDaysLabel.textContent = sorted.map(d=>`Day ${d}`).join(', ');
+  modifyPanel.classList.add('open');
+  setTimeout(()=>modifyPanel.scrollIntoView({behavior:'smooth',block:'start'}),120);
+});
+
+btnCancel.addEventListener('click', () => { modifyPanel.classList.remove('open'); modifyStatus.textContent=''; });
+
+function insertSuggestion(el) {
+  const cur = promptArea.value.trim();
+  promptArea.value = cur ? cur + '. ' + el.textContent : el.textContent;
+  promptArea.focus();
+}
+
+btnSubmit.addEventListener('click', async () => {
+  const prompt = promptArea.value.trim();
+  if (!prompt) { showStatus('Please describe your changes.','error'); return; }
+  const daysArr = Array.from(selectedDays).sort((a,b)=>a-b);
+  if (!daysArr.length) { showStatus('No days selected.','error'); return; }
+  btnSubmit.disabled = btnCancel.disabled = true;
+  showStatus(`Regenerating ${daysArr.length} day(s)…`,'');
+  daysArr.forEach(d=>document.getElementById(`day-entry-${d}`)?.classList.add('regenerating'));
+  try {
+    const res  = await fetch(REGEN_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({selected_days:daysArr,user_prompt:prompt,itinerary_id:ITINERARY_ID})});
+    const text = await res.text();
+    if (text.trimStart().startsWith('<')) throw new Error(`Server error (${res.status})`);
+    const data = JSON.parse(text);
+    if (!res.ok || data.status !== 200) throw new Error(data.message||`Error ${res.status}`);
+    Object.entries(data.updated_days||{}).forEach(([d,dd])=>applyUpdate(parseInt(d),dd));
+    showStatus(`✓ ${Object.keys(data.updated_days||{}).length} day(s) updated.`,'success');
+    showToast('Days updated!','success');
+    daysArr.forEach(d=>{document.getElementById(`day-entry-${d}`)?.classList.remove('selected','regenerating');selectedDays.delete(d);});
+    updateToolbar();
+    setTimeout(()=>{modifyPanel.classList.remove('open');promptArea.value='';},2500);
+  } catch(err) {
+    showStatus(`Error: ${err.message}`,'error'); showToast('Failed.','error');
+    daysArr.forEach(d=>document.getElementById(`day-entry-${d}`)?.classList.remove('regenerating'));
+  }
+  btnSubmit.disabled = btnCancel.disabled = false;
+});
+
+function applyUpdate(dayNum, dayData) {
+  const entry = document.getElementById(`day-entry-${dayNum}`);
+  if (!entry) return;
+  const lines = (dayData.ai_plan||'').split('\n').map(l=>l.trim()).filter(Boolean);
+  let aboutText=''; const schedRows=[];
+  lines.forEach(line=>{
+    if(line.startsWith('📍')||/^ABOUT:/i.test(line)){aboutText=line.replace(/^📍\s*ABOUT:\s*/i,'').replace(/^📍\s*/,'').trim();}
+    else if(!line.startsWith('🏨')&&!line.startsWith('🍽 MEALS')){const di=line.indexOf(' — ');if(di!==-1){const t=line.slice(0,di).replace(/[🌅🕙🌞🌆🍽🌇🌃]/gu,'').trim();const r=line.slice(di+3);const ci=r.indexOf(':');schedRows.push({time:t,activity:ci!==-1?r.slice(0,ci).trim():'',description:ci!==-1?r.slice(ci+1).trim():r});}}
+  });
+  if(aboutText){const ab=entry.querySelector('.day-about-container');if(ab)ab.innerHTML=`<div class="body-section"><div class="section-label"><i class="fas fa-map-pin"></i> About</div><div class="day-about">${esc(aboutText)}</div></div>`;}
+  if(schedRows.length){const sc=entry.querySelector('.day-schedule-container');if(sc)sc.innerHTML=`<div class="section-label"><i class="fas fa-clock"></i> Schedule</div><div class="schedule-list">${schedRows.map(r=>`<div class="sched-row"><div class="sched-time">${esc(r.time)}</div><div class="sched-line"></div><div>${r.activity?`<span class="sched-activity">${esc(r.activity)}</span>`:''}<span class="sched-desc">${esc(r.description)}</span></div></div>`).join('')}</div>`;}
+  entry.classList.remove('just-updated'); void entry.offsetWidth; entry.classList.add('just-updated');
+  setTimeout(()=>entry.scrollIntoView({behavior:'smooth',block:'center'}),100);
+}
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function showStatus(m,t){modifyStatus.textContent=m;modifyStatus.className='modify-status'+(t?' '+t:'');}
+let tt;
+function showToast(m,t=''){toastMsg.textContent=m;toastEl.className='toast'+(t==='success'?' toast-success':t==='error'?' toast-error':'');clearTimeout(tt);requestAnimationFrame(()=>toastEl.classList.add('show'));tt=setTimeout(()=>toastEl.classList.remove('show'),3500);}
+</script>
+</body>
+</html>
